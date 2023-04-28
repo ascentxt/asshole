@@ -1,0 +1,95 @@
+proxies:
+proxy-groups:
+  - name: "PILIH-GRUP-SERVER"
+    type: select
+    disable-udp: false
+    proxies: [SSHKIT, OPENTUNNEL, MAINSSH, SG, LAINNYA, ID, DIRECT, ]
+  - name: "SSHKIT"
+    type: select
+    disable-udp: false
+    use: [SSHKIT]
+  - name: "OPENTUNNEL"
+    type: select
+    disable-udp: false
+    use: [OPENTUNNEL]
+  - name: "MAINSSH"
+    type: select
+    disable-udp: false
+    use: [MAINSSH]
+  - name: "SG"
+    type: select
+    disable-udp: false
+    use: [SG]
+  - name: "LAINNYA"
+    type: select
+    disable-udp: false
+    use: [LAINNYA]
+  - name: "ID"
+    type: select
+    disable-udp: false
+    use: [ID]
+#  - name: BEST-PING
+#    type: url-test
+#    url: http://cp.cloudflare.com/generate_204
+#    ninterval: 300
+#    use: [MAINSSH,OPENTUNNEL,SG, SSHKIT, LAINNYA, ID]
+
+proxy-providers:
+  MAINSSH:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/mainssh.yaml"
+    interval: 3600
+    path: "./server/mainssh.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+  OPENTUNNEL:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/opentunnel.yaml"
+    interval: 3600
+    path: "./server/opentunnel.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+  SG:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sg.yaml"
+    interval: 3600
+    path: "./server/sg.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+  SSHKIT:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sshkit.yaml"
+    interval: 3600
+    path: "./server/sshkit.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+  LAINNYA:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/lain.yaml"
+    interval: 3600
+    path: "./server/lain.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+  ID:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/id.yaml"
+    interval: 3600
+    path: "./server/id.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+rules:
+  - PROCESS-NAME, com.whatsapp, DIRECT
+  - PROCESS-NAME, com.asobimo.toramonline, DIRECT
+  - MATCH,PILIH-GRUP-SERVER
