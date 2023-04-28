@@ -42,7 +42,7 @@ proxy-groups:
 proxy-providers:
 #  MAINSSH:
 #    type: http
-#    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/mainssh.yaml"
+#    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/mainssh.yaml"
 #    interval: 3600
 #    path: "./server/mainssh.yaml"
 #    health-check:
@@ -51,7 +51,7 @@ proxy-providers:
 #      interval: 300
   OPENTUNNEL:
     type: http
-    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/opentunnel.yaml"
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/opentunnel.yaml"
     interval: 3600
     path: "./server/opentunnel.yaml"
     health-check:
@@ -60,7 +60,7 @@ proxy-providers:
       interval: 300
   SG:
     type: http
-    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sg.yaml"
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/sg.yaml"
     interval: 3600
     path: "./server/sg.yaml"
     health-check:
@@ -69,7 +69,7 @@ proxy-providers:
       interval: 300
   SSHKIT:
     type: http
-    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sshkit.yaml"
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/sshkit.yaml"
     interval: 3600
     path: "./server/sshkit.yaml"
     health-check:
@@ -78,7 +78,7 @@ proxy-providers:
       interval: 300
   LAINNYA:
     type: http
-    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/lain.yaml"
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/lain.yaml"
     interval: 3600
     path: "./server/lain.yaml"
     health-check:
@@ -87,7 +87,7 @@ proxy-providers:
       interval: 300
   ID:
     type: http
-    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/id.yaml"
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/id.yaml"
     interval: 3600
     path: "./server/id.yaml"
     health-check:
