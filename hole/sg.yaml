@@ -81,21 +81,6 @@ proxies:
       headers:
         Host: sg-9.0rd.net
     udp: true
-  - name: 0305_sg8vl_sshstores
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: 2dfe16cb-427d-4e71-b55e-09f418d844e9
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg8vl.xservs.xyz
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: sg8vl.xservs.xyz
-    udp: true
   - name: 2003_sgcvless.ipservers.xyz_jagoanssh
     server: *akrab4
     port: 443
