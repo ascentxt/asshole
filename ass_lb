@@ -1,0 +1,114 @@
+proxies:
+proxy-groups:
+  - name: "PILIH-MODE ⛈️🌏"
+    type: select
+    proxies: [OTOMATIS,MANUAL,MAINSSH-LB,OPENTUNNEL-LB,SG-LB,DIRECT]
+
+  - name: "MANUAL"
+    type: select
+    use: [OPENTUNNEL,MAINSSH,SG,SSHKIT,LAINNYA,ID]
+
+  - name: "OTOMATIS"
+    type: url-test
+    proxies: [MAINSSH-LB,OPENTUNNEL-LB,SG-LB]
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+#    strategy: consistent-hashing
+
+  - name: "MAINSSH-LB"
+    type: load-balance
+    use: [MAINSSH]
+    strategy: consistent-hashing
+
+  - name: "OPENTUNNEL-LB"
+    type: load-balance
+    use: [OPENTUNNEL]
+    strategy: consistent-hashing
+
+  - name: "SG-LB"
+    type: load-balance
+    use: [SG]
+    strategy: consistent-hashing
+
+#  - name: "SSHKIT-LB"
+#    type: load-balance
+#    use: [SSHKIT]
+#    strategy: consistent-hashing
+
+#  - name: "FB-BP"
+#    type: fallback
+#    url: http://www.gstatic.com/generate_204
+#    interval: 100
+#    proxies: [BEST-PING]
+
+#  - name: BEST-PING
+#    type: url-test
+#    url: http://cp.cloudflare.com/generate_204
+#    ninterval: 300
+#    use: [MAINSSH,OPENTUNNEL,LAINNYA,SSHKIT,ID]
+
+proxy-providers:
+
+  MAINSSH:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/mainssh.yaml"
+    interval: 3600
+    path: "./server/mainssh.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
+  OPENTUNNEL:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/opentunnel.yaml"
+    interval: 3600
+    path: "./server/opentunnel.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
+  SG:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sg.yaml"
+    interval: 3600
+    path: "./server/sg.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
+  SSHKIT:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sshkit.yaml"
+    interval: 3600
+    path: "./server/sshkit.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1000
+
+  LAINNYA:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/lain.yaml"
+    interval: 3600
+    path: "./server/lain.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1000
+
+  ID:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/id.yaml"
+    interval: 3600
+    path: "./server/id.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1000
+
+rules:
+  - PROCESS-NAME, com.whatsapp, DIRECT
+  - MATCH,PILIH-MODE ⛈️🌏
