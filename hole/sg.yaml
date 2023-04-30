@@ -65,22 +65,6 @@ proxies:
     grpc-opts:
       grpc-service-name: grpc
     udp: true
-  - name: Vmess Singapore Melbi 3 2023-05-03_fastssh
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 910defa0-e3c7-11ed-b638-205c6d5f5d78
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg-9.0rd.net
-    network: ws
-    ws-opts:
-      path: /0jrxl8gq
-      headers:
-        Host: sg-9.0rd.net
-    udp: true
   - name: 3105_sg_gamingssh
     server: 172.67.73.39
     port: 80
@@ -96,6 +80,22 @@ proxies:
       path: /v2ray-vmess/ntls
       headers: 
         Host: vm.sg.goserver.pw
+    udp: true
+  - name: Vmess Singapore Melbi 3 2023-05-03_fastssh
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 910defa0-e3c7-11ed-b638-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg-9.0rd.net
+    network: ws
+    ws-opts:
+      path: /0jrxl8gq
+      headers:
+        Host: sg-9.0rd.net
     udp: true
   - name: 2003_sgcvless.ipservers.xyz_jagoanssh
     server: *akrab4
