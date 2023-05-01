@@ -175,7 +175,7 @@ proxies:
     servername: sg-lb.vhax.net
     network: ws
     ws-opts: 
-      path: /sshkit/jsnsbbsb/644e7f8961f55/
+      path: /sshkit/akubegini/64503bed9605a/
       headers: 
         Host: sg-lb.vhax.net
     udp: true
