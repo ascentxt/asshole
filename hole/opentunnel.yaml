@@ -67,7 +67,7 @@ proxies:
       headers:
         Host: sgv-1.openv2ray.com
     udp: true
-  - name: 0405_sgv-4
+  - name: 0905_sgv-4
     server: *akrab4
     port: 443
     type: vmess
@@ -79,7 +79,7 @@ proxies:
     servername: sgv-4.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-widakdikku
+      path: /u/opentunnel.net-kenapakamu
       headers:
         Host: sgv-4.openv2ray.com
     udp: true
