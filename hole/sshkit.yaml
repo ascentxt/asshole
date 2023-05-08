@@ -53,7 +53,7 @@ flex:
 
 proxies:
   - name: 0805_sg2_widakdi
-    server: *akrab0
+    server: *akrab4
     port: 80
     type: vmess
     uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
@@ -148,7 +148,7 @@ proxies:
       headers: 
         Host: sg1-v2ray.sshkit.org
     udp: true
-  - name: 0405_sg4_widakdi
+  - name: 0706_sg4_widakdi
     server: *akrab4
     port: 443
     type: vmess
@@ -160,7 +160,7 @@ proxies:
     servername: sg4-v2ray.sshkit.org
     network: ws
     ws-opts: 
-      path: /sshkit/582191343/642c274ac33d7/
+      path: /sshkit/582191343/645842d05d598/
       headers: 
         Host: sg4-v2ray.sshkit.org
     udp: true
@@ -176,7 +176,7 @@ proxies:
     servername: sg-lb.vhax.net
     network: ws
     ws-opts: 
-      path: /sshkit/asukowknb/6455fd83616a5/
+      path: /sshkit/asukaut/645843390ff14/
       headers: 
         Host: sg-lb.vhax.net
     udp: true
