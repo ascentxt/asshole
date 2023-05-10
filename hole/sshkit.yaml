@@ -52,7 +52,7 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 0805_sg2_widakdi
+  - name: 0906_sg2_widakdi
     server: *akrab4
     port: 80
     type: vmess
@@ -64,7 +64,7 @@ proxies:
     servername: sg2-v2ray.sshkit.org
     network: ws
     ws-opts:
-      path: /sshkit/582191343/64309d253e03c/
+      path: /sshkit/582191343/645ae11985bb7/
       headers:
         Host: sg2-v2ray.sshkit.org
     udp: true
