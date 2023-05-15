@@ -65,6 +65,32 @@ proxies:
     grpc-opts:
       grpc-service-name: grpc
     udp: true
+  - name: 2205_sg2lgrpc.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: 896103fb-3453-4482-b6c6-395cd1d32d86
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2lgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vlessgrpc
+    udp: true
+  - name: 2205_sg3lgrpc.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: 8253e388-9dfe-4c2c-bec4-0dc250d88ab1
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3lgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vlessgrpc
+    udp: true
   - name: 3105_sg_gamingssh
     server: 172.67.73.39
     port: 80
@@ -80,19 +106,6 @@ proxies:
       path: /v2ray-vmess/ntls
       headers: 
         Host: vm.sg.goserver.pw
-    udp: true
-  - name: 2205_sg3lgrpc.mainssh.xyz
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: 8253e388-9dfe-4c2c-bec4-0dc250d88ab1
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg3lgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: vlessgrpc
     udp: true
   - name: 2003_sgcvless.ipservers.xyz_jagoanssh
     server: *akrab4
