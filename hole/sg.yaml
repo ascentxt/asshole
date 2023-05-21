@@ -65,7 +65,7 @@ proxies:
     grpc-opts:
       grpc-service-name: grpc
     udp: true
-  - name: 2o05_sg2lgrpc.mainssh.xyz
+  - name: 2905_sg2lgrpc.mainssh.xyz
     server: *akrab4
     port: 443
     type: vless
