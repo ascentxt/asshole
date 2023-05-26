@@ -91,27 +91,11 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 3105_sg_gamingssh
-    server: 172.67.73.39
-    port: 80
-    type: vmess
-    uuid: 2fc4512d-9052-4f28-aad8-4313082012d8
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    servername: vm.sg.goserver.pw
-    network: ws
-    ws-opts: 
-      path: /v2ray-vmess/ntls
-      headers: 
-        Host: vm.sg.goserver.pw
-    udp: true
-  - name: 2003_sgcvless.ipservers.xyz_jagoanssh
+  - name: 2506_sgcvless.ipservers.xyz_jagoanssh
     server: *akrab4
     port: 443
     type: vless
-    uuid: 99882321-4b10-4318-91e8-3feeaba40fa6
+    uuid: b496ed63-fe76-4bac-bbb7-a79374b243b2
     cipher: auto
     tls: true
     skip-cert-verify: true
