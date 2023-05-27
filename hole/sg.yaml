@@ -65,11 +65,11 @@ proxies:
     grpc-opts:
       grpc-service-name: grpc
     udp: true
-  - name: 2905_sg2lgrpc.mainssh.xyz
+  - name: 0406_sg2lgrpc.mainssh.xyz
     server: *akrab4
     port: 443
     type: vless
-    uuid: 51617e67-859b-48e1-ace4-62c398ce5167
+    uuid: 00737932-cd48-4592-b10f-cdbe7a607619
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -87,6 +87,19 @@ proxies:
     tls: true
     skip-cert-verify: true
     servername: sg3lgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vlessgrpc
+    udp: true
+  - name: 0406_sglgrpc.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: 41ccdb55-d23e-4e1d-90f4-302547c19b8e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sglgrpc.mainssh.xyz
     network: grpc
     grpc-opts: 
       grpc-service-name: vlessgrpc
