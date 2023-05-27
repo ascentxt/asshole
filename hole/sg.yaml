@@ -51,20 +51,6 @@ flex:
   - &flex 104.22.2.25
 
 proxies:  
-  - name: 2605_sgmgrpc.serverip.my.id_serverssh
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 82712ff4-13b7-4c76-b98a-2075c63d7e06
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sgmgrpc.serverip.my.id
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc
-    udp: true
   - name: 0406_sg2lgrpc.mainssh.xyz
     server: *akrab4
     port: 443
@@ -119,6 +105,21 @@ proxies:
       headers: 
         Host: sgcvless.ipservers.xyz
     udp: true
+  - name: 2605_sgmgrpc.serverip.my.id_serverssh
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 82712ff4-13b7-4c76-b98a-2075c63d7e06
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgmgrpc.serverip.my.id
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc
+    udp: true
+
 
 
 
