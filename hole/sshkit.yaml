@@ -116,22 +116,6 @@ proxies:
       headers: 
         Host: sg3-v2ray.sshkit.org
     udp: true
-  - name: 1305_sg3_nrl
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg3-v2ray.sshkit.org
-    network: ws
-    ws-opts: 
-      path: /sshkit/1453093006/64373589115e4/
-      headers: 
-        Host: sg3-v2ray.sshkit.org
-    udp: true
   - name: 0106_sg1_widakdi
     server: 172.67.73.39
     port: 443
