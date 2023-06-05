@@ -8,6 +8,10 @@ proxy-groups:
     type: select
     disable-udp: false
     use: [SSHKIT]
+  - name: "SG"
+    type: select
+    disable-udp: false
+    use: [SG]
   - name: "OPENTUNNEL"
     type: select
     disable-udp: false
@@ -16,10 +20,6 @@ proxy-groups:
 #    type: select
 #    disable-udp: false
 #    use: [MAINSSH]
-  - name: "SG"
-    type: select
-    disable-udp: false
-    use: [SG]
   - name: "LAINNYA"
     type: select
     disable-udp: false
