@@ -3,7 +3,7 @@ proxy-groups:
   - name: "🫠🫠"
     type: select
     disable-udp: false
-    proxies: [SSHKIT, OPENTUNNEL, SG, LAINNYA, ID, DIRECT, ]
+    proxies: [SSHKIT, SG, OPENTUNNEL, LAINNYA, ID, DIRECT, ]
   - name: "SSHKIT"
     type: select
     disable-udp: false
