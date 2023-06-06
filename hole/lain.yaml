@@ -67,11 +67,11 @@ proxies:
       headers:
         Host: usa-v2ray.sshkit.net
     udp: true
-  - name: 0206_uslgrpc.mainssh.xyz
+  - name: 1306_uslgrpc.mainssh.xyz
     server: 172.67.73.39
     port: 443
     type: vless
-    uuid: d7401cad-090b-4d78-b1ba-dab6b1271a02
+    uuid: 71db9acc-885f-42c2-914b-4b3c1cf945cf
     cipher: auto
     tls: true
     skip-cert-verify: true
