@@ -51,11 +51,11 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 2403_idlgrpc.mainssh.xyz
+  - name: 1306_idlgrpc.mainssh.xyz
     server: *akrab4
     port: 443
     type: vless
-    uuid: 0c502bac-2a80-4bf2-a7da-c155f0921ff7
+    uuid: 24ac920d-54d3-453e-8267-479d467142b4
     cipher: auto
     tls: true
     skip-cert-verify: true
