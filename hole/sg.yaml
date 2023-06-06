@@ -77,7 +77,7 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 1306_sg2mgrpc
+  - name: 1306_sg2mgrpc.mainssh.xyz
     server: *akrab4
     port: 443
     type: vmess
@@ -91,7 +91,7 @@ proxies:
     grpc-opts: 
       grpc-service-name: vmessgrpc
     udp: true
-  - name: 1306_sg3mgrpc
+  - name: 1306_sg3mgrpc.mainssh.xyz
     server: *akrab4
     port: 443
     type: vmess
