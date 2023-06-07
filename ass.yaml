@@ -189,7 +189,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 200
+      interval: 300
   SG:
     type: http
     url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/sg.yaml"
@@ -198,7 +198,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 150
+      interval: 300
   SSHKIT:
     type: http
     url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/sshkit.yaml"
@@ -207,7 +207,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 100
+      interval: 300
   LAINNYA:
     type: http
     url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/lain.yaml"
