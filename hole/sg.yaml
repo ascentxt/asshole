@@ -53,7 +53,7 @@ flex:
 
 proxies:  
   - name: 1206_sg2lgrpc.mainssh.xyz
-    server: *akrab499
+    server: *akrab49
     port: 443
     type: vless
     uuid: cb4954a6-6912-4e5a-84f6-8005e8958823
