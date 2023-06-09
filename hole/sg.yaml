@@ -52,7 +52,7 @@ flex:
 
 proxies:  
   - name: 1206_sg2lgrpc.mainssh.xyz
-    server: *akrab4
+    server: *akrab10
     port: 443
     type: vless
     uuid: cb4954a6-6912-4e5a-84f6-8005e8958823
@@ -78,7 +78,7 @@ proxies:
       grpc-service-name: vlessgrpc
     udp: true
   - name: 1306_sg2mgrpc.mainssh.xyz
-    server: *akrab4
+    server: *akrab10
     port: 443
     type: vmess
     uuid: 72ea2bcd-8463-43d3-80b9-804456828117
