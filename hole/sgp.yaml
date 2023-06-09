@@ -1,0 +1,155 @@
+akrab:
+  - &akrab1 104.17.3.81
+  - &akrab2 172.64.149.82
+  - &akrab3 188.114.97.12
+  - &akrab4 172.67.73.39
+  - &akrab5 104.18.38.174
+  - &akrab6 172.67.199.34
+  - &akrab7 141.193.213.20
+  - &akrab8 141.193.213.21
+  - &akrab9 104.20.74.141
+  - &akrab10 104.20.75.141
+  - &akrab11 104.18.11.39
+  - &akrab12 104.18.10.39
+  - &akrab13 104.18.2.2
+  - &akrab14 104.18.21.226
+  - &akrab15 104.21.21.147
+  - &akrab16 104.26.5.10
+  - &akrab17 104.26.4.10
+  - &akrab18 104.18.24.243
+  - &akrab19 104.18.25.243
+  - &akrab20 104.18.26.28
+  - &akrab21 104.18.27.28
+  - &akrab22 104.18.30.9
+  - &akrab23 104.18.31.9
+  - &akrab24 104.17.2.81
+  - &akrab25 104.21.21.104
+  - &akrab26 104.21.10.162
+  - &akrab27 104.21.4.109
+  - &akrab28 104.21.16.163
+  - &akrab29 104.21.6.56
+  - &akrab30 104.21.12.167
+  - &akrab31 172.67.70.14
+  - &akrab32 104.26.14.59
+  - &akrab33 104.26.15.59
+  - &akrab34 170.114.46.0
+  - &akrab35 104.21.21.107
+  - &akrab36 172.67.199.34
+  - &akrab37 104.17.71.206
+  - &akrab38 104.17.70.206
+  - &akrab39 104.21.1.180
+  - &akrab40 104.21.1.229
+  - &akrab41 104.16.42.102
+  - &akrab42 104.16.43.102
+  - &akrab43 104.18.211.56
+  - &akrab44 104.18.24.139
+  - &akrab45 104.18.211.56
+  - &akrab46 172.67.182.69
+  - &akrab47 104.21.32.17
+  - &akrab48 104.26.4.126
+  - &akrab49 104.18.3.198
+flex:
+  - &flex 104.22.2.25
+
+proxies:  
+  - name: 1206_sg2lgrpc.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: cb4954a6-6912-4e5a-84f6-8005e8958823
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2lgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vlessgrpc
+    udp: true
+  - name: 1106_sg3lgrpc.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: 0bfcff1c-a339-4b48-8c12-6ff4e1209ba8
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3lgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vlessgrpc
+    udp: true
+  - name: 1306_sg2mgrpc.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 72ea2bcd-8463-43d3-80b9-804456828117
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2mgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vmessgrpc
+    udp: true
+  - name: 1306_sg3mgrpc.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: caf9b1c7-5aa1-40c9-9a91-d36e0d87725a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3mgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vmessgrpc
+    udp: true
+  - name: 1306_sg3grpc.serverssh
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: bfc00fa8-86d0-4d5d-a405-fd2c94a062cb
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2grpc.serverip.my.id
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: grpc
+    udp: true
+  - name: 2506_sgcvless_jagoanssh
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: b496ed63-fe76-4bac-bbb7-a79374b243b2
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgcvless.ipservers.xyz
+    network: ws
+    ws-opts: 
+      path: /jagoanssh
+      headers: 
+        Host: sgcvless.ipservers.xyz
+    udp: true
+  - name: 2605_sgmgrpc_serverssh
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 82712ff4-13b7-4c76-b98a-2075c63d7e06
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgmgrpc.serverip.my.id
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc
+    udp: true
+
+
+
+
