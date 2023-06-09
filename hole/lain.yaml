@@ -47,12 +47,13 @@ akrab:
   - &akrab46 172.67.182.69
   - &akrab47 104.21.32.17
   - &akrab48 104.26.4.126
+  - &akrab49 104.18.3.198
 flex:
   - &flex 104.22.2.25
 
 proxies:
   - name: 1404_usa-sshkit.net
-    server: *akrab4
+    server: *akrab49
     port: 443
     type: vmess
     uuid: d2ce8dd9-cfbb-44d9-b6de-af3103e6fc5e
@@ -68,7 +69,7 @@ proxies:
         Host: usa-v2ray.sshkit.net
     udp: true
   - name: 1306_uslgrpc.mainssh.xyz
-    server: 172.67.73.39
+    server: *akrab49
     port: 443
     type: vless
     uuid: 71db9acc-885f-42c2-914b-4b3c1cf945cf
