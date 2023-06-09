@@ -52,7 +52,7 @@ flex:
   - &flex 104.22.2.25
 
 proxies:  
-  - name: 1206_sg2lgrpc.mainssh.xyz49
+  - name: 1206_sg2lgrpc.mainssh.xyz
     server: *akrab499
     port: 443
     type: vless
