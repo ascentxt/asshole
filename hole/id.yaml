@@ -47,12 +47,13 @@ akrab:
   - &akrab46 172.67.182.69
   - &akrab47 104.21.32.17
   - &akrab48 104.26.4.126
+  - &akrab49 104.18.3.198
 flex:
   - &flex 104.22.2.25
 
 proxies:
   - name: 1306_idlgrpc.mainssh.xyz
-    server: *akrab4
+    server: *akrab49
     port: 443
     type: vless
     uuid: 24ac920d-54d3-453e-8267-479d467142b4
