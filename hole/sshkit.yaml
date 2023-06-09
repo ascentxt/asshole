@@ -48,12 +48,13 @@ akrab:
   - &akrab46 172.67.182.69
   - &akrab47 104.21.32.17
   - &akrab48 104.26.4.126
+  - &akrab49 104.18.3.198
 flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 0906_sg2_widakdi
-    server: *akrab10
+  - name: 0906_sg2_widakdi49
+    server: *akrab499
     port: 80
     type: vmess
     uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
@@ -69,7 +70,7 @@ proxies:
         Host: sg2-v2ray.sshkit.org
     udp: true
   - name: 2106_sg2_ascnt
-    server: *akrab4
+    server: *akrab49
     port: 80
     type: vmess
     uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
@@ -85,7 +86,7 @@ proxies:
         Host: sg2-v2ray.sshkit.org
     udp: true
   - name: 0807_sg2_lswtn
-    server: *akrab4
+    server: *akrab49
     port: 80
     type: vmess
     uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
@@ -101,7 +102,7 @@ proxies:
         Host: sg2-v2ray.sshkit.org
     udp: true
   - name: 0507_sg3_widakdi
-    server: *akrab4
+    server: *akrab49
     port: 443
     type: vmess
     uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
@@ -133,7 +134,7 @@ proxies:
         Host: sg1-v2ray.sshkit.org
     udp: true
   - name: 0907_sg4_widakdi
-    server: *akrab4
+    server: *akrab49
     port: 443
     type: vmess
     uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
@@ -149,7 +150,7 @@ proxies:
         Host: sg4-v2ray.sshkit.org
     udp: true
   - name: 1305_sg-lb.vhax.net_tls
-    server: *akrab10
+    server: *akrab49
     port: 443
     type: vmess
     uuid: 6fea1649-425b-4092-bf53-29792152c925
