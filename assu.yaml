@@ -192,7 +192,7 @@ proxy-providers:
       interval: 300
   SG:
     type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/sg.yaml"
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/sgp.yaml"
     interval: 3600
     path: "./servers/sgp.yaml"
     health-check:
@@ -221,7 +221,7 @@ proxy-providers:
     type: http
     url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/idn.yaml"
     interval: 3600
-    path: "./servers/id.yaml"
+    path: "./servers/idn.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
