@@ -53,7 +53,7 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 0906_sg2_widakdi49
+  - name: 0906_sg2_widakdi
     server: *akrab499
     port: 80
     type: vmess
