@@ -47,12 +47,13 @@ akrab:
   - &akrab46 172.67.182.69
   - &akrab47 104.21.32.17
   - &akrab48 104.26.4.126
+  - &akrab49 104.18.3.198
 flex:
   - &flex 104.22.2.25
 
 proxies:  
-  - name: 1206_sg2lgrpc.mainssh.xyz
-    server: *akrab10
+  - name: 1206_sg2lgrpc.mainssh.xyz49
+    server: *akrab499
     port: 443
     type: vless
     uuid: cb4954a6-6912-4e5a-84f6-8005e8958823
@@ -65,7 +66,7 @@ proxies:
       grpc-service-name: vlessgrpc
     udp: true
   - name: 1106_sg3lgrpc.mainssh.xyz
-    server: *akrab4
+    server: *akrab49
     port: 443
     type: vless
     uuid: 0bfcff1c-a339-4b48-8c12-6ff4e1209ba8
@@ -78,7 +79,7 @@ proxies:
       grpc-service-name: vlessgrpc
     udp: true
   - name: 1306_sg2mgrpc.mainssh.xyz
-    server: *akrab10
+    server: *akrab49
     port: 443
     type: vmess
     uuid: 72ea2bcd-8463-43d3-80b9-804456828117
@@ -92,7 +93,7 @@ proxies:
       grpc-service-name: vmessgrpc
     udp: true
   - name: 1306_sg3mgrpc.mainssh.xyz
-    server: *akrab4
+    server: *akrab49
     port: 443
     type: vmess
     uuid: caf9b1c7-5aa1-40c9-9a91-d36e0d87725a
@@ -106,7 +107,7 @@ proxies:
       grpc-service-name: vmessgrpc
     udp: true
   - name: 1306_sg3grpc.serverssh
-    server: *akrab4
+    server: *akrab49
     port: 443
     type: vmess
     uuid: bfc00fa8-86d0-4d5d-a405-fd2c94a062cb
@@ -120,7 +121,7 @@ proxies:
       grpc-service-name: grpc
     udp: true
   - name: 2506_sgcvless_jagoanssh
-    server: *akrab4
+    server: *akrab49
     port: 443
     type: vless
     uuid: b496ed63-fe76-4bac-bbb7-a79374b243b2
@@ -135,7 +136,7 @@ proxies:
         Host: sgcvless.ipservers.xyz
     udp: true
   - name: 2605_sgmgrpc_serverssh
-    server: *akrab4
+    server: *akrab49
     port: 443
     type: vmess
     uuid: 82712ff4-13b7-4c76-b98a-2075c63d7e06
