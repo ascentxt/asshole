@@ -124,6 +124,38 @@ proxies:
     grpc-opts: 
       grpc-service-name: grpc
     udp: true
+  - name: 1207_vm.sg_lionssh
+    server: *akrab4
+    port: 80
+    type: vmess
+    uuid: f5e2b663-3a5d-4b63-8363-e5d81062f433
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    servername: sg.goserver.pw
+    network: ws
+    ws-opts: 
+      path: /v2ray-vmess/ntls
+      headers: 
+        Host: sg.goserver.pw
+    udp: true
+  - name: 1207_vm.sg_lionssh
+    server: *akrab4
+    port: 80
+    type: vmess
+    uuid: f5e2b663-3a5d-4b63-8363-e5d81062f433
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    servername: vm.sg.goserver.pw
+    network: ws
+    ws-opts: 
+      path: /v2ray-vmess/ntls
+      headers: 
+        Host: vm.sg.goserver.pw
+    udp: true
   - name: 2506_sgcvless_jagoanssh
     server: *akrab4
     port: 443
