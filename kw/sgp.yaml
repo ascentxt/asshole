@@ -140,7 +140,7 @@ proxies:
       headers: 
         Host: sg.goserver.pw
     udp: true
-  - name: 1207_vm.sg_lionssh
+  - name: 1207_vm.sg_lionssh_
     server: *akrab4
     port: 80
     type: vmess
