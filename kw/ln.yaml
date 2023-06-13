@@ -68,11 +68,11 @@ proxies:
       headers:
         Host: usa-v2ray.sshkit.net
     udp: true
-  - name: 1306_uslgrpc.mainssh.xyz
+  - name: 2006_uslgrpc.mainssh.xyz
     server: *akrab4
     port: 443
     type: vless
-    uuid: 71db9acc-885f-42c2-914b-4b3c1cf945cf
+    uuid: b05926d1-2ad8-43e4-84c1-a5101791a56c
     cipher: auto
     tls: true
     skip-cert-verify: true
