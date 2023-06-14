@@ -85,33 +85,18 @@ proxies:
       headers: 
         Host: sg3lws.mainssh.xyz
     udp: true
-  - name: 1306_sg2mgrpc.mainssh
+  - name: 2106_sg6-grpc|sshocean
     server: *akrab4
     port: 443
-    type: vmess
-    uuid: 72ea2bcd-8463-43d3-80b9-804456828117
-    alterId: 0
+    type: vless
+    uuid: 49158464-91a8-4c84-906e-f52765bbc84f
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sg2mgrpc.mainssh.xyz
+    servername: sg6-grpc.xvless.xyz
     network: grpc
     grpc-opts: 
-      grpc-service-name: vmessgrpc
-    udp: true
-  - name: 1306_sg3mgrpc.mainssh
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: caf9b1c7-5aa1-40c9-9a91-d36e0d87725a
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg3mgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: vmessgrpc
+      grpc-service-name: grpc
     udp: true
   - name: 1806_sg1grpc.serverssh
     server: *akrab4
@@ -126,38 +111,6 @@ proxies:
     network: grpc
     grpc-opts: 
       grpc-service-name: grpc
-    udp: true
-  - name: 1207_vm.sg_lionssh
-    server: *akrab4
-    port: 80
-    type: vmess
-    uuid: f5e2b663-3a5d-4b63-8363-e5d81062f433
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    servername: sg.goserver.pw
-    network: ws
-    ws-opts: 
-      path: /v2ray-vmess/ntls
-      headers: 
-        Host: sg.goserver.pw
-    udp: true
-  - name: 1207_vm.sg_lionssh_
-    server: *akrab4
-    port: 80
-    type: vmess
-    uuid: f5e2b663-3a5d-4b63-8363-e5d81062f433
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    servername: vm.sg.goserver.pw
-    network: ws
-    ws-opts: 
-      path: /v2ray-vmess/ntls
-      headers: 
-        Host: vm.sg.goserver.pw
     udp: true
   - name: 2506_sgcvless_jagoanssh
     server: *akrab4
