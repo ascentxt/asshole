@@ -98,6 +98,19 @@ proxies:
     grpc-opts: 
       grpc-service-name: grpc
     udp: true
+  - name: 2106_sg3-grpc|sshoceam
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: 55e37aa1-0cee-4cd2-ab95-920574c2ef7a
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3-grpc.xvless.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: grpc
+    udp: true
   - name: 1806_sg1grpc.serverssh
     server: *akrab4
     port: 443
