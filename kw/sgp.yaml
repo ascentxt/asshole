@@ -55,61 +55,35 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 1806_sg2lws.mainssh
+  - name: 2706_sg2lgrpc.mainssh
     server: *akrab4
     port: 443
     type: vless
-    uuid: c13b65b7-eaa4-462f-8b15-b0aeadbc094f
+    uuid: 637eafee-2b2b-4865-b532-dfe448bc4327
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sg2lws.mainssh.xyz
+    servername: sg2lgrpc.mainssh.xyz
     network: ws
     ws-opts: 
       path: /vless
       headers: 
-        Host: sg2lws.mainssh.xyz
+        Host: sg2lgrpc.mainssh.xyz
     udp: true
-  - name: 1806_sg3lws.mainssh
+  - name: 2706_sg3lgrpc.mainssh
     server: *akrab4
     port: 443
     type: vless
-    uuid: b6824cf8-b94b-457e-af1a-44969b7f779d
+    uuid: 8c09c051-dfd7-452e-b368-c42da126b489
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sg3lws.mainssh.xyz
+    servername: sg3lgrpc.mainssh.xyz
     network: ws
     ws-opts: 
       path: /vless
       headers: 
-        Host: sg3lws.mainssh.xyz
-    udp: true
-  - name: 2106_sg6-grpc|sshocean
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: 49158464-91a8-4c84-906e-f52765bbc84f
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg6-grpc.xvless.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: grpc
-    udp: true
-  - name: 2106_sg3-grpc|sshoceam
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: 55e37aa1-0cee-4cd2-ab95-920574c2ef7a
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg3-grpc.xvless.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: grpc
+        Host: sg3lgrpc.mainssh.xyz
     udp: true
   - name: 1806_sg1grpc.serverssh
     server: *akrab4
