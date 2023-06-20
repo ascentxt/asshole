@@ -64,11 +64,9 @@ proxies:
     tls: true
     skip-cert-verify: true
     servername: sg2lgrpc.mainssh.xyz
-    network: ws
-    ws-opts: 
-      path: /vless
-      headers: 
-        Host: sg2lgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vlessgrpc
     udp: true
   - name: 2706_sg3lgrpc.mainssh
     server: *akrab4
@@ -79,11 +77,9 @@ proxies:
     tls: true
     skip-cert-verify: true
     servername: sg3lgrpc.mainssh.xyz
-    network: ws
-    ws-opts: 
-      path: /vless
-      headers: 
-        Host: sg3lgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vlessgrpc
     udp: true
   - name: 1806_sg1grpc.serverssh
     server: *akrab4
