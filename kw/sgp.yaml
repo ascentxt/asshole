@@ -81,20 +81,6 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 1806_sg1grpc.serverssh
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 31763aa2-84f2-4aee-8312-67caeaaab8bf
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg1grpc.serverip.my.id
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: grpc
-    udp: true
   - name: 2506_sgcvless_jagoanssh
     server: *akrab4
     port: 443
