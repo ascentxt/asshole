@@ -55,11 +55,11 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 0507_sg2lgrpc.mainssh
+  - name: 1207_sg2lgrpc.mainssh
     server: *akrab4
     port: 443
     type: vless
-    uuid: 2eaf4704-16fa-4d7d-a976-90e893673c1a
+    uuid: 581013b1-8abd-48cf-9239-2121c932d34a
     cipher: auto
     tls: true
     skip-cert-verify: true
