@@ -70,7 +70,7 @@ proxies:
       headers:
         Host: sgx-1.openv2ray.com
     udp: true
-  - name: 0507_sgv-1
+  - name: 1607_sgv-1
     server: *akrab4
     port: 443
     type: vmess
@@ -82,11 +82,11 @@ proxies:
     servername: sgv-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-kokisobro1
+      path: /u/opentunnel.net-kokngeneb
       headers:
         Host: sgv-1.openv2ray.com
     udp: true
-  - name: 0507_sgv-4
+  - name: 1607_sgv-4
     server: *akrab4
     port: 443
     type: vmess
@@ -98,11 +98,11 @@ proxies:
     servername: sgv-4.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-koweknpbro
+      path: /u/opentunnel.net-kokngeneb
       headers:
         Host: sgv-4.openv2ray.com
     udp: true
-  - name: 0507_sgv-3
+  - name: 1607_sgv-3
     server: *akrab4
     port: 443
     type: vmess
@@ -114,7 +114,7 @@ proxies:
     servername: sgv-3.openv2ray.com
     network: ws
     ws-opts: 
-      path: /u/opentunnel.net-koweknpbro
+      path: /u/opentunnel.net-kokngeneb
       headers: 
         Host: sgv-3.openv2ray.com
     udp: true
