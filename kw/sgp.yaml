@@ -55,11 +55,11 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 1207_sg2lgrpc.mainssh
+  - name: 2007_sg2lgrpc.mainssh
     server: *akrab4
     port: 443
     type: vless
-    uuid: 581013b1-8abd-48cf-9239-2121c932d34a
+    uuid: c85985ba-bb97-4f1b-9bc3-9aea1f35b648
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -68,11 +68,11 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 1207_sg3lgrpc.mainssh
+  - name: 2007_sg3lgrpc.mainssh
     server: *akrab4
     port: 443
     type: vless
-    uuid: 18a11b56-120d-4de8-b248-2a9dd5ad1200
+    uuid: 0eaa8331-fc16-4a84-af96-2bfc4b57da12
     cipher: auto
     tls: true
     skip-cert-verify: true
