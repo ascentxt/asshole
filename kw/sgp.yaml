@@ -96,16 +96,16 @@ proxies:
       headers: 
         Host: sgcvless.ipservers.xyz
     udp: true
-  - name: 2605_sgmgrpc_serverssh
+  - name: 1208_sgm1grpc.serverssh.net
     server: *akrab4
     port: 443
     type: vmess
-    uuid: 82712ff4-13b7-4c76-b98a-2075c63d7e06
+    uuid: 10840958-f3cf-4828-8495-6b12fca6a2b9
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sgmgrpc.serverip.my.id
+    servername: sgm1grpc.serverip.my.id
     network: grpc
     grpc-opts:
       grpc-service-name: grpc
