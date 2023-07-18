@@ -102,7 +102,7 @@ proxies:
       headers:
         Host: sgv-4.openv2ray.com
     udp: true
-  - name: opentunnel.net-entunnel
+  - name: 2507_sgv-5
     server: *akrab4
     port: 80
     type: vmess
