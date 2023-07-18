@@ -119,7 +119,7 @@ proxies:
       headers: 
         Host: sg1-v2ray.sshkit.org
     udp: true
-  - name: 0907_sg4_ascent
+  - name: 1708_sg4_ascent
     server: *akrab4
     port: 80
     type: vmess
