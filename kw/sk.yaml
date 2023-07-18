@@ -87,22 +87,6 @@ proxies:
       headers: 
         Host: sg2-v2ray.sshkit.org
     udp: true
-  - name: 0807_sg2_lswtn
-    server: *akrab4
-    port: 80
-    type: vmess
-    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    servername: 
-    network: ws
-    ws-opts: 
-      path: /sshkit/5207496782/6481448c726d3/
-      headers: 
-        Host: sg2-v2ray.sshkit.org
-    udp: true
   - name: 0608_sg3_widakdi
     server: *akrab4
     port: 80
@@ -150,20 +134,4 @@ proxies:
       path: /sshkit/582191343/64827b2d5f009/
       headers: 
         Host: sg4-v2ray.sshkit.org
-    udp: true
-  - name: 1305_sg-lb.vhax.net_tls
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 6fea1649-425b-4092-bf53-29792152c925
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg-lb.vhax.net
-    network: ws
-    ws-opts: 
-      path: /sshkit/koknjjhj/646a9adcc2de6/
-      headers: 
-        Host: sg-lb.vhax.net
     udp: true
