@@ -56,7 +56,7 @@ flex:
 
 proxies:
   - name: 2208_sg2lgrpc.mainssh
-    server: *akrab4
+    server: *akrab2
     port: 443
     type: vless
     uuid: 0d173f50-67ed-4f5f-bace-3e61567b9bc9
@@ -69,7 +69,7 @@ proxies:
       grpc-service-name: vlessgrpc
     udp: true
   - name: 2208_sg3lgrpc.mainssh
-    server: *akrab4
+    server: *akrab2
     port: 443
     type: vless
     uuid: c4ca1af4-28ae-413d-831f-d744653198df
@@ -82,7 +82,7 @@ proxies:
       grpc-service-name: vlessgrpc
     udp: true
   - name: 1208_sgcvless_jagoanssh
-    server: *akrab4
+    server: *akrab2
     port: 443
     type: vless
     uuid: 325c3a13-2128-4987-83a3-d1db8fe84e7b
@@ -97,7 +97,7 @@ proxies:
         Host: sgcvless.ipservers.xyz
     udp: true
   - name: 1208_sgm1grpc.serverssh.net
-    server: *akrab4
+    server: *akrab2
     port: 443
     type: vmess
     uuid: 10840958-f3cf-4828-8495-6b12fca6a2b9
