@@ -57,7 +57,7 @@ profile:
     # - "443"
 
 tun:
-  enable: true
+  enable: false
   # # biarkan default utun
   device: utun
   mtu: 9000
