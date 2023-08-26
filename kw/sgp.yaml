@@ -81,36 +81,5 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 1208_sgcvless_jagoanssh
-    server: *akrab2
-    port: 443
-    type: vless
-    uuid: 325c3a13-2128-4987-83a3-d1db8fe84e7b
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sgcvless.ipservers.xyz
-    network: ws
-    ws-opts: 
-      path: /jagoanssh
-      headers: 
-        Host: sgcvless.ipservers.xyz
-    udp: true
-  - name: 1208_sgm1grpc.serverssh.net
-    server: *akrab2
-    port: 443
-    type: vmess
-    uuid: 10840958-f3cf-4828-8495-6b12fca6a2b9
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sgm1grpc.serverip.my.id
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc
-    udp: true
-
-
 
 
