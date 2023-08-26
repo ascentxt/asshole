@@ -55,8 +55,8 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 0408_sgx-1
-    server: *akrab4
+  - name: 0209_sgx-1
+    server: *akrab2
     port: 443
     type: vless
     uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
@@ -66,28 +66,12 @@ proxies:
     servername: sgx-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-akusemua
+      path: /u/opentunnel.net-makanan
       headers:
         Host: sgx-1.openv2ray.com
     udp: true
-  - name: 0408_sgv-1
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-    alterId: 16
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sgv-1.openv2ray.com
-    network: ws
-    ws-opts:
-      path: /u/opentunnel.net-akusemua
-      headers:
-        Host: sgv-1.openv2ray.com
-    udp: true
-  - name: 0408_sgv-4
-    server: *akrab4
+  - name: 0209_sgv-4
+    server: *akrab2
     port: 443
     type: vmess
     uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
@@ -98,23 +82,7 @@ proxies:
     servername: sgv-4.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-akusemua
+      path: /u/opentunnel.net-makanan
       headers:
         Host: sgv-4.openv2ray.com
-    udp: true
-  - name: 0408_sgv-3
-    server: *akrab4
-    port: 80
-    type: vmess
-    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-    alterId: 16
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: sgv-3.openv2ray.com
-    network: ws
-    ws-opts:
-      path: /u/opentunnel.net-akusemua
-      headers:
-        Host: sgv-3.openv2ray.com
     udp: true
