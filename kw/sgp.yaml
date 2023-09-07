@@ -53,6 +53,8 @@ akrab:
   - &akrab51 188.114.97.12
 flex:
   - &flex 104.22.2.25
+vision:
+  - &vision0 104.18.225.52
 
 proxies:
   - name: 0909_sg2lgrpc.mainssh
