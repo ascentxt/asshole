@@ -57,31 +57,29 @@ vision:
   - &vision0 104.18.225.52
 
 proxies:
-  - name: 1509_sg2lgrpc.mainssh
+  - name: 1509_sg2lgrpc
     server: *vision0
-    port: 80
+    port: 443
     type: vless
     uuid: 22ffc823-6944-4eb1-8caf-f1dab70d79e5
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
     servername: sg2lgrpc.mainssh.xyz
     network: grpc
-    grpc-opts: 
+    grpc-opts:
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 1509_sg3lgrpc.mainssh
+  - name: 1509_sg3lgrpc
     server: *vision0
-    port: 80
+    port: 443
     type: vless
     uuid: 1d4d9f81-fb1c-4bba-828e-719ffe2155ec
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
     servername: sg3lgrpc.mainssh.xyz
     network: grpc
-    grpc-opts: 
+    grpc-opts:
       grpc-service-name: vlessgrpc
     udp: true
-
-
