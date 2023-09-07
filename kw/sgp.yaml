@@ -59,11 +59,11 @@ vision:
 proxies:
   - name: 0909_sg2lgrpc.mainssh
     server: *vision0
-    port: 443
+    port: 80
     type: vless
     uuid: ec26c39c-7b18-4701-94ec-a29772053782
     cipher: auto
-    tls: true
+    tls: false
     skip-cert-verify: true
     servername: sg2lgrpc.mainssh.xyz
     network: grpc
@@ -72,11 +72,11 @@ proxies:
     udp: true
   - name: 0909_sg3lgrpc.mainssh
     server: *vision0
-    port: 443
+    port: 80
     type: vless
     uuid: 390f7378-d81a-4e03-bd69-542106591fd7
     cipher: auto
-    tls: true
+    tls: false
     skip-cert-verify: true
     servername: sg3lgrpc.mainssh.xyz
     network: grpc
