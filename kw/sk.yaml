@@ -53,10 +53,12 @@ akrab:
   - &akrab51 188.114.97.12
 flex:
   - &flex 104.22.2.25
+vision:
+  - &vision0 104.18.225.52
 
 proxies:
   - name: 1209_sg2_widakdi
-    server: *akrab2
+    server: *vision0
     port: 80
     type: vmess
     uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
@@ -72,7 +74,7 @@ proxies:
         Host: sg2-v2ray.sshkit.org
     udp: true
   - name: 2509_sg2_ascnt
-    server: *akrab2
+    server: *vision0
     port: 80
     type: vmess
     uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
@@ -88,7 +90,7 @@ proxies:
         Host: sg2-v2ray.sshkit.org
     udp: true
   - name: 0609_sg3_widakdi
-    server: *akrab2
+    server: *vision0
     port: 80
     type: vmess
     uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
@@ -104,7 +106,7 @@ proxies:
         Host: sg3-v2ray.sshkit.org
     udp: true
   - name: 1209_sg1_widakdi
-    server: *akrab2
+    server: *vision0
     port: 80
     type: vmess
     uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
@@ -120,7 +122,7 @@ proxies:
         Host: sg1-v2ray.sshkit.org
     udp: true
   - name: 0609_sg4_ascent
-    server: *akrab2
+    server: *vision0
     port: 80
     type: vmess
     uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
@@ -135,20 +137,3 @@ proxies:
       headers: 
         Host: sg4-v2ray.sshkit.org
     udp: true
-  - name: 1209_sg2_uji
-    server: sg2-v2ray.sshkit.org
-    port: 80
-    type: vmess
-    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: pagead2.googlesyndication.com
-    network: ws
-    ws-opts:
-      path: /sshkit/582191343/64d8aafee995e/
-      headers:
-        Host: sb.scorecardresearch.com
-    udp: true
-
