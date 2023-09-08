@@ -193,7 +193,7 @@ proxy-providers:
   OTHER:
     type: http
     url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/sgp.yaml"
-#    interval: 3600
+    interval: 3600
     path: "./servers/sgp.yaml"
     health-check:
       enable: true
