@@ -22,7 +22,7 @@ geox-url:
   mmdb: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb"
   geoip: "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geoip.dat"
   geosite: "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geosite.dat"
-find-process-mode: strict
+find-process-mode: always
 
 profile:
   store-selected: true
@@ -135,31 +135,31 @@ proxy-groups:
   - name: "🫠🫠"
     type: select
     disable-udp: false
-    proxies: [SSHKIT, SG, OPENTUNNEL, LAINNYA, ID, DIRECT, ]
+    proxies: [SSHKIT, OTHER, DIRECT, ]
   - name: "SSHKIT"
     type: select
     disable-udp: false
     use: [SSHKIT]
-  - name: "SG"
+  - name: "OTHER"
     type: select
     disable-udp: false
-    use: [SG]
-  - name: "OPENTUNNEL"
-    type: select
-    disable-udp: false
-    use: [OPENTUNNEL]
+    use: [OTHER]
+#  - name: "OPENTUNNEL"
+#    type: select
+#    disable-udp: false
+#    use: [OPENTUNNEL]
 #  - name: "MAINSSH"
 #    type: select
 #    disable-udp: false
 #    use: [MAINSSH]
-  - name: "LAINNYA"
-    type: select
-    disable-udp: false
-    use: [LAINNYA]
-  - name: "ID"
-    type: select
-    disable-udp: false
-    use: [ID]
+#  - name: "LAINNYA"
+#    type: select
+#    disable-udp: false
+#    use: [LAINNYA]
+#  - name: "ID"
+#    type: select
+#    disable-udp: false
+#    use: [ID]
 #  - name: BEST-PING
 #    type: url-test
 #    url: http://cp.cloudflare.com/generate_204
@@ -181,19 +181,19 @@ proxy-providers:
 #      enable: true
 #      url: http://www.gstatic.com/generate_204
 #      interval: 300
-  OPENTUNNEL:
-    type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/ot.yaml"
-    interval: 3600
-    path: "./servers/ot.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  SG:
+#  OPENTUNNEL:
+#    type: http
+#    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/ot.yaml"
+#    interval: 3600
+#    path: "./servers/ot.yaml"
+#    health-check:
+#      enable: true
+#      url: http://www.gstatic.com/generate_204
+#      interval: 300
+  OTHER:
     type: http
     url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/sgp.yaml"
-    interval: 3600
+#    interval: 3600
     path: "./servers/sgp.yaml"
     health-check:
       enable: true
@@ -208,24 +208,24 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  LAINNYA:
-    type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/ln.yaml"
-    interval: 3600
-    path: "./servers/ln.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  ID:
-    type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/idn.yaml"
-    interval: 3600
-    path: "./servers/idn.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+#  LAINNYA:
+#    type: http
+#    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/ln.yaml"
+#    interval: 3600
+#    path: "./servers/ln.yaml"
+#    health-check:
+#      enable: true
+#      url: http://www.gstatic.com/generate_204
+#      interval: 300
+#  ID:
+#    type: http
+#    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/idn.yaml"
+#    interval: 3600
+#    path: "./servers/idn.yaml"
+#    health-check:
+#      enable: true
+#      url: http://www.gstatic.com/generate_204
+#      interval: 300
 rules:
   - PROCESS-NAME, com.asobimo.toramonline, DIRECT
   - MATCH,🫠🫠
