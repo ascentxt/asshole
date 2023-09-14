@@ -57,11 +57,11 @@ vision:
   - &vision0 104.18.225.52
 
 proxies:
-  - name: 1509_sg2lgrpc
+  - name: 2209_sg2lgrpc
     server: *vision0
     port: 443
     type: vless
-    uuid: 22ffc823-6944-4eb1-8caf-f1dab70d79e5
+    uuid: 76d6cdf2-f78c-4496-914e-398aeb9d02b7
     cipher: auto
     tls: true
     skip-cert-verify: true
