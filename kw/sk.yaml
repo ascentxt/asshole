@@ -89,22 +89,6 @@ proxies:
       headers: 
         Host: sg2-v2ray.sshkit.org
     udp: true
-  - name: 0609_sg3_widakdi
-    server: *vision0
-    port: 80
-    type: vmess
-    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    servername: sg3-v2ray.sshkit.org
-    network: ws
-    ws-opts: 
-      path: /sshkit/582191343/64d03dc15df71/
-      headers: 
-        Host: sg3-v2ray.sshkit.org
-    udp: true
   - name: 1209_sg1_widakdi
     server: *vision0
     port: 80
@@ -117,23 +101,7 @@ proxies:
     servername: sg1-v2ray.sshkit.org
     network: ws
     ws-opts: 
-      path: /sshkit/582191343/64d8ab916c515/
+      path: /sshkit/1373695293/650392a35b35f/
       headers: 
         Host: sg1-v2ray.sshkit.org
-    udp: true
-  - name: 0609_sg4_ascent
-    server: *vision0
-    port: 80
-    type: vmess
-    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: sg4-v2ray.sshkit.org
-    network: ws
-    ws-opts: 
-      path: /sshkit/582191343/64d03e87eefcf/
-      headers: 
-        Host: sg4-v2ray.sshkit.org
     udp: true
