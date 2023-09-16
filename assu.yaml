@@ -132,7 +132,7 @@ hosts:
 
 proxies:
 proxy-groups:
-  - name: "🫠🫠"
+  - name: "VPN"
     type: select
     disable-udp: false
     proxies: [SSHKIT, OTHER, DIRECT, ]
@@ -144,52 +144,26 @@ proxy-groups:
     type: select
     disable-udp: false
     use: [OTHER]
-#  - name: "OPENTUNNEL"
-#    type: select
-#    disable-udp: false
-#    use: [OPENTUNNEL]
-#  - name: "MAINSSH"
-#    type: select
-#    disable-udp: false
-#    use: [MAINSSH]
-#  - name: "LAINNYA"
-#    type: select
-#    disable-udp: false
-#    use: [LAINNYA]
-#  - name: "ID"
-#    type: select
-#    disable-udp: false
-#    use: [ID]
 #  - name: BEST-PING
 #    type: url-test
 #    url: http://cp.cloudflare.com/generate_204
 #    ninterval: 300
-#    use: [MAINSSH,OPENTUNNEL,SG, SSHKIT, LAINNYA, ID]
+#    use: [SSHKIT, OTHER]
 #  - name: FALLBACK
 #    type: fallback
 #    url: http://cp.cloudflare.com/generate_204
 #    ninterval: 300
-#    use: [MAINSSH,OPENTUNNEL,SG, SSHKIT, LAINNYA, ID]
+#    use: [SSHKIT, OTHER]
+  - name: "AdBlock"
+    type: select
+    disable-udp: false
+    proxies: [REJECT, VPN]
+  - name: "18+"
+    type: select
+    disable-udp: false
+    proxies: [REJECT, VPN]
 
 proxy-providers:
-#  MAINSSH:
-#    type: http
-#    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/mainssh.yaml"
-#    interval: 3600
-#    path: "./servers/mainssh.yaml"
-#    health-check:
-#      enable: true
-#      url: http://www.gstatic.com/generate_204
-#      interval: 300
-#  OPENTUNNEL:
-#    type: http
-#    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/ot.yaml"
-#    interval: 3600
-#    path: "./servers/ot.yaml"
-#    health-check:
-#      enable: true
-#      url: http://www.gstatic.com/generate_204
-#      interval: 300
   OTHER:
     type: http
     url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/sgp.yaml"
@@ -208,24 +182,38 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-#  LAINNYA:
-#    type: http
-#    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/ln.yaml"
-#    interval: 3600
-#    path: "./servers/ln.yaml"
-#    health-check:
-#      enable: true
-#      url: http://www.gstatic.com/generate_204
-#      interval: 300
-#  ID:
-#    type: http
-#    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/idn.yaml"
-#    interval: 3600
-#    path: "./servers/idn.yaml"
-#    health-check:
-#      enable: true
-#      url: http://www.gstatic.com/generate_204
-#      interval: 300
+      
+rule-providers:
+  18+:
+    type: http
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/18.yaml"
+    interval: 3600
+    behavior: domain
+    path: "./provider/rules/18+.yaml"
+  Nsfw:
+    type: http
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/nswf.yaml"
+    interval: 3600
+    behavior: domain
+    path: "./provider/rules/nsfw.yaml"
+  Basicads:
+    type: http
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/basicads.yaml"
+    interval: 3600
+    behavior: domain
+    path: "./provider/rules/basicads.yaml"
+  Personalads:
+    type: http
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/personalads.yaml"
+    interval: 3600
+    behavior: classical
+    path: "./provider/rules/personalads.yaml"
+
 rules:
-  - PROCESS-NAME, com.asobimo.toramonline, DIRECT
-  - MATCH,🫠🫠
+  - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+  - DOMAIN-SUFFIX,googlesyndication.com,VPN
+  - RULE-SET,Personalads,AdBlock
+  - RULE-SET,Basicads,AdBlock
+  - RULE-SET,18+,18+
+  - RULE-SET,Nsfw,18+
+  - MATCH,VPN
