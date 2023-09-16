@@ -154,10 +154,14 @@ proxy-groups:
 #    url: http://cp.cloudflare.com/generate_204
 #    ninterval: 300
 #    use: [SSHKIT, OTHER]
-  - name: "18+"
+  - name: "AdBlock"
     type: select
     disable-udp: false
     proxies: [VPN, REJECT]
+  - name: "18+"
+    type: select
+    disable-udp: false
+    proxies: [REJECT, VPN]
 
 proxy-providers:
   OTHER:
@@ -188,9 +192,20 @@ rule-providers:
     type: file
     behavior: domain
     path: "./provider/rule/nsfw.yaml"
+  Basicads:
+    type: file
+    behavior: domain
+    path: "./provider/rule/basicads.yaml"
+  Personalads:
+    type: file
+    behavior: classical
+    path: "./provider/rule/personalads.yaml"
+
 rules:
   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
   - DOMAIN-SUFFIX,googlesyndication.com,VPN
+  - RULE-SET,Personalads,AdBlock
+  - RULE-SET,Basicads,AdBlock
   - RULE-SET,18+,18+
   - RULE-SET,Nsfw,18+
   - MATCH,VPN
