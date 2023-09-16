@@ -158,7 +158,7 @@ proxy-groups:
     type: select
     disable-udp: false
     proxies: [REJECT, VPN]
-  - name: "18+"
+  - name: "ANU"
     type: select
     disable-udp: false
     proxies: [REJECT, VPN]
@@ -214,6 +214,6 @@ rules:
   - DOMAIN-SUFFIX,googlesyndication.com,VPN
   - RULE-SET,Personalads,AdBlock
   - RULE-SET,Basicads,AdBlock
-  - RULE-SET,18+,18+
-  - RULE-SET,Nsfw,18+
+  - RULE-SET,18+,ANU
+  - RULE-SET,Nsfw,ANU
   - MATCH,VPN
