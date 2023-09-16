@@ -157,7 +157,7 @@ proxy-groups:
   - name: "AdBlock"
     type: select
     disable-udp: false
-    proxies: [VPN, REJECT]
+    proxies: [REJECT, VPN]
   - name: "18+"
     type: select
     disable-udp: false
