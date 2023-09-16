@@ -22,7 +22,7 @@ geox-url:
   mmdb: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb"
   geoip: "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geoip.dat"
   geosite: "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geosite.dat"
-find-process-mode: strict
+find-process-mode: always
 
 profile:
   store-selected: true
@@ -56,18 +56,18 @@ profile:
     # - "80"
     # - "443"
 
-# tun:
-  # enable: false
+tun:
+  enable: false
   # # biarkan default utun
-  # device: utun
-  # mtu: 9000
+  device: utun
+  mtu: 9000
   # # gvisor / lwip / system
-  # stack: system
-  # dns-hijack:
-    # - any:53
+  stack: system
+  dns-hijack:
+    - any:53
   # # bagi yg awam, kalau TUN on wajib true, only armv8/64
-  # auto-route: true
-  # auto-detect-interface: true
+  auto-route: true
+  auto-detect-interface: true
   # # end
   # inet4-address: 172.19.0.1/30
   # inet6-address: [fdfe:dcba:9876::1/126]
@@ -132,100 +132,65 @@ hosts:
 
 proxies:
 proxy-groups:
-  - name: "🫠🫠"
+  - name: "VPN"
     type: select
     disable-udp: false
-    proxies: [SSHKIT, SG, OPENTUNNEL, LAINNYA, ID, DIRECT, ]
+    proxies: [SSHKIT, OTHER, DIRECT, ]
   - name: "SSHKIT"
     type: select
     disable-udp: false
     use: [SSHKIT]
-  - name: "SG"
+  - name: "OTHER"
     type: select
     disable-udp: false
-    use: [SG]
-  - name: "OPENTUNNEL"
-    type: select
-    disable-udp: false
-    use: [OPENTUNNEL]
-#  - name: "MAINSSH"
-#    type: select
-#    disable-udp: false
-#    use: [MAINSSH]
-  - name: "LAINNYA"
-    type: select
-    disable-udp: false
-    use: [LAINNYA]
-  - name: "ID"
-    type: select
-    disable-udp: false
-    use: [ID]
+    use: [OTHER]
 #  - name: BEST-PING
 #    type: url-test
 #    url: http://cp.cloudflare.com/generate_204
 #    ninterval: 300
-#    use: [MAINSSH,OPENTUNNEL,SG, SSHKIT, LAINNYA, ID]
+#    use: [SSHKIT, OTHER]
 #  - name: FALLBACK
 #    type: fallback
 #    url: http://cp.cloudflare.com/generate_204
 #    ninterval: 300
-#    use: [MAINSSH,OPENTUNNEL,SG, SSHKIT, LAINNYA, ID]
+#    use: [SSHKIT, OTHER]
+  - name: "18+"
+    type: select
+    disable-udp: false
+    proxies: [VPN, REJECT]
 
 proxy-providers:
-#  MAINSSH:
-#    type: http
-#    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/mainssh.yaml"
-#    interval: 3600
-#    path: "./server/mainssh.yaml"
-#    health-check:
-#      enable: true
-#      url: http://www.gstatic.com/generate_204
-#      interval: 300
-  OPENTUNNEL:
+  OTHER:
     type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/opentunnel.yaml"
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/sgp.yaml"
     interval: 3600
-    path: "./server/opentunnel.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  SG:
-    type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/sg.yaml"
-    interval: 3600
-    path: "./server/sg.yaml"
+    path: "./servers/sgp.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   SSHKIT:
     type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/sshkit.yaml"
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/sk.yaml"
     interval: 3600
-    path: "./server/sshkit.yaml"
+    path: "./servers/sk.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  LAINNYA:
-    type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/lain.yaml"
-    interval: 3600
-    path: "./server/lain.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  ID:
-    type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/id.yaml"
-    interval: 3600
-    path: "./server/id.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+      
+rule-providers:
+  18+:
+    type: file
+    behavior: domain
+    path: "./provider/rule/18+.yaml"
+  Nsfw:
+    type: file
+    behavior: domain
+    path: "./provider/rule/nsfw.yaml"
 rules:
-  - PROCESS-NAME, com.asobimo.toramonline, DIRECT
-  - MATCH,🫠🫠
+  - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+  - DOMAIN-SUFFIX,googlesyndication.com,VPN
+  - RULE-SET,18+,18+
+  - RULE-SET,Nsfw,18+
+  - MATCH,VPN
