@@ -70,11 +70,11 @@ proxies:
     grpc-opts:
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 1509_sg3lgrpc
+  - name: 2409_sg3lgrpc
     server: *vision0
     port: 443
     type: vless
-    uuid: 1d4d9f81-fb1c-4bba-828e-719ffe2155ec
+    uuid: 2f70052b-335e-4b18-95bd-b3b36f0bb8dc
     cipher: auto
     tls: true
     skip-cert-verify: true
