@@ -83,7 +83,7 @@ proxies:
     grpc-opts:
       grpc-service-name: vlessgrpc
     udp: true
-- name: 0410_idlgrpc
+  - name: 0410_idlgrpc
     server: *vision0
     port: 443
     type: vless
