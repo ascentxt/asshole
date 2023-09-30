@@ -96,3 +96,18 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
+  - name: 3010_sgcvless
+    server: *vision0
+    port: 443
+    type: vless
+    uuid: fc63cbfd-d94a-4aa4-9c3d-4c6108257e50
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgcvless.ipservers.xyz
+    network: ws
+    ws-opts:
+      path: /jagoanssh
+      headers:
+        Host: sgcvless.ipservers.xyz
+    udp: true
