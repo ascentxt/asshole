@@ -61,7 +61,7 @@ proxies:
     server: *vision0
     port: 443
     type: vless
-    uuid: ae20f24b-aa85-4627-89c0-adda47ab039f
+    uuid: 00995f23-172e-4a94-8bd9-9b62f2403423
     cipher: auto
     tls: true
     skip-cert-verify: true
