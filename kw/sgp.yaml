@@ -83,19 +83,6 @@ proxies:
     grpc-opts:
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 1210_idlgrpc
-    server: *vision0
-    port: 443
-    type: vless
-    uuid: b77a3ee9-20a9-48ad-ae21-b9fd3938fbaf
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idlgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: vlessgrpc
-    udp: true
   - name: 3010_sgcvless
     server: *vision0
     port: 443
