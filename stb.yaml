@@ -9,7 +9,6 @@ proxy-groups:
   - OTHER
   - ID
   - LB ALL
-  - SPEEDTEST
   - DIRECT
   
 - name: FALLBACK
@@ -58,20 +57,21 @@ proxy-groups:
   - ID
   url: http://www.gstatic.com/generate_204
   interval: '300'
-- name: SPEEDTEST
+
+- name: AdBlock
   type: select
   disable-udp: false
   proxies:
-  - SSHKIT
-  - OTHER
-  - ID
-  - LB ALL
-  use:
-  - sshkit
-  - other
-  - id
-  url: http://www.gstatic.com/generate_204
-  interval: '30'
+  - REJECT
+  - VPN
+  
+- name: ANU
+  type: select
+  disable-udp: false
+  proxies: 
+  - REJECT
+  - VPN
+
 proxy-providers:
   sshkit:
     type: http
@@ -105,13 +105,37 @@ rules:
 - DST-PORT,7895,REJECT
 - DST-PORT,7892,REJECT
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- RULE-SET,rule_Speedtest, SPEEDTEST
+- RULE-SET,Personalads,AdBlock
+- RULE-SET,Basicads,AdBlock
+- RULE-SET,18+,ANU
+- RULE-SET,Nsfw,ANU
 - MATCH,VPN
 rule-providers:
-  rule_Speedtest:
-    type: file
+  18+:
+    type: http
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/18.yaml"
+    interval: 3600
+    behavior: domain
+    path: "./rule_provider/18+.yaml"
+  Nsfw:
+    type: http
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/nswf.yaml"
+    interval: 3600
+    behavior: domain
+    path: "./rule_provider/nsfw.yaml"
+  Basicads:
+    type: http
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/basicads.yaml"
+    interval: 3600
+    behavior: domain
+    path: "./rule_provider/basicads.yaml"
+  Personalads:
+    type: http
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/personalads.yaml"
+    interval: 3600
     behavior: classical
-    path: "./rule_provider/lb-speedtest.yaml"
+    path: "./rule_provider/personalads.yaml"
+    
 unified-delay: true
 redir-port: 7892
 tproxy-port: 7895
