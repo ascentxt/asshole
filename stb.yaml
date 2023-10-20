@@ -1,5 +1,26 @@
 ---
 proxy-groups:
+- name: VPN
+  type: select
+  disable-udp: false
+  proxies:
+  - FALLBACK
+  - SSHKIT
+  - OTHER
+  - ID
+  - LB ALL
+  - SPEEDTEST
+  - DIRECT
+  
+- name: FALLBACK
+  type: fallback
+  url: http://cp.cloudflare.com/generate_204
+  interval: 300
+  use: 
+  - sshkit
+  - other
+  - id
+  
 - name: SSHKIT
   type: load-balance
   strategy: round-robin
@@ -85,7 +106,7 @@ rules:
 - DST-PORT,7892,REJECT
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - RULE-SET,rule_Speedtest, SPEEDTEST
-- MATCH,GLOBAL
+- MATCH,VPN
 rule-providers:
   rule_Speedtest:
     type: file
@@ -151,3 +172,4 @@ profile:
   store-fake-ip: true
 authentication:
 - Clash:oHeRh67o
+
