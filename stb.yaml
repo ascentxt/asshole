@@ -1,0 +1,153 @@
+---
+proxy-groups:
+- name: SSHKIT
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - sshkit
+  url: http://www.gstatic.com/generate_204
+  interval: '300'
+
+- name: OTHER
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - other
+  url: http://www.gstatic.com/generate_204
+  interval: '300'
+
+- name: ID
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - id
+  url: http://www.gstatic.com/generate_204
+  interval: '300'
+  
+- name: LB ALL
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
+  proxies:
+  - SSHKIT
+  - OTHER
+  - ID
+  url: http://www.gstatic.com/generate_204
+  interval: '300'
+- name: SPEEDTEST
+  type: select
+  disable-udp: false
+  proxies:
+  - SSHKIT
+  - OTHER
+  - ID
+  - LB ALL
+  use:
+  - sshkit
+  - other
+  - id
+  url: http://www.gstatic.com/generate_204
+  interval: '30'
+proxy-providers:
+  sshkit:
+    type: http
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/sk.yaml"
+    interval: 3600
+    path: "./proxy_provider/sshkit.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  other:
+    type: http
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/sgp.yaml"
+    interval: 3600
+    path: "./proxy_provider/other.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  id:
+    type: http
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/id.yaml"
+    interval: 3600
+    path: "./proxy_provider/id.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+
+rules:
+- DST-PORT,7895,REJECT
+- DST-PORT,7892,REJECT
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- RULE-SET,rule_Speedtest, SPEEDTEST
+- MATCH,GLOBAL
+rule-providers:
+  rule_Speedtest:
+    type: file
+    behavior: classical
+    path: "./rule_provider/lb-speedtest.yaml"
+unified-delay: true
+redir-port: 7892
+tproxy-port: 7895
+port: 7890
+socks-port: 7891
+mixed-port: 7893
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: skipper
+bind-address: "*"
+external-ui: "/usr/share/openclash/ui"
+ipv6: false
+geodata-mode: false
+geodata-loader: memconservative
+tcp-concurrent: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+  - dhcp://"eth1"
+  - dhcp://"eth2"
+  - 192.168.9.1
+  - 192.168.8.1
+  - 8.8.8.8
+  - 8.8.4.4
+  - https://dns.adguard.com/dns-query
+  - https://dns.google/dns-query
+  - tls://dns.adguard.com
+  - tls://dns.google
+  - 192.168.14.62
+  - 192.168.42.129
+  default-nameserver:
+  - 192.168.9.1
+  - 192.168.8.1
+  - 8.8.8.8
+  - 8.8.4.4
+  - 192.168.14.62
+  - 192.168.42.129
+sniffer:
+  enable: true
+  sniffing:
+  - tls
+  - http
+tun:
+  enable: true
+  stack: system
+  device: utun
+  auto-route: false
+  auto-detect-interface: false
+  dns-hijack:
+  - tcp://any:53
+profile:
+  store-selected: true
+  store-fake-ip: true
+authentication:
+- Clash:oHeRh67o
