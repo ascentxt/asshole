@@ -1,14 +1,45 @@
----
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: skipper
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+
 proxy-groups:
 - name: VPN
   type: select
   disable-udp: false
   proxies:
   - FALLBACK
-  - SSHKIT
-  - OTHER
-  - ID
   - LB ALL
+  - MANUAL
   - DIRECT
   
 - name: FALLBACK
@@ -19,44 +50,25 @@ proxy-groups:
   - sshkit
   - other
   - id
-  
-- name: SSHKIT
+ 
+- name: LB ALL
   type: load-balance
   strategy: round-robin
   disable-udp: false
   use:
   - sshkit
-  url: http://www.gstatic.com/generate_204
-  interval: '300'
-
-- name: OTHER
-  type: load-balance
-  strategy: round-robin
-  disable-udp: false
-  use:
   - other
-  url: http://www.gstatic.com/generate_204
-  interval: '300'
-
-- name: ID
-  type: load-balance
-  strategy: round-robin
-  disable-udp: false
-  use:
   - id
   url: http://www.gstatic.com/generate_204
   interval: '300'
-  
-- name: LB ALL
-  type: load-balance
-  strategy: round-robin
+
+- name: MANUAL
+  type: select
   disable-udp: false
-  proxies:
-  - SSHKIT
-  - OTHER
-  - ID
-  url: http://www.gstatic.com/generate_204
-  interval: '300'
+  use:
+  - sshkit
+  - other
+  - id
 
 - name: AdBlock
   type: select
@@ -101,15 +113,6 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 
-rules:
-- DST-PORT,7895,REJECT
-- DST-PORT,7892,REJECT
-- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- RULE-SET,Personalads,AdBlock
-- RULE-SET,Basicads,AdBlock
-- RULE-SET,18+,ANU
-- RULE-SET,Nsfw,ANU
-- MATCH,VPN
 rule-providers:
   18+:
     type: http
@@ -135,64 +138,16 @@ rule-providers:
     interval: 3600
     behavior: classical
     path: "./rule_provider/personalads.yaml"
-    
-unified-delay: true
-redir-port: 7892
-tproxy-port: 7895
-port: 7890
-socks-port: 7891
-mixed-port: 7893
-mode: rule
-log-level: silent
-allow-lan: true
-external-controller: 0.0.0.0:9090
-secret: skipper
-bind-address: "*"
-external-ui: "/usr/share/openclash/ui"
-ipv6: false
-geodata-mode: false
-geodata-loader: memconservative
-tcp-concurrent: true
-dns:
-  enable: true
-  ipv6: false
-  enhanced-mode: redir-host
-  listen: 0.0.0.0:7874
-  nameserver:
-  - dhcp://"eth1"
-  - dhcp://"eth2"
-  - 192.168.9.1
-  - 192.168.8.1
-  - 8.8.8.8
-  - 8.8.4.4
-  - https://dns.adguard.com/dns-query
-  - https://dns.google/dns-query
-  - tls://dns.adguard.com
-  - tls://dns.google
-  - 192.168.14.62
-  - 192.168.42.129
-  default-nameserver:
-  - 192.168.9.1
-  - 192.168.8.1
-  - 8.8.8.8
-  - 8.8.4.4
-  - 192.168.14.62
-  - 192.168.42.129
-sniffer:
-  enable: true
-  sniffing:
-  - tls
-  - http
-tun:
-  enable: true
-  stack: system
-  device: utun
-  auto-route: false
-  auto-detect-interface: false
-  dns-hijack:
-  - tcp://any:53
-profile:
-  store-selected: true
-  store-fake-ip: true
+
+rules:
+- DST-PORT,7895,REJECT
+- DST-PORT,7892,REJECT
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- RULE-SET,Personalads,AdBlock
+- RULE-SET,Basicads,AdBlock
+- RULE-SET,18+,ANU
+- RULE-SET,Nsfw,ANU
+- MATCH,VPN
+
 authentication:
 - Clash:oHeRh67o
