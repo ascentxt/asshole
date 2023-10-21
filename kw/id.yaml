@@ -57,11 +57,11 @@ vision:
   - &vision0 104.18.225.52
 
 proxies:
-  - name: 1210_idlgrpc
+  - name: 2810_idlgrpc
     server: *vision0
     port: 443
     type: vless
-    uuid: b77a3ee9-20a9-48ad-ae21-b9fd3938fbaf
+    uuid: 5b63ca89-3a89-405f-b9a7-a4979aee432b
     cipher: auto
     tls: true
     skip-cert-verify: true
