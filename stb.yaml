@@ -38,7 +38,6 @@ proxy-groups:
   disable-udp: false
   proxies:
   - FALLBACK
-  - LB ALL
   - MANUAL
   - DIRECT
   
@@ -51,17 +50,6 @@ proxy-groups:
   - other
   - id
  
-- name: LB ALL
-  type: load-balance
-  strategy: round-robin
-  disable-udp: false
-  use:
-  - sshkit
-  - other
-  - id
-  url: http://www.gstatic.com/generate_204
-  interval: '300'
-
 - name: MANUAL
   type: select
   disable-udp: false
