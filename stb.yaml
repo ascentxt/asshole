@@ -1,88 +1,30 @@
-port: 7890
-socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-tproxy-port: 7895
-ipv6: false
-mode: rule
-log-level: silent
-allow-lan: true
-external-controller: 0.0.0.0:9090
-secret: skipper
-bind-address: "*"
-unified-delay: true
-profile:
-  store-selected: true
-dns:
-  enable: true
-  ipv6: false
-  enhanced-mode: redir-host
-  listen: 0.0.0.0:7874
-  nameserver:
-    - 8.8.8.8
-    - 1.0.0.1
-    - https://dns.google/dns-query
-  fallback:
-    - 1.1.1.1
-    - 8.8.4.4
-    - https://cloudflare-dns.com/dns-query
-    - 112.215.203.254
-  default-nameserver:
-    - 8.8.8.8
-    - 1.1.1.1
-    - 112.215.203.254
-
+proxies:
 proxy-groups:
-- name: VPN
-  type: select
-  disable-udp: false
-  proxies:
-  - FALLBACK
-  - MANUAL
-  - DIRECT
-  
-- name: FALLBACK
-  type: fallback
-  url: http://cp.cloudflare.com/generate_204
-  interval: 300
-  use: 
-  - sshkit
-  - other
-  - id
- 
-- name: MANUAL
-  type: select
-  disable-udp: false
-  use:
-  - sshkit
-  - other
-  - id
-
-- name: AdBlock
-  type: select
-  disable-udp: false
-  proxies:
-  - REJECT
-  - VPN
-  
-- name: ANU
-  type: select
-  disable-udp: false
-  proxies: 
-  - REJECT
-  - VPN
+  - name: "VPN"
+    type: select
+    disable-udp: false
+    proxies: [FALLBACK, MANUAL, DIRECT,]
+  - name: FALLBACK
+    type: fallback
+    url: http://cp.cloudflare.com/generate_204
+    interval: '300'
+    tolerance: '150'
+    use: [SSHKIT, OTHER, ID]
+  - name: "MANUAL"
+    type: select
+    disable-udp: false
+    use: [SSHKIT, OTHER, ID]
+  - name: "AdBlock"
+    type: select
+    disable-udp: false
+    proxies: [REJECT, VPN]
+  - name: "ANU"
+    type: select
+    disable-udp: false
+    proxies: [REJECT, VPN]
 
 proxy-providers:
-  sshkit:
-    type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/sk.yaml"
-    interval: 3600
-    path: "./proxy_provider/sshkit.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  other:
+  OTHER:
     type: http
     url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/sgp.yaml"
     interval: 3600
@@ -91,7 +33,16 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  id:
+  SSHKIT:
+    type: http
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/sk.yaml"
+    interval: 3600
+    path: "./proxy_provider/sshkit.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  ID:
     type: http
     url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/id.yaml"
     interval: 3600
@@ -100,42 +51,63 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-
+      
 rule-providers:
   18+:
     type: http
     url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/18.yaml"
     interval: 3600
     behavior: domain
-    path: "./rule_provider/18+.yaml"
+    path: "./provider/rules/18+.yaml"
   Nsfw:
     type: http
     url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/nswf.yaml"
     interval: 3600
     behavior: domain
-    path: "./rule_provider/nsfw.yaml"
+    path: "./provider/rules/nsfw.yaml"
   Basicads:
     type: http
     url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/basicads.yaml"
     interval: 3600
     behavior: domain
-    path: "./rule_provider/basicads.yaml"
+    path: "./provider/rules/basicads.yaml"
   Personalads:
     type: http
     url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/personalads.yaml"
     interval: 3600
     behavior: classical
-    path: "./rule_provider/personalads.yaml"
+    path: "./provider/rules/personalads.yaml"
 
 rules:
-- DST-PORT,7895,REJECT
-- DST-PORT,7892,REJECT
-- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- RULE-SET,Personalads,AdBlock
-- RULE-SET,Basicads,AdBlock
-- RULE-SET,18+,ANU
-- RULE-SET,Nsfw,ANU
-- MATCH,VPN
+  - DST-PORT,7895,REJECT
+  - DST-PORT,7892,REJECT
+  - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+  - DST-PORT,22,VPN
+  - RULE-SET,Personalads,AdBlock
+  - RULE-SET,Basicads,AdBlock
+  - RULE-SET,18+,ANU
+  - RULE-SET,Nsfw,ANU
+  - MATCH,VPN
+
+dns:
+  nameserver:
+  - dhcp://"eth1"
+  - dhcp://"wwan0"
+  - dhcp://"usb0"
+  - https://dns-google.com/dns-query
+  - tls://dns-google.com/
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host(tun mode)
+  fake-ip-range: 198.18.0.1/16
+  listen: 127.0.0.1:7874
+  fake-ip-filter:
+  - "+.*"
+  default-nameserver:
+  - 10.10.8.1
+  - 192.168.8.1
+redir-port: 7892
+tcp-concurrent: true
 
 authentication:
 - Clash:oHeRh67o
