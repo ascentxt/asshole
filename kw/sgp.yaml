@@ -57,7 +57,7 @@ vision:
   - &vision0 104.18.225.52
 
 proxies:
-  - name: 2210_sg2lgrpc
+  - name: 2910_sg2lgrpc
     server: *vision0
     port: 443
     type: vless
@@ -70,7 +70,7 @@ proxies:
     grpc-opts:
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 2210_sg3lgrpc
+  - name: 2910_sg3lgrpc
     server: *vision0
     port: 443
     type: vless
