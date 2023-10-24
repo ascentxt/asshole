@@ -70,7 +70,7 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-  - name: graris
+  - name: idch.lunoxx.gay
     server: *vision0
     port: 443
     type: vless
@@ -84,4 +84,34 @@ proxies:
       path: /vless
       headers:
         Host: idch.lunoxx.gay
+    udp: true
+  - name: edypler.lunoxx.gay
+    server: *vision0
+    port: 443
+    type: vless
+    uuid: 51e8eb23-4ca5-4984-91f7-473daa3e5124
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: edypler.lunoxx.gay
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: edypler.lunoxx.gay
+    udp: true
+  - name: id.lunoxx.gay
+    server: *vision0
+    port: 443
+    type: vless
+    uuid: a3ababd5-e455-4128-a3ec-05b01bc61d07
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id.lunoxx.gay
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: id.lunoxx.gay
     udp: true
