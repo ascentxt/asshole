@@ -70,3 +70,18 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
+  - name: (EdyJawa) [VLESS - ws] TLS
+    server: *vision0
+    port: 443
+    type: vless
+    uuid: fd6ccff7-385f-476e-acf4-2ecb3729ff70
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idch.lunoxx.gay
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: idch.lunoxx.gay
+    udp: true
