@@ -70,7 +70,7 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-  - name: gratisan
+  - name: graris
     server: *vision0
     port: 443
     type: vless
