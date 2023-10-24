@@ -70,7 +70,7 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-  - name: (EdyJawa) [VLESS - ws] TLS
+  - name: gratisan
     server: *vision0
     port: 443
     type: vless
