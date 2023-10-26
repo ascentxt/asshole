@@ -57,7 +57,7 @@ vision:
   - &vision0 104.18.225.52
 
 proxies:
-  - name: 2511_sg1
+  - name: 2511_sg1_widakdi
     server: *vision0
     port: 80
     type: vmess
@@ -65,10 +65,11 @@ proxies:
     alterId: 0
     cipher: auto
     tls: false
-    skip-cert-verify: false
+    skip-cert-verify: true
     servername: vmess-sg1.sshkit.org
     network: ws
-    ws-opts: 
+    ws-opts:
       path: /sshkit/582191343/653a4ab2bd54a/
-      headers: 
+      headers:
         Host: vmess-sg1.sshkit.org
+    udp: true
