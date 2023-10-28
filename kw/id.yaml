@@ -90,13 +90,14 @@ proxies:
     port: 80
     type: vmess
     uuid: 8129da3f-bcc4-4511-96a5-d6d0caa63838
+    alterId: 0
     cipher: auto
     tls: false
     skip-cert-verify: true
     servername: edypler.lunoxx.gay
     network: ws
     ws-opts:
-      path: /vless
+      path: /vmess
       headers:
         Host: edypler.lunoxx.gay
     udp: true
