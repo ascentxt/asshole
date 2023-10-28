@@ -57,11 +57,11 @@ vision:
   - &vision0 104.18.225.52
 
 proxies:
-  - name: 2910_sg2lgrpc
+  - name: 0511_sg2lgrpc
     server: *vision0
     port: 443
     type: vless
-    uuid: f74ce745-7cd1-4122-bc94-647781e0e531
+    uuid: 40c39a4a-6f2e-4527-96aa-2c83ed89bf5b
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -70,11 +70,11 @@ proxies:
     grpc-opts:
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 2910_sg3lgrpc
+  - name: 0511_sg3lgrpc
     server: *vision0
     port: 443
     type: vless
-    uuid: d5e776b6-c7a1-4612-babb-4a933dbe4f09
+    uuid: 94d1d785-2e68-4f52-9753-8636d02a7d5f
     cipher: auto
     tls: true
     skip-cert-verify: true
