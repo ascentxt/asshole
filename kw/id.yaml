@@ -87,11 +87,11 @@ proxies:
     udp: true
   - name: edypler.lunoxx.gay
     server: *vision0
-    port: 443
-    type: vless
-    uuid: 51e8eb23-4ca5-4984-91f7-473daa3e5124
+    port: 80
+    type: vmess
+    uuid: 8129da3f-bcc4-4511-96a5-d6d0caa63838
     cipher: auto
-    tls: true
+    tls: false
     skip-cert-verify: true
     servername: edypler.lunoxx.gay
     network: ws
