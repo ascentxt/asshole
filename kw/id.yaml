@@ -57,6 +57,21 @@ vision:
   - &vision0 104.18.225.52
 
 proxies:
+  - name: 0611_idx-1
+    server: *vision0
+    port: 443
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idx-1.openv2ray.com
+    network: ws
+    ws-opts:
+      path: /u/opentunnel.net-gratisancuk
+      headers:
+        Host: idx-1.openv2ray.com
+    udp: true
   - name: 0411_idlgrpc
     server: *vision0
     port: 443
