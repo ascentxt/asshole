@@ -85,22 +85,6 @@ proxies:
       headers:
         Host: idch.lunoxx.gay
     udp: true
-  - name: edypler.lunoxx.gay
-    server: *vision0
-    port: 80
-    type: vmess
-    uuid: 8129da3f-bcc4-4511-96a5-d6d0caa63838
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: edypler.lunoxx.gay
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: edypler.lunoxx.gay
-    udp: true
   - name: id.lunoxx.gay
     server: *vision0
     port: 443
@@ -115,4 +99,19 @@ proxies:
       path: /vless
       headers:
         Host: id.lunoxx.gay
+    udp: true
+  - name: edtpler.lunoxx.gay
+    server: *vision0
+    port: 443
+    type: vless
+    uuid: 51e8eb23-4ca5-4984-91f7-473daa3e5124
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: edypler.lunoxx.gay
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: edypler.lunoxx.gay
     udp: true
