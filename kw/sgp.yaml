@@ -57,6 +57,22 @@ vision:
   - &vision0 104.18.225.52
 
 proxies:
+  - name: 3011_gamingssh
+    server: *vision0
+    port: 443
+    type: vmess
+    uuid: 4f3b9119-1de4-4449-b018-1278ac0ffa77
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg.serverfast.pw
+    network: ws
+    ws-opts:
+      path: /v2ray-vmess/tls
+      headers:
+        Host: sg.serverfast.pw
+    udp: true
   - name: 0511_sg2lgrpc
     server: *vision0
     port: 443
