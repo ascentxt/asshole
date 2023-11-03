@@ -73,6 +73,22 @@ proxies:
       headers:
         Host: sg.serverfast.pw
     udp: true
+  - name: 2811_sg1_widakdi
+    server: *vision0
+    port: 80
+    type: vmess
+    uuid: e620d600-ee19-4012-a96c-968e85a52de9
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: vmess-sg1.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/582191343/653e688d97744/
+      headers:
+        Host: vmess-sg1.sshkit.org
+    udp: true
   - name: 0511_sg2lgrpc
     server: *vision0
     port: 443
