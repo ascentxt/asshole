@@ -1,0 +1,18 @@
+proxies:
+  - name: 0412_sg1_widakdi
+    server: beacon.liveon.id
+    port: 80
+    type: vmess
+    uuid: e620d600-ee19-4012-a96c-968e85a52de9
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: vmess-sg1.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/582191343/6545897c1dc57/
+      headers:
+        Host: vmess-sg1.sshkit.org
+    udp: true
+    interface-name: usb0
