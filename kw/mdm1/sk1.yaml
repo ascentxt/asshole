@@ -1,5 +1,5 @@
 proxies:
-  - name: 0412_sg1_widakdi
+  - name: 0412_sg1_widakdi_vision
     server: beacon.liveon.id
     port: 80
     type: vmess
