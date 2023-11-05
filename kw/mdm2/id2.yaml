@@ -29,11 +29,11 @@ proxies:
         Host: edypler.lunoxx.gay
     udp: true
     interface-name: usb1
-  - name: 0411_idlgrpc
+  - name: 1211_idlgrpc
     server: beacon.liveon.id
     port: 443
     type: vless
-    uuid: ca51377f-8b9b-4e85-9d05-2b20cb7764ea
+    uuid: 3f90aa62-ce80-4ea7-8119-83c6cec4e8fe
     cipher: auto
     tls: true
     skip-cert-verify: true
