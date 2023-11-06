@@ -1,0 +1,166 @@
+bug-isp:
+  - &bug 104.18.225.52
+interface:
+  - &usb usb0
+
+proxies:
+
+#ID
+  - name: 0611_idx-1
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idx-1.openv2ray.com
+    network: ws
+    ws-opts:
+      path: /u/opentunnel.net-gratisancuk
+      headers:
+        Host: idx-1.openv2ray.com
+    udp: true
+    interface-name: *usb
+  - name: edypler.lunoxx.gay
+    server: *bug
+    port: 443
+    type: trojan
+    password: EqwC4wiFoomuH3r-78bP1A
+    skip-cert-verify: true
+    sni: edypler.lunoxx.gay
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: edypler.lunoxx.gay
+    udp: true
+    interface-name: *usb
+  - name: 1211_idlgrpc
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 3f90aa62-ce80-4ea7-8119-83c6cec4e8fe
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idlgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vlessgrpc
+    udp: true
+    interface-name: *usb
+  - name: idch.lunoxx.gay
+    server: *bug
+    port: 443
+    type: vless
+    uuid: fd6ccff7-385f-476e-acf4-2ecb3729ff70
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idch.lunoxx.gay
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: idch.lunoxx.gay
+    udp: true
+    interface-name: *usb
+  - name: id.lunoxx.gay
+    server: *bug
+    port: 443
+    type: vless
+    uuid: a3ababd5-e455-4128-a3ec-05b01bc61d07
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id.lunoxx.gay
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: id.lunoxx.gay
+    udp: true
+    interface-name: *usb
+
+#SG
+  - name: 3011_gamingssh
+    server: *bug
+    port: 443
+    type: vmess
+    uuid: 4f3b9119-1de4-4449-b018-1278ac0ffa77
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg.serverfast.pw
+    network: ws
+    ws-opts:
+      path: /v2ray-vmess/tls
+      headers:
+        Host: sg.serverfast.pw
+    udp: true
+    interface-name: *usb
+  - name: 0511_sg2lgrpc
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 40c39a4a-6f2e-4527-96aa-2c83ed89bf5b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2lgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts:
+      grpc-service-name: vlessgrpc
+    udp: true
+    interface-name: *usb
+  - name: 0511_sg3lgrpc
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 94d1d785-2e68-4f52-9753-8636d02a7d5f
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3lgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts:
+      grpc-service-name: vlessgrpc
+    udp: true
+    interface-name: *usb
+  - name: 3010_sgcvless
+    server: *bug
+    port: 443
+    type: vless
+    uuid: fc63cbfd-d94a-4aa4-9c3d-4c6108257e50
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgcvless.ipservers.xyz
+    network: ws
+    ws-opts:
+      path: /jagoanssh
+      headers:
+        Host: sgcvless.ipservers.xyz
+    udp: true
+    interface-name: *usb
+
+#SSHKIT
+  - name: 0412_sg1_widakdi
+    server: *bug
+    port: 80
+    type: vmess
+    uuid: e620d600-ee19-4012-a96c-968e85a52de9
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: vmess-sg1.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/582191343/6545897c1dc57/
+      headers:
+        Host: vmess-sg1.sshkit.org
+    udp: true
+    interface-name: *usb
