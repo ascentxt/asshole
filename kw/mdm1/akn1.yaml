@@ -6,7 +6,7 @@ interface:
 proxies:
 
 #ID
-  - name: 0611_idx-1
+  - name: 0611_idx-1_vision
     server: *bug
     port: 443
     type: vless
@@ -22,7 +22,7 @@ proxies:
         Host: idx-1.openv2ray.com
     udp: true
     interface-name: *usb
-  - name: edypler.lunoxx.gay
+  - name: edypler.lunoxx.gay_vision
     server: *bug
     port: 443
     type: trojan
@@ -36,7 +36,7 @@ proxies:
         Host: edypler.lunoxx.gay
     udp: true
     interface-name: *usb
-  - name: 1211_idlgrpc
+  - name: 1211_idlgrpc_vision
     server: *bug
     port: 443
     type: vless
@@ -50,7 +50,7 @@ proxies:
       grpc-service-name: vlessgrpc
     udp: true
     interface-name: *usb
-  - name: idch.lunoxx.gay
+  - name: idch.lunoxx.gay_vision
     server: *bug
     port: 443
     type: vless
@@ -66,7 +66,7 @@ proxies:
         Host: idch.lunoxx.gay
     udp: true
     interface-name: *usb
-  - name: id.lunoxx.gay
+  - name: id.lunoxx.gay_vision
     server: *bug
     port: 443
     type: vless
@@ -84,7 +84,7 @@ proxies:
     interface-name: *usb
 
 #SG
-  - name: 3011_gamingssh
+  - name: 3011_gamingssh_vision
     server: *bug
     port: 443
     type: vmess
@@ -101,7 +101,7 @@ proxies:
         Host: sg.serverfast.pw
     udp: true
     interface-name: *usb
-  - name: 0511_sg2lgrpc
+  - name: 0511_sg2lgrpc_vision
     server: *bug
     port: 443
     type: vless
@@ -115,7 +115,7 @@ proxies:
       grpc-service-name: vlessgrpc
     udp: true
     interface-name: *usb
-  - name: 0511_sg3lgrpc
+  - name: 0511_sg3lgrpc_vision
     server: *bug
     port: 443
     type: vless
@@ -129,7 +129,7 @@ proxies:
       grpc-service-name: vlessgrpc
     udp: true
     interface-name: *usb
-  - name: 3010_sgcvless
+  - name: 3010_sgcvless_vision
     server: *bug
     port: 443
     type: vless
@@ -147,7 +147,7 @@ proxies:
     interface-name: *usb
 
 #SSHKIT
-  - name: 0412_sg1_widakdi
+  - name: 0412_sg1_widakdi_vision
     server: *bug
     port: 80
     type: vmess
