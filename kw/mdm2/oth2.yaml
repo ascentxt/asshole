@@ -1,6 +1,11 @@
+bug-isp:
+  - &bug beacon.liveon.id
+interface:
+  - &usb usb1
+
 proxies:
   - name: 3011_gamingssh
-    server: beacon.liveon.id
+    server: *bug
     port: 443
     type: vmess
     uuid: 4f3b9119-1de4-4449-b018-1278ac0ffa77
@@ -15,9 +20,9 @@ proxies:
       headers:
         Host: sg.serverfast.pw
     udp: true
-    interface-name: usb1
+    interface-name: *usb
   - name: 0511_sg2lgrpc
-    server: beacon.liveon.id
+    server: *bug
     port: 443
     type: vless
     uuid: 40c39a4a-6f2e-4527-96aa-2c83ed89bf5b
@@ -29,9 +34,9 @@ proxies:
     grpc-opts:
       grpc-service-name: vlessgrpc
     udp: true
-    interface-name: usb1
+    interface-name: *usb
   - name: 0511_sg3lgrpc
-    server: beacon.liveon.id
+    server: *bug
     port: 443
     type: vless
     uuid: 94d1d785-2e68-4f52-9753-8636d02a7d5f
@@ -43,9 +48,9 @@ proxies:
     grpc-opts:
       grpc-service-name: vlessgrpc
     udp: true
-    interface-name: usb1
+    interface-name: *usb
   - name: 3010_sgcvless
-    server: beacon.liveon.id
+    server: *bug
     port: 443
     type: vless
     uuid: fc63cbfd-d94a-4aa4-9c3d-4c6108257e50
@@ -59,4 +64,4 @@ proxies:
       headers:
         Host: sgcvless.ipservers.xyz
     udp: true
-    interface-name: usb1
+    interface-name: *usb
