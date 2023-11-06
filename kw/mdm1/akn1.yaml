@@ -22,7 +22,7 @@ proxies:
         Host: idx-1.openv2ray.com
     udp: true
     interface-name: *usb
-  - name: edypler.lunoxx.gay_liveon
+  - name: edypler.lunoxx.gay_vision
     server: *bug
     port: 443
     type: vmess
