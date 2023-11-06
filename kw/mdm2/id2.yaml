@@ -1,6 +1,11 @@
+bug-isp:
+  - &bug beacon.liveon.id
+interface:
+  - &usb usb1
+
 proxies:
   - name: 0611_idx-1
-    server: beacon.liveon.id
+    server: *bug
     port: 443
     type: vless
     uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
@@ -14,9 +19,9 @@ proxies:
       headers:
         Host: idx-1.openv2ray.com
     udp: true
-    interface-name: usb1
+    interface-name: *usb
   - name: edypler.lunoxx.gay
-    server: beacon.liveon.id
+    server: *bug
     port: 443
     type: trojan
     password: EqwC4wiFoomuH3r-78bP1A
@@ -28,9 +33,9 @@ proxies:
       headers:
         Host: edypler.lunoxx.gay
     udp: true
-    interface-name: usb1
+    interface-name: *usb
   - name: 1211_idlgrpc
-    server: beacon.liveon.id
+    server: *bug
     port: 443
     type: vless
     uuid: 3f90aa62-ce80-4ea7-8119-83c6cec4e8fe
@@ -42,9 +47,9 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-    interface-name: usb1
+    interface-name: *usb
   - name: idch.lunoxx.gay
-    server: beacon.liveon.id
+    server: *bug
     port: 443
     type: vless
     uuid: fd6ccff7-385f-476e-acf4-2ecb3729ff70
@@ -58,9 +63,9 @@ proxies:
       headers:
         Host: idch.lunoxx.gay
     udp: true
-    interface-name: usb1
+    interface-name: *usb
   - name: id.lunoxx.gay
-    server: beacon.liveon.id
+    server: *bug
     port: 443
     type: vless
     uuid: a3ababd5-e455-4128-a3ec-05b01bc61d07
@@ -74,4 +79,4 @@ proxies:
       headers:
         Host: id.lunoxx.gay
     udp: true
-    interface-name: usb1
+    interface-name: *usb
