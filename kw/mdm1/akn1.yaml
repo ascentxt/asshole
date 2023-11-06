@@ -76,7 +76,7 @@ proxies:
     server: *bug
     port: 443
     type: vless
-    uuid: 40c39a4a-6f2e-4527-96aa-2c83ed89bf5b
+    uuid: fbb5ede2-7187-4e8b-a9a7-976a340328f0
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -84,36 +84,6 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: vlessgrpc
-    udp: true
-    interface-name: *usb
-  - name: 0511_sg3lgrpc_vision
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 94d1d785-2e68-4f52-9753-8636d02a7d5f
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg3lgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts:
-      grpc-service-name: vlessgrpc
-    udp: true
-    interface-name: *usb
-  - name: 3010_sgcvless_vision
-    server: *bug
-    port: 443
-    type: vless
-    uuid: fc63cbfd-d94a-4aa4-9c3d-4c6108257e50
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sgcvless.ipservers.xyz
-    network: ws
-    ws-opts:
-      path: /jagoanssh
-      headers:
-        Host: sgcvless.ipservers.xyz
     udp: true
     interface-name: *usb
 
