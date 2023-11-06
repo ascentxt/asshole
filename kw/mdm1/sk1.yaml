@@ -1,6 +1,11 @@
+bug-isp:
+  - &bug 104.18.225.52
+interface:
+  - &usb usb0
+
 proxies:
   - name: 0412_sg1_widakdi_vision
-    server: beacon.liveon.id
+    server: *bug
     port: 80
     type: vmess
     uuid: e620d600-ee19-4012-a96c-968e85a52de9
@@ -15,4 +20,4 @@ proxies:
       headers:
         Host: vmess-sg1.sshkit.org
     udp: true
-    interface-name: usb0
+    interface-name: *usb
