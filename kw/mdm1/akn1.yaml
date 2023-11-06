@@ -22,19 +22,22 @@ proxies:
         Host: idx-1.openv2ray.com
     udp: true
     interface-name: *usb
-  - name: edypler.lunoxx.gay_vision
+  - name: edypler.lunoxx.gay_liveon
     server: *bug
     port: 443
-    type: trojan
-    password: EqwC4wiFoomuH3r-78bP1A
+    type: vmess
+    uuid: 8129da3f-bcc4-4511-96a5-d6d0caa63838
+    alterId: 0
+    cipher: auto
+    tls: true
     skip-cert-verify: true
-    sni: edypler.lunoxx.gay
+    servername: edypler.lunoxx.gay
     network: ws
     ws-opts:
-      path: /trojan
+      path: /vmess
       headers:
         Host: edypler.lunoxx.gay
-    udp: true
+    udp: true   
     interface-name: *usb
   - name: 1211_idlgrpc_vision
     server: *bug
@@ -48,38 +51,6 @@ proxies:
     network: grpc
     grpc-opts: 
       grpc-service-name: vlessgrpc
-    udp: true
-    interface-name: *usb
-  - name: idch.lunoxx.gay_vision
-    server: *bug
-    port: 443
-    type: vless
-    uuid: fd6ccff7-385f-476e-acf4-2ecb3729ff70
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idch.lunoxx.gay
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: idch.lunoxx.gay
-    udp: true
-    interface-name: *usb
-  - name: id.lunoxx.gay_vision
-    server: *bug
-    port: 443
-    type: vless
-    uuid: a3ababd5-e455-4128-a3ec-05b01bc61d07
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id.lunoxx.gay
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: id.lunoxx.gay
     udp: true
     interface-name: *usb
 
