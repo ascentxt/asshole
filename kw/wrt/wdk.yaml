@@ -6,7 +6,7 @@ interface:
 proxies:
 
 #ID
-  - name: 1311_idx-1_liveon
+  - name: 1611_idx-1_liveon
     server: *bug
     port: 443
     type: vless
@@ -17,7 +17,7 @@ proxies:
     servername: idx-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-mosokiyo
+      path: /u/opentunnel.net-kokngeneyo
       headers:
         Host: idx-1.openv2ray.com
     udp: true
@@ -55,6 +55,22 @@ proxies:
     interface-name: *usb
 
 #SG
+  - name: 1611_sgx-1_liveon
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgx-1.openv2ray.com
+    network: ws
+    ws-opts:
+      path: /u/opentunnel.net-kokngeneyo
+      headers:
+        Host: sgx-1.openv2ray.com
+    udp: true
+    interface-name: *usb
   - name: 3011_gamingssh_liveon
     server: *bug
     port: 443
