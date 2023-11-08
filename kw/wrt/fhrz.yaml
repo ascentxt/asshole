@@ -17,29 +17,12 @@ proxies:
     servername: idx-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-merekaasu
+      path: /u/opentunnel.net-kokngeneyo
       headers:
         Host: idx-1.openv2ray.com
     udp: true
     interface-name: *usb
-  - name: edypler.lunoxx.gay_liveon
-    server: *bug
-    port: 443
-    type: vmess
-    uuid: 8129da3f-bcc4-4511-96a5-d6d0caa63838
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: edypler.lunoxx.gay
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: edypler.lunoxx.gay
-    udp: true   
-    interface-name: *usb
-  - name: 1211_idlgrpc_liveon
+  - name: 1211_idlgrpc
     server: *bug
     port: 443
     type: vless
@@ -55,7 +38,7 @@ proxies:
     interface-name: *usb
 
 #SG
-  - name: 1611_sgx-1_liveon
+  - name: 1611_sgx-1
     server: *bug
     port: 443
     type: vless
@@ -71,24 +54,24 @@ proxies:
         Host: sgx-1.openv2ray.com
     udp: true
     interface-name: *usb
-  - name: 3011_gamingssh_liveon
+  - name: 0912_gaming
     server: *bug
-    port: 443
+    port: 80
     type: vmess
-    uuid: 4f3b9119-1de4-4449-b018-1278ac0ffa77
+    uuid: 8e4c89ee-254d-4737-835d-90e13ca7940b
     alterId: 0
     cipher: auto
-    tls: true
+    tls: false
     skip-cert-verify: true
     servername: sg.serverfast.pw
     network: ws
     ws-opts:
-      path: /v2ray-vmess/tls
+      path: /v2ray-vmess/ntls
       headers:
         Host: sg.serverfast.pw
     udp: true
     interface-name: *usb
-  - name: 1311_sg2lgrpc_liveon
+  - name: 1311_sg2lgrpc
     server: *bug
     port: 443
     type: vless
@@ -104,7 +87,7 @@ proxies:
     interface-name: *usb
 
 #SSHKIT
-  - name: 0412_sg1_widakdi_liveon
+  - name: 0912_sg1_widakdi
     server: *bug
     port: 80
     type: vmess
@@ -116,7 +99,7 @@ proxies:
     servername: vmess-sg1.sshkit.org
     network: ws
     ws-opts:
-      path: /sshkit/582191343/6545897c1dc57/
+      path: /sshkit/582191343/654c0bdec06d6/
       headers:
         Host: vmess-sg1.sshkit.org
     udp: true
