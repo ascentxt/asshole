@@ -22,7 +22,7 @@ geox-url:
   mmdb: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb"
   geoip: "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geoip.dat"
   geosite: "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geosite.dat"
-find-process-mode: strict
+find-process-mode: always
 
 profile:
   store-selected: true
@@ -56,18 +56,18 @@ profile:
     # - "80"
     # - "443"
 
-# tun:
-  # enable: true
+tun:
+  enable: true
   # # biarkan default utun
-  # device: utun
-  # mtu: 9000
+  device: utun
+  mtu: 9000
   # # gvisor / lwip / system
-  # stack: system
-  # dns-hijack:
-    # - any:53
+  stack: system
+  dns-hijack:
+    - any:53
   # # bagi yg awam, kalau TUN on wajib true, only armv8/64
-  # auto-route: true
-  # auto-detect-interface: true
+  auto-route: true
+  auto-detect-interface: true
   # # end
   # inet4-address: 172.19.0.1/30
   # inet6-address: [fdfe:dcba:9876::1/126]
@@ -132,109 +132,75 @@ hosts:
 
 proxies:
 proxy-groups:
-  - name: "🫠🫠"
+  - name: "VPN"
     type: select
     disable-udp: false
-    proxies: [SSHKIT, SG, OPENTUNNEL, LAINNYA, ID, DIRECT, ]
-  - name: "SSHKIT"
+    proxies: [FALLBACK, MANUAL, DIRECT,]
+  - name: FALLBACK
+    type: fallback
+    url: http://cp.cloudflare.com/generate_204
+    interval: 99
+    use: [AKUN]
+  - name: "MANUAL"
     type: select
     disable-udp: false
-    use: [SSHKIT]
-  - name: "SG"
-    type: select
-    disable-udp: false
-    use: [SG]
-  - name: "OPENTUNNEL"
-    type: select
-    disable-udp: false
-    use: [OPENTUNNEL]
-#  - name: "MAINSSH"
-#    type: select
-#    disable-udp: false
-#    use: [MAINSSH]
-  - name: "LAINNYA"
-    type: select
-    disable-udp: false
-    use: [LAINNYA]
-  - name: "ID"
-    type: select
-    disable-udp: false
-    use: [ID]
+    use: [SSHKIT, OTHER, ID]
 #  - name: BEST-PING
 #    type: url-test
 #    url: http://cp.cloudflare.com/generate_204
 #    ninterval: 300
-#    use: [MAINSSH,OPENTUNNEL,SG, SSHKIT, LAINNYA, ID]
-#  - name: FALLBACK
-#    type: fallback
-#    url: http://cp.cloudflare.com/generate_204
-#    ninterval: 300
-#    use: [MAINSSH,OPENTUNNEL,SG, SSHKIT, LAINNYA, ID]
+#    use: [SSHKIT, OTHER]
+  - name: "AdBlock"
+    type: select
+    disable-udp: false
+    proxies: [REJECT, VPN]
+  - name: "ANU"
+    type: select
+    disable-udp: false
+    proxies: [REJECT, VPN]
 
 proxy-providers:
-#  MAINSSH:
-#    type: http
-#    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/mainssh.yaml"
-#    interval: 3600
-#    path: "./server/mainssh.yaml"
-#    health-check:
-#      enable: true
-#      url: http://www.gstatic.com/generate_204
-#      interval: 300
-  OPENTUNNEL:
+  AKUN:
     type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/opentunnel.yaml"
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/wrt/akun.yaml"
     interval: 3600
-    path: "./server/opentunnel.yaml"
+    path: "./servers/akun.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 300
-  SG:
+      interval: 99
+      
+rule-providers:
+  18+:
     type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/sg.yaml"
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/18.yaml"
     interval: 3600
-    path: "./server/sg.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  SSHKIT:
+    behavior: domain
+    path: "./provider/rules/18+.yaml"
+  Nsfw:
     type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/sshkit.yaml"
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/nswf.yaml"
     interval: 3600
-    path: "./server/sshkit.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  LAINNYA:
+    behavior: domain
+    path: "./provider/rules/nsfw.yaml"
+  Basicads:
     type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/lain.yaml"
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/basicads.yaml"
     interval: 3600
-    path: "./server/lain.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  ID:
+    behavior: domain
+    path: "./provider/rules/basicads.yaml"
+  Personalads:
     type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/hole/id.yaml"
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/rules/personalads.yaml"
     interval: 3600
-    path: "./server/id.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+    behavior: classical
+    path: "./provider/rules/personalads.yaml"
+
 rules:
-  - PROCESS-NAME, com.asobimo.toramonline, DIRECT
-  - MATCH,🫠🫠
-tun:
-  enable: true
-  mtu: 9000
-  device: utun
-  stack: system # gvisor / system
-  dns-hijack:
-    - any:53
-  auto-route: true
-  auto-detect-interface: true
+  - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+  - DOMAIN-SUFFIX,googlesyndication.com,VPN
+  - RULE-SET,Personalads,AdBlock
+  - RULE-SET,Basicads,AdBlock
+  - RULE-SET,18+,ANU
+  - RULE-SET,Nsfw,ANU
+  - MATCH,VPN
