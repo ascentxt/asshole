@@ -1,0 +1,106 @@
+bug-isp:
+  - &bug 104.18.225.52
+interface:
+  - &usb usb0
+
+proxies:
+
+#ID
+  - name: 1611_idx-1
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idx-1.openv2ray.com
+    network: ws
+    ws-opts:
+      path: /u/opentunnel.net-kokngeneyo
+      headers:
+        Host: idx-1.openv2ray.com
+    udp: true
+    interface-name: *usb
+  - name: 1211_idlgrpc
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 3f90aa62-ce80-4ea7-8119-83c6cec4e8fe
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idlgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vlessgrpc
+    udp: true
+    interface-name: *usb
+
+#SG
+  - name: 1611_sgx-1
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgx-1.openv2ray.com
+    network: ws
+    ws-opts:
+      path: /u/opentunnel.net-kokngeneyo
+      headers:
+        Host: sgx-1.openv2ray.com
+    udp: true
+    interface-name: *usb
+  - name: 0912_gaming
+    server: *bug
+    port: 80
+    type: vmess
+    uuid: 8e4c89ee-254d-4737-835d-90e13ca7940b
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: sg.serverfast.pw
+    network: ws
+    ws-opts:
+      path: /v2ray-vmess/ntls
+      headers:
+        Host: sg.serverfast.pw
+    udp: true
+    interface-name: *usb
+  - name: 1311_sg2lgrpc
+    server: *bug
+    port: 443
+    type: vless
+    uuid: fbb5ede2-7187-4e8b-a9a7-976a340328f0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2lgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts:
+      grpc-service-name: vlessgrpc
+    udp: true
+    interface-name: *usb
+
+#SSHKIT
+  - name: 0412_sg1_widakdi
+    server: *bug
+    port: 80
+    type: vmess
+    uuid: e620d600-ee19-4012-a96c-968e85a52de9
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: vmess-sg1.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/582191343/6545897c1dc57/
+      headers:
+        Host: vmess-sg1.sshkit.org
+    udp: true
+    interface-name: *usb
