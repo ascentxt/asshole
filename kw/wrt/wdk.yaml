@@ -5,6 +5,25 @@ interface:
 
 proxies:
 
+#SSHKIT
+  - name: 0912_sg1_widakdi
+    server: *bug
+    port: 80
+    type: vmess
+    uuid: e620d600-ee19-4012-a96c-968e85a52de9
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: vmess-sg1.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/582191343/654e4353a6499/
+      headers:
+        Host: vmess-sg1.sshkit.org
+    udp: true
+    interface-name: *usb
+
 #ID
   - name: 1611_idx-1
     server: *bug
@@ -86,21 +105,3 @@ proxies:
     udp: true
     interface-name: *usb
 
-#SSHKIT
-  - name: 0412_sg1_widakdi
-    server: *bug
-    port: 80
-    type: vmess
-    uuid: e620d600-ee19-4012-a96c-968e85a52de9
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: vmess-sg1.sshkit.org
-    network: ws
-    ws-opts:
-      path: /sshkit/582191343/654e4353a6499/
-      headers:
-        Host: vmess-sg1.sshkit.org
-    udp: true
-    interface-name: *usb
