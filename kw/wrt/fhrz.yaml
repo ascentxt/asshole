@@ -18,7 +18,7 @@ proxies:
     servername: vmess-sg1.sshkit.org
     network: ws
     ws-opts:
-      path: /sshkit/582191343/654c0bdec06d6/
+      path: /sshkit/582191343/654e4353a6499/
       headers:
         Host: vmess-sg1.sshkit.org
     udp: true
