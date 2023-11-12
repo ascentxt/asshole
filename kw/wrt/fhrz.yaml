@@ -41,11 +41,11 @@ proxies:
         Host: idx-1.openv2ray.com
     udp: true
     interface-name: *usb
-  - name: 1211_idlgrpc
+  - name: 1911_idlgrpc
     server: *bug
     port: 443
     type: vless
-    uuid: 3f90aa62-ce80-4ea7-8119-83c6cec4e8fe
+    uuid: 150c67da-4ae9-4cd2-9c40-e0258e48b6f6
     cipher: auto
     tls: true
     skip-cert-verify: true
