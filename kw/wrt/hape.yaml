@@ -3,9 +3,28 @@ bugisp:
 
 proxies:
 
+#SSHKIT
+  - name: 0912_sg1_widakdi
+    server: *bug
+    port: 80
+    type: vmess
+    uuid: e620d600-ee19-4012-a96c-968e85a52de9
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: vmess-sg1.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/582191343/654e4353a6499/
+      headers:
+        Host: vmess-sg1.sshkit.org
+    udp: true
+    
+
 #ID
   - name: 1611_idx-1
-    server: 104.18.225.52
+    server: *bug
     port: 443
     type: vless
     uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
@@ -20,11 +39,11 @@ proxies:
         Host: idx-1.openv2ray.com
     udp: true
     
-  - name: 1211_idlgrpc
-    server: 104.18.225.52
+  - name: 1911_idlgrpc
+    server: *bug
     port: 443
     type: vless
-    uuid: 3f90aa62-ce80-4ea7-8119-83c6cec4e8fe
+    uuid: 150c67da-4ae9-4cd2-9c40-e0258e48b6f6
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -37,7 +56,7 @@ proxies:
 
 #SG
   - name: 1611_sgx-1
-    server: 104.18.225.52
+    server: *bug
     port: 443
     type: vless
     uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
@@ -70,7 +89,7 @@ proxies:
     udp: true
     
   - name: 1311_sg2lgrpc
-    server: 104.18.225.52
+    server: *bug
     port: 443
     type: vless
     uuid: fbb5ede2-7187-4e8b-a9a7-976a340328f0
@@ -84,21 +103,3 @@ proxies:
     udp: true
     
 
-#SSHKIT
-  - name: 0412_sg1_widakdi
-    server: 104.18.225.52
-    port: 80
-    type: vmess
-    uuid: e620d600-ee19-4012-a96c-968e85a52de9
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: vmess-sg1.sshkit.org
-    network: ws
-    ws-opts:
-      path: /sshkit/582191343/654e4353a6499/
-      headers:
-        Host: vmess-sg1.sshkit.org
-    udp: true
-    
