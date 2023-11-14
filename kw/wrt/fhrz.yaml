@@ -6,7 +6,7 @@ interface:
 proxies:
 
 #SSHKIT
-  - name: 0912_sg1_widakdi
+  - name: 1412_sg1_widakdi
     server: *bug
     port: 80
     type: vmess
@@ -18,11 +18,11 @@ proxies:
     servername: vmess-sg1.sshkit.org
     network: ws
     ws-opts:
-      path: /sshkit/582191343/654e4353a6499/
+      path: /sshkit/582191343/6552b5133d03f/
       headers:
         Host: vmess-sg1.sshkit.org
     udp: true
-    interface-name: *usb
+    
 
 #ID
   - name: 1611_idx-1
@@ -40,7 +40,7 @@ proxies:
       headers:
         Host: idx-1.openv2ray.com
     udp: true
-    interface-name: *usb
+    
   - name: 1911_idlgrpc
     server: *bug
     port: 443
@@ -54,7 +54,7 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-    interface-name: *usb
+    
 
 #SG
   - name: 1611_sgx-1
@@ -72,7 +72,7 @@ proxies:
       headers:
         Host: sgx-1.openv2ray.com
     udp: true
-    interface-name: *usb
+    
   - name: 0912_gaming
     server: *bug
     port: 80
@@ -89,7 +89,7 @@ proxies:
       headers:
         Host: sg.serverfast.pw
     udp: true
-    interface-name: *usb
+    
   - name: 1311_sg2lgrpc
     server: *bug
     port: 443
@@ -103,5 +103,5 @@ proxies:
     grpc-opts:
       grpc-service-name: vlessgrpc
     udp: true
-    interface-name: *usb
+    
 
