@@ -4,7 +4,7 @@ bugisp:
 proxies:
 
 #SSHKIT
-  - name: 0912_sg1_widakdi
+  - name: 1412_sg1_widakdi
     server: *bug
     port: 80
     type: vmess
@@ -16,7 +16,7 @@ proxies:
     servername: vmess-sg1.sshkit.org
     network: ws
     ws-opts:
-      path: /sshkit/582191343/654e4353a6499/
+      path: /sshkit/582191343/6552b5133d03f/
       headers:
         Host: vmess-sg1.sshkit.org
     udp: true
