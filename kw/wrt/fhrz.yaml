@@ -90,11 +90,11 @@ proxies:
         Host: sg.serverfast.pw
     udp: true
     
-  - name: 1311_sg2lgrpc
+  - name: 2711_sg2lgrpc
     server: *bug
     port: 443
     type: vless
-    uuid: fbb5ede2-7187-4e8b-a9a7-976a340328f0
+    uuid: bed2997b-b4e8-4403-9e77-a239cd0ce9d1
     cipher: auto
     tls: true
     skip-cert-verify: true
