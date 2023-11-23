@@ -3,26 +3,58 @@ bugisp:
 
 proxies:
 
-#SSHKIT
-  - name: 1412_sg1_widakdi
+#ID
+  - name: Trial_IGHXFRZ
     server: *bug
     port: 80
     type: vmess
-    uuid: e620d600-ee19-4012-a96c-968e85a52de9
+    uuid: 7c562dc8-a4a3-40f3-ae72-13763085788d
     alterId: 0
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: vmess-sg1.sshkit.org
+    servername: ikd.patkurgamtenk.my.id
     network: ws
     ws-opts:
-      path: /sshkit/582191343/6552b5133d03f/
+      path: /vmess
       headers:
-        Host: vmess-sg1.sshkit.org
+        Host: ikd.patkurgamtenk.my.id
     udp: true
-    
 
-#ID
+  - name: lEdyPler
+    server: *bug
+    port: 80
+    type: vmess
+    uuid: 54dbe646-0427-4d89-bce2-c128dc506472
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: edypler.lunoxx.gay
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: edypler.lunoxx.gay
+    udp: true
+
+  - name: TrialEDY
+    server: *bug
+    port: 80
+    type: vmess
+    uuid: e54c4376-842d-49be-bdef-b1d11d157c59
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: id.lunoxx.gay
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: id.lunoxx.gay
+    udp: true
+
   - name: 2811_idx-1
     server: *bug
     port: 443
@@ -101,5 +133,24 @@ proxies:
     grpc-opts:
       grpc-service-name: vlessgrpc
     udp: true
+
+#SSHKIT
+  - name: 1412_sg1_widakdi
+    server: *bug
+    port: 80
+    type: vmess
+    uuid: e620d600-ee19-4012-a96c-968e85a52de9
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: vmess-sg1.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/582191343/6552b5133d03f/
+      headers:
+        Host: vmess-sg1.sshkit.org
+    udp: true
     
+
 
