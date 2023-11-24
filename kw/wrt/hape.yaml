@@ -4,55 +4,50 @@ bugisp:
 proxies:
 
 #ID
-  - name: Trial_IGHXFRZ
+  - name: TrialEDY
     server: *bug
-    port: 80
-    type: vmess
-    uuid: 7c562dc8-a4a3-40f3-ae72-13763085788d
-    alterId: 0
+    port: 443
+    type: vless
+    uuid: bd361fd0-3ce3-4d89-b7d0-ee4b39df2faa
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
-    servername: ikd.patkurgamtenk.my.id
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: ikd.patkurgamtenk.my.id
+    servername: id.lunoxx.gay
+    network: grpc
+    grpc-opts:
+      grpc-service-name: vless-service
     udp: true
 
-  - name: lEdyPler
+  - name: EdyPler
     server: *bug
-    port: 80
-    type: vmess
-    uuid: 54dbe646-0427-4d89-bce2-c128dc506472
-    alterId: 0
+    port: 443
+    type: vless
+    uuid: 4bcc0346-9369-491a-93d5-7b25735c356e
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
     servername: edypler.lunoxx.gay
     network: ws
     ws-opts:
-      path: /vmess
+      path: /vless
       headers:
         Host: edypler.lunoxx.gay
     udp: true
 
-  - name: TrialEDY
+  - name: Trial_IGHXFRZ
     server: *bug
-    port: 80
-    type: vmess
-    uuid: e54c4376-842d-49be-bdef-b1d11d157c59
-    alterId: 0
+    port: 443
+    type: vless
+    uuid: dfa515c8-d2c8-432f-bfdd-5fcffbeec1d7
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
-    servername: id.lunoxx.gay
+    servername: 103.167.34.136
     network: ws
     ws-opts:
-      path: /vmess
+      path: /vless
       headers:
-        Host: id.lunoxx.gay
+        Host: 103.167.34.136
     udp: true
 
   - name: 2811_idx-1
