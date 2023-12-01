@@ -6,53 +6,7 @@ interface:
 proxies:
 
 #ID
-  - name: TrialEDY
-    server: *bug
-    port: 443
-    type: vless
-    uuid: bd361fd0-3ce3-4d89-b7d0-ee4b39df2faa
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id.lunoxx.gay
-    network: grpc
-    grpc-opts:
-      grpc-service-name: vless-service
-    udp: true
-
-  - name: EdyPler
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 4bcc0346-9369-491a-93d5-7b25735c356e
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: edypler.lunoxx.gay
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: edypler.lunoxx.gay
-    udp: true
-
-  - name: Trial_IGHXFRZ
-    server: *bug
-    port: 443
-    type: vless
-    uuid: dfa515c8-d2c8-432f-bfdd-5fcffbeec1d7
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: 103.167.34.136
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: 103.167.34.136
-    udp: true
-
-  - name: 2811_idx-1
+  - name: 0812_idx-1
     server: *bug
     port: 443
     type: vless
@@ -63,16 +17,16 @@ proxies:
     servername: idx-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-anjingbro
+      path: /u/opentunnel.net-manhdjdj
       headers:
         Host: idx-1.openv2ray.com
     udp: true
     
-  - name: 2811_idlgrpc
+  - name: 0812_idlgrpc
     server: *bug
     port: 443
     type: vless
-    uuid: 3f752783-117d-4b61-85f8-9bbea67bfb59
+    uuid: 63fb4b43-5fda-475f-a260-78b05cefe391
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -84,7 +38,7 @@ proxies:
     
 
 #SG
-  - name: 1611_sgx-1
+  - name: 0812_sgx-3
     server: *bug
     port: 443
     type: vless
@@ -95,7 +49,7 @@ proxies:
     servername: sgx-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-kokngeneyo
+      path: /u/opentunnel.net-kokisoyo
       headers:
         Host: sgx-1.openv2ray.com
     udp: true
@@ -117,11 +71,11 @@ proxies:
         Host: sg.serverfast.pw
     udp: true
     
-  - name: 2711_sg2lgrpc
+  - name: 0812_sg2lgrpc
     server: *bug
     port: 443
     type: vless
-    uuid: bed2997b-b4e8-4403-9e77-a239cd0ce9d1
+    uuid: 2cdb3b8b-4c54-4788-ae6c-6116d2fbb2fd
     cipher: auto
     tls: true
     skip-cert-verify: true
