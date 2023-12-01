@@ -4,52 +4,6 @@ bugisp:
 proxies:
 
 #ID
-  - name: TrialEDY
-    server: *bug
-    port: 443
-    type: vless
-    uuid: bd361fd0-3ce3-4d89-b7d0-ee4b39df2faa
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id.lunoxx.gay
-    network: grpc
-    grpc-opts:
-      grpc-service-name: vless-service
-    udp: true
-
-  - name: EdyPler
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 4bcc0346-9369-491a-93d5-7b25735c356e
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: edypler.lunoxx.gay
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: edypler.lunoxx.gay
-    udp: true
-
-  - name: Trial_IGHXFRZ
-    server: *bug
-    port: 443
-    type: vless
-    uuid: dfa515c8-d2c8-432f-bfdd-5fcffbeec1d7
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: 103.167.34.136
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: 103.167.34.136
-    udp: true
-
   - name: 0812_idx-1
     server: *bug
     port: 443
