@@ -6,18 +6,18 @@ interface:
 proxies:
 
 #ID
-  - name: 0912_idx-1
+  - name: 0912_idx1
     server: *bug
-    port: 443
+    port: 80
     type: vless
     uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
     cipher: auto
-    tls: true
+    tls: false
     skip-cert-verify: true
     servername: idx-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-kontlokkk
+      path: /u/pentunnel.net-kontlokkk
       headers:
         Host: idx-1.openv2ray.com
     udp: true
