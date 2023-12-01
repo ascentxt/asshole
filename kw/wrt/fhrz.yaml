@@ -6,7 +6,7 @@ interface:
 proxies:
 
 #ID
-  - name: 0812_idx-1
+  - name: 0912_idx-1
     server: *bug
     port: 443
     type: vless
@@ -17,7 +17,7 @@ proxies:
     servername: idx-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-manhdjdj
+      path: /u/opentunnel.net-kontlokkk
       headers:
         Host: idx-1.openv2ray.com
     udp: true
