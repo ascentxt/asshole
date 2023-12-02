@@ -4,18 +4,18 @@ bugisp:
 proxies:
 
 #ID
-  - name: 0812_idx-1
+  - name: 0912_idx1
     server: *bug
-    port: 443
+    port: 80
     type: vless
     uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
     cipher: auto
-    tls: true
+    tls: false
     skip-cert-verify: true
     servername: idx-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-manhdjdj
+      path: /u/pentunnel.net-kontlokkk
       headers:
         Host: idx-1.openv2ray.com
     udp: true
@@ -51,12 +51,12 @@ proxies:
       headers:
         Host: sgx-1.openv2ray.com
     udp: true
-    
-  - name: 0912_gaming
+
+  - name: 0101_gaming
     server: *bug
     port: 80
     type: vmess
-    uuid: 8e4c89ee-254d-4737-835d-90e13ca7940b
+    uuid: 32e2ae4b-b17d-4c17-9b6b-1d245844a370
     alterId: 0
     cipher: auto
     tls: false
@@ -101,5 +101,3 @@ proxies:
         Host: vmess-sg1.sshkit.org
     udp: true
     
-
-
