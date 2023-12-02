@@ -53,12 +53,12 @@ proxies:
       headers:
         Host: sgx-1.openv2ray.com
     udp: true
-    
-  - name: 0912_gaming
+
+  - name: 0101_gaming
     server: *bug
     port: 80
     type: vmess
-    uuid: 8e4c89ee-254d-4737-835d-90e13ca7940b
+    uuid: 32e2ae4b-b17d-4c17-9b6b-1d245844a370
     alterId: 0
     cipher: auto
     tls: false
