@@ -17,7 +17,7 @@ proxies:
     servername: idx-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/pentunnel.net-kontlokkk
+      path: /u/pentunnel.net-pppppppppp
       headers:
         Host: idx-1.openv2ray.com
     udp: true
