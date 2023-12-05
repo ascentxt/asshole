@@ -36,6 +36,14 @@ proxies:
       grpc-service-name: vlessgrpc
     udp: true
     
+  - name: 1212_trojan
+    server: *bug
+    port: 443
+    type: trojan
+    password: opentunnel.net-mangdyb
+    skip-cert-verify: true
+    sni: idt-1.optnl.com
+    udp: true
 
 #SG
   - name: 0812_sgx-3
