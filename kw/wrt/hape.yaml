@@ -4,7 +4,7 @@ bugisp:
 proxies:
 
 #ID
-  - name: 0912_idx1
+  - name: 1212_idx1
     server: *bug
     port: 443
     type: vless
@@ -15,7 +15,7 @@ proxies:
     servername: idx-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-pppppppppp
+      path: /u/opentunnel.net-kokorakon
       headers:
         Host: idx-1.openv2ray.com
     udp: true
@@ -33,9 +33,38 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-    
 
 #SG
+  - name: 1312_greenssh
+    server: *bug
+    port: 443
+    type: vless
+    uuid: ca603f12-4cb0-4b57-a2b8-fcf5746d9dc9
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2-grpc.greenssh.xyz
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc
+    udp: true
+
+  - name: 1312_greenssh
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 8c9f974b-387b-4b89-a5fa-d0066916066c
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg1-vless.greenssh.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sg1-vless.greenssh.xyz
+    udp: true
+    
   - name: 0812_sgx-3
     server: *bug
     port: 443
@@ -51,55 +80,39 @@ proxies:
       headers:
         Host: sgx-1.openv2ray.com
     udp: true
-
-  - name: 0101_gaming
-    server: *bug
-    port: 80
-    type: vmess
-    uuid: 32e2ae4b-b17d-4c17-9b6b-1d245844a370
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: sg.serverfast.pw
-    network: ws
-    ws-opts:
-      path: /v2ray-vmess/ntls
-      headers:
-        Host: sg.serverfast.pw
-    udp: true
     
-  - name: 0812_sg2lgrpc
+  - name: 1312_sg3lgrpc
     server: *bug
     port: 443
     type: vless
-    uuid: 2cdb3b8b-4c54-4788-ae6c-6116d2fbb2fd
+    uuid: 7cfe38fa-752d-4953-b3dd-f6c18734cbba
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sg2lgrpc.mainssh.xyz
+    servername: sg3lgrpc.mainssh.xyz
     network: grpc
     grpc-opts:
       grpc-service-name: vlessgrpc
     udp: true
 
 #SSHKIT
-  - name: 1412_sg1_widakdi
+  - name: 0501_sg_kit.ascent
     server: *bug
-    port: 80
+    port: 443
     type: vmess
     uuid: e620d600-ee19-4012-a96c-968e85a52de9
     alterId: 0
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
     servername: vmess-sg1.sshkit.org
     network: ws
     ws-opts:
-      path: /sshkit/582191343/6552b5133d03f/
+      path: /sshkit/1373695293/65709c50bdd07/
       headers:
         Host: vmess-sg1.sshkit.org
     udp: true
+    
     
 
 
