@@ -35,17 +35,38 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-    
-  - name: 1212_trojan
-    server: *bug
-    port: 443
-    type: trojan
-    password: opentunnel.net-mangdyb
-    skip-cert-verify: true
-    sni: idt-1.optnl.com
-    udp: true
 
 #SG
+  - name: 1312_greenssh
+    server: *bug
+    port: 443
+    type: vless
+    uuid: ca603f12-4cb0-4b57-a2b8-fcf5746d9dc9
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2-grpc.greenssh.xyz
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc
+    udp: true
+
+  - name: 1312_greenssh
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 8c9f974b-387b-4b89-a5fa-d0066916066c
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg1-vless.greenssh.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sg1-vless.greenssh.xyz
+    udp: true
+    
   - name: 0812_sgx-3
     server: *bug
     port: 443
@@ -61,33 +82,16 @@ proxies:
       headers:
         Host: sgx-1.openv2ray.com
     udp: true
-
-  - name: 0101_gaming
-    server: *bug
-    port: 80
-    type: vmess
-    uuid: 32e2ae4b-b17d-4c17-9b6b-1d245844a370
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: sg.serverfast.pw
-    network: ws
-    ws-opts:
-      path: /v2ray-vmess/ntls
-      headers:
-        Host: sg.serverfast.pw
-    udp: true
     
-  - name: 0812_sg2lgrpc
+  - name: 1312_sg3lgrpc
     server: *bug
     port: 443
     type: vless
-    uuid: 2cdb3b8b-4c54-4788-ae6c-6116d2fbb2fd
+    uuid: 7cfe38fa-752d-4953-b3dd-f6c18734cbba
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sg2lgrpc.mainssh.xyz
+    servername: sg3lgrpc.mainssh.xyz
     network: grpc
     grpc-opts:
       grpc-service-name: vlessgrpc
