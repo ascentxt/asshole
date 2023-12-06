@@ -94,7 +94,7 @@ proxies:
     udp: true
 
 #SSHKIT
-  - name: 1412_sg1_widakdi
+  - name: 0501_sg1_kit.ascent
     server: *bug
     port: 80
     type: vmess
@@ -106,7 +106,7 @@ proxies:
     servername: vmess-sg1.sshkit.org
     network: ws
     ws-opts:
-      path: /sshkit/582191343/6552b5133d03f/
+      path: /sshkit/1373695293/65709c50bdd07/
       headers:
         Host: vmess-sg1.sshkit.org
     udp: true
