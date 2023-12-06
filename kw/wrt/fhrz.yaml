@@ -37,7 +37,7 @@ proxies:
     udp: true
 
 #SG
-  - name: 1312_greenssh
+  - name: 1312_greenssh.sg2grpc
     server: *bug
     port: 443
     type: vless
