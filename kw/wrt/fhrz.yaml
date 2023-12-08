@@ -66,24 +66,6 @@ proxies:
       headers:
         Host: sglws.mainssh.xyz
     udp: true
-
-#SSHKIT
-  - name: 0501_sg_kit.ascent
-    server: *bug
-    port: 443
-    type: vmess
-    uuid: e620d600-ee19-4012-a96c-968e85a52de9
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: vmess-sg1.sshkit.org
-    network: ws
-    ws-opts:
-      path: /sshkit/1373695293/65709c50bdd07/
-      headers:
-        Host: vmess-sg1.sshkit.org
-    udp: true
     
 
 
