@@ -6,34 +6,20 @@ interface:
 proxies:
 
 #ID
-  - name: 1212_idx1
+  - name: 1612_idlws
     server: *bug
     port: 443
     type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    uuid: c4feb850-3e04-4e41-87da-44a9a13ae070
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: idx-1.openv2ray.com
+    servername: idlws.mainssh.xyz
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-kokorakon
+      path: /vless
       headers:
-        Host: idx-1.openv2ray.com
-    udp: true
-    
-  - name: 0812_idlgrpc
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 63fb4b43-5fda-475f-a260-78b05cefe391
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idlgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: vlessgrpc
+        Host: idlws.mainssh.xyz
     udp: true
 
 #SG
