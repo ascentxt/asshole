@@ -4,51 +4,35 @@ bugisp:
 proxies:
 
 #ID
-  - name: 1212_idx1
+  - name: 1612_id6.sshocean
     server: *bug
     port: 443
-    type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
-    cipher: auto
-    tls: true
+    type: trojan
+    password: 74420619-c020-4301-9507-62e3b751644f
     skip-cert-verify: true
-    servername: idx-1.openv2ray.com
-    network: ws
-    ws-opts:
-      path: /u/opentunnel.net-kokorakon
-      headers:
-        Host: idx-1.openv2ray.com
-    udp: true
-    
-  - name: 0812_idlgrpc
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 63fb4b43-5fda-475f-a260-78b05cefe391
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idlgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: vlessgrpc
-    udp: true
-
-#SG
-  - name: 1312_greenssh
-    server: *bug
-    port: 443
-    type: vless
-    uuid: ca603f12-4cb0-4b57-a2b8-fcf5746d9dc9
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg2-grpc.greenssh.xyz
+    sni: id6.trojanvpn.de
     network: grpc
     grpc-opts:
       grpc-service-name: grpc
     udp: true
 
+  - name: 1612_idlws.mainssh
+    server: *bug
+    port: 443
+    type: vless
+    uuid: c4feb850-3e04-4e41-87da-44a9a13ae070
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idlws.mainssh.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: idlws.mainssh.xyz
+    udp: true
+
+#SG
   - name: 1312_greenssh
     server: *bug
     port: 443
@@ -65,54 +49,21 @@ proxies:
         Host: sg1-vless.greenssh.xyz
     udp: true
     
-  - name: 0812_sgx-3
+  - name: 1612_sglws.mainssh
     server: *bug
     port: 443
     type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    uuid: a158bf62-b57a-4e93-9d5d-d30b7574991f
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sgx-1.openv2ray.com
+    servername: sglws.mainssh.xyz
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-kokisoyo
+      path: /vless
       headers:
-        Host: sgx-1.openv2ray.com
+        Host: sglws.mainssh.xyz
     udp: true
-    
-  - name: 1312_sg3lgrpc
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 7cfe38fa-752d-4953-b3dd-f6c18734cbba
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg3lgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts:
-      grpc-service-name: vlessgrpc
-    udp: true
-
-#SSHKIT
-  - name: 0501_sg_kit.ascent
-    server: *bug
-    port: 443
-    type: vmess
-    uuid: e620d600-ee19-4012-a96c-968e85a52de9
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: vmess-sg1.sshkit.org
-    network: ws
-    ws-opts:
-      path: /sshkit/1373695293/65709c50bdd07/
-      headers:
-        Host: vmess-sg1.sshkit.org
-    udp: true
-    
     
 
 
