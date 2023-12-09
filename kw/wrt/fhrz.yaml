@@ -6,13 +6,13 @@ interface:
 proxies:
 
 #ID
-  - name: 1612_id6.sshocean
+  - name: 1612_id5.sshocean
     server: *bug
     port: 443
     type: trojan
-    password: 74420619-c020-4301-9507-62e3b751644f
+    password: 7cf56f64-025c-4d64-a76b-dde3eb427ebf
     skip-cert-verify: true
-    sni: id6.trojanvpn.de
+    sni: id5.trojanvpn.de
     network: grpc
     grpc-opts:
       grpc-service-name: grpc
