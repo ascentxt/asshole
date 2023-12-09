@@ -6,6 +6,20 @@ interface:
 proxies:
 
 #ID
+  - name: 1612_id5.ocean
+    server: *bug
+    port: 443
+    type: trojan
+    password: 7cf56f64-025c-4d64-a76b-dde3eb427ebf
+    skip-cert-verify: true
+    sni: id5.trojanvpn.de
+    network: ws
+    ws-opts:
+      path: /websocket
+      headers:
+        Host: id5.trojanvpn.de
+    udp: true
+    
   - name: 1612_id5.sshocean
     server: *bug
     port: 443
