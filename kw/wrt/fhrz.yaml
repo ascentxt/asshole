@@ -36,14 +36,14 @@ proxies:
     udp: true
 
   - name: 1612.id2vless.jagoanssh
-    server: id2vless.ipservers.xyz
+    server: *bug
     port: 443
     type: vless
     uuid: 2862b19a-1cf2-46d8-a1ea-fd7802211963
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: 112
+    servername: id2vless.ipservers.xyz
     network: ws
     ws-opts:
       path: /jagoanssh
@@ -52,20 +52,20 @@ proxies:
     udp: true
 
 #SG
-  - name: 1312.greenssh
+  - name: 2112.sg2.green
     server: *bug
     port: 443
     type: vless
-    uuid: 8c9f974b-387b-4b89-a5fa-d0066916066c
+    uuid: ed001c1d-f742-4f67-94c0-9b89d4bbd9ae
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sg1-vless.greenssh.xyz
+    servername: sg2-xray.greenssh.xyz
     network: ws
     ws-opts:
-      path: /vless
+      path: /websocket
       headers:
-        Host: sg1-vless.greenssh.xyz
+        Host: sg2-xray.greenssh.xyz
     udp: true
     
   - name: 1612_sglws.mainssh
