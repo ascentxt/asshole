@@ -54,6 +54,39 @@ proxies:
         Host: idx-1.openv2ray.com
     udp: true
 
+  - name: 2212.idray.serverssh
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 875a3b57-8a14-44df-a31f-ee6e0f52ff9f
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idray.serverip.my.id
+    network: ws
+    ws-opts:
+      path: /serverssh
+      headers:
+        Host: idray.serverip.my.id
+    udp: true
+    
+  - name: 2212.id2.dns.jagoan
+    server: *bug
+    port: 443
+    type: vmess
+    uuid: cafe0b0e-0c1a-4131-acac-affbbb4e043e
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id2-ray.ipservers.xyz
+    network: ws
+    ws-opts:
+      path: /JAGOANSSH/
+      headers:
+        Host: id2-ray.ipservers.xyz
+    udp: true
+
 #SG
   - name: 1612_sglws.mainssh
     server: *bug
@@ -71,7 +104,7 @@ proxies:
         Host: sglws.mainssh.xyz
     udp: true
     
-  - name: 1401.serverssh
+  - name: 1401.sgm1.serverssh
     server: *bug
     port: 443
     type: vmess
