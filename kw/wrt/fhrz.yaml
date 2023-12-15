@@ -55,22 +55,6 @@ proxies:
     udp: true
 
 #SG
-  - name: 2212.sg2.green
-    server: *bug
-    port: 443
-    type: vless
-    uuid: da134ff0-8dbf-4d97-98dd-3849669a2b3f
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg2-xray.greenssh.xyz
-    network: ws
-    ws-opts:
-      path: /websocket
-      headers:
-        Host: sg2-xray.greenssh.xyz
-    udp: true
-    
   - name: 1612_sglws.mainssh
     server: *bug
     port: 443
@@ -86,6 +70,22 @@ proxies:
       headers:
         Host: sglws.mainssh.xyz
     udp: true
+    
+  - name: 1401.serverssh
+    server: *bug
+    port: 443
+    type: vmess
+    uuid: 88453297-c1b2-42aa-bfda-7f949aec01d9
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgm1grpc.serverip.my.id
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc
+    udp: true
+    
     
 
 
