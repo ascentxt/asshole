@@ -6,11 +6,11 @@ interface:
 proxies:
 
 #ID
-  - name: 1612.idlws.mainssh
+  - name: 2912.idlws.mainssh
     server: *bug
     port: 443
     type: vless
-    uuid: c4feb850-3e04-4e41-87da-44a9a13ae070
+    uuid: be42be4a-95cb-461b-83f8-04ade95af1d5
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -22,11 +22,11 @@ proxies:
         Host: idlws.mainssh.xyz
     udp: true
 
-  - name: 1612.id2vless.jagoanssh
+  - name: 2912.id2vless.jagoanssh
     server: *bug
     port: 443
     type: vless
-    uuid: 2862b19a-1cf2-46d8-a1ea-fd7802211963
+    uuid: f4548843-0935-4dc5-928e-188140f7f1e0
     cipher: auto
     tls: true
     skip-cert-verify: true
