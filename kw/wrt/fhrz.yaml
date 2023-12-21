@@ -88,20 +88,20 @@ proxies:
     udp: true
 
 #SG
-  - name: 1612_sglws.mainssh
+  - name: 2912_sg3lws.mainssh
     server: *bug
     port: 443
     type: vless
-    uuid: a158bf62-b57a-4e93-9d5d-d30b7574991f
+    uuid: a059d142-0248-4beb-9dc1-88dd032af51e
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sglws.mainssh.xyz
+    servername: sg3lws.mainssh.xyz
     network: ws
     ws-opts:
       path: /vless
       headers:
-        Host: sglws.mainssh.xyz
+        Host: sg3lws.mainssh.xyz
     udp: true
     
   - name: 1401.sgm1.serverssh
