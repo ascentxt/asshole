@@ -6,11 +6,11 @@ interface:
 proxies:
 
 #ID
-  - name: 2912.idlws.mainssh
+  - name: 0501.idlws.mainssh
     server: *bug
     port: 443
     type: vless
-    uuid: be42be4a-95cb-461b-83f8-04ade95af1d5
+    uuid: 158a3d00-2829-4f34-9f60-04a9457dc50c
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -22,11 +22,11 @@ proxies:
         Host: idlws.mainssh.xyz
     udp: true
 
-  - name: 2912.id2vless.jagoanssh
+  - name: 0501.id2vless.jagoanssh
     server: *bug
     port: 443
     type: vless
-    uuid: f4548843-0935-4dc5-928e-188140f7f1e0
+    uuid: 941bc375-0bad-45f2-9568-cab08b17b37f
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -38,7 +38,7 @@ proxies:
         Host: id2vless.ipservers.xyz
     udp: true
     
-  - name: 2212.idx1.open
+  - name: 0501.idx1.open
     server: *bug
     port: 443
     type: vless
@@ -49,16 +49,16 @@ proxies:
     servername: idx-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-12121212
+      path: /u/opentunnel.net-45454545
       headers:
         Host: idx-1.openv2ray.com
     udp: true
 
-  - name: 2212.idray.serverssh
+  - name: 0501.idray.serverssh
     server: *bug
     port: 443
     type: vless
-    uuid: 875a3b57-8a14-44df-a31f-ee6e0f52ff9f
+    uuid: 3f252d97-61d1-451a-af9f-b8b38d1a2011
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -70,11 +70,11 @@ proxies:
         Host: idray.serverip.my.id
     udp: true
     
-  - name: 2212.id2.dns.jagoan
+  - name: 0501.id2.dns.jagoan
     server: *bug
     port: 443
     type: vmess
-    uuid: cafe0b0e-0c1a-4131-acac-affbbb4e043e
+    uuid: ccad0aa8-f7e7-4a41-aa60-78a6ea016212
     alterId: 0
     cipher: auto
     tls: true
@@ -88,11 +88,11 @@ proxies:
     udp: true
 
 #SG
-  - name: 2912_sg3lws.mainssh
+  - name: 0501_sg3lws.mainssh
     server: *bug
     port: 443
     type: vless
-    uuid: a059d142-0248-4beb-9dc1-88dd032af51e
+    uuid: 5e0fad96-3d0b-4896-8e84-130b80949c4e
     cipher: auto
     tls: true
     skip-cert-verify: true
