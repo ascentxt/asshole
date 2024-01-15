@@ -22,11 +22,11 @@ proxies:
         Host: idlws.mainssh.xyz
     udp: true
 
-  - name: 0501.id2vless.jagoanssh
+  - name: 2201.id2vless.jagoanssh
     server: *bug
     port: 443
     type: vless
-    uuid: 941bc375-0bad-45f2-9568-cab08b17b37f
+    uuid: e34d97e8-2676-47b0-a9de-074f19e10d64
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -37,28 +37,12 @@ proxies:
       headers:
         Host: id2vless.ipservers.xyz
     udp: true
-    
-  - name: 0501.idx1.open
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idx-1.openv2ray.com
-    network: ws
-    ws-opts:
-      path: /u/opentunnel.net-45454545
-      headers:
-        Host: idx-1.openv2ray.com
-    udp: true
 
   - name: 0501.idray.serverssh
     server: *bug
     port: 443
     type: vless
-    uuid: 3f252d97-61d1-451a-af9f-b8b38d1a2011
+    uuid: 425989fe-d754-44ff-a3cd-be3e4a564acf
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -68,23 +52,6 @@ proxies:
       path: /serverssh
       headers:
         Host: idray.serverip.my.id
-    udp: true
-    
-  - name: 0501.id2.dns.jagoan
-    server: *bug
-    port: 443
-    type: vmess
-    uuid: ccad0aa8-f7e7-4a41-aa60-78a6ea016212
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id2-ray.ipservers.xyz
-    network: ws
-    ws-opts:
-      path: /JAGOANSSH/
-      headers:
-        Host: id2-ray.ipservers.xyz
     udp: true
 
 #SG
