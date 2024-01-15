@@ -6,11 +6,11 @@ interface:
 proxies:
 
 #ID
-  - name: 0501.idlws.mainssh
+  - name: 2201.idlws.mainssh
     server: *bug
     port: 443
     type: vless
-    uuid: 158a3d00-2829-4f34-9f60-04a9457dc50c
+    uuid: 55194054-000c-410a-9ee7-0d312d896cd0
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -88,11 +88,11 @@ proxies:
     udp: true
 
 #SG
-  - name: 0501_sg3lws.mainssh
+  - name: 2201_sg3lws.mainssh
     server: *bug
     port: 443
     type: vless
-    uuid: 5e0fad96-3d0b-4896-8e84-130b80949c4e
+    uuid: 0a0da4a1-f9d7-4ba1-86c5-c480dd26b089
     cipher: auto
     tls: true
     skip-cert-verify: true
