@@ -6,11 +6,11 @@ interface:
 proxies:
 
 #ID
-  - name: 1612.idlws.mainssh
+  - name: 2201.idlws.mainssh
     server: *bug
     port: 443
     type: vless
-    uuid: c4feb850-3e04-4e41-87da-44a9a13ae070
+    uuid: 55194054-000c-410a-9ee7-0d312d896cd0
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -22,11 +22,11 @@ proxies:
         Host: idlws.mainssh.xyz
     udp: true
 
-  - name: 1612.id2vless.jagoanssh
+  - name: 2201.id2vless.jagoanssh
     server: *bug
     port: 443
     type: vless
-    uuid: 2862b19a-1cf2-46d8-a1ea-fd7802211963
+    uuid: e34d97e8-2676-47b0-a9de-074f19e10d64
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -37,28 +37,12 @@ proxies:
       headers:
         Host: id2vless.ipservers.xyz
     udp: true
-    
-  - name: 2212.idx1.open
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idx-1.openv2ray.com
-    network: ws
-    ws-opts:
-      path: /u/opentunnel.net-12121212
-      headers:
-        Host: idx-1.openv2ray.com
-    udp: true
 
-  - name: 2212.idray.serverssh
+  - name: 0501.idray.serverssh
     server: *bug
     port: 443
     type: vless
-    uuid: 875a3b57-8a14-44df-a31f-ee6e0f52ff9f
+    uuid: 425989fe-d754-44ff-a3cd-be3e4a564acf
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -69,39 +53,22 @@ proxies:
       headers:
         Host: idray.serverip.my.id
     udp: true
-    
-  - name: 2212.id2.dns.jagoan
-    server: *bug
-    port: 443
-    type: vmess
-    uuid: cafe0b0e-0c1a-4131-acac-affbbb4e043e
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id2-ray.ipservers.xyz
-    network: ws
-    ws-opts:
-      path: /JAGOANSSH/
-      headers:
-        Host: id2-ray.ipservers.xyz
-    udp: true
 
 #SG
-  - name: 1612_sglws.mainssh
+  - name: 2201_sg3lws.mainssh
     server: *bug
     port: 443
     type: vless
-    uuid: a158bf62-b57a-4e93-9d5d-d30b7574991f
+    uuid: 0a0da4a1-f9d7-4ba1-86c5-c480dd26b089
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sglws.mainssh.xyz
+    servername: sg3lws.mainssh.xyz
     network: ws
     ws-opts:
       path: /vless
       headers:
-        Host: sglws.mainssh.xyz
+        Host: sg3lws.mainssh.xyz
     udp: true
     
   - name: 1401.sgm1.serverssh
@@ -118,3 +85,7 @@ proxies:
     grpc-opts:
       grpc-service-name: grpc
     udp: true
+    
+    
+
+
