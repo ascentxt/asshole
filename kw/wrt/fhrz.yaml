@@ -21,6 +21,22 @@ proxies:
       headers:
         Host: id1.v2vless.xyz
     udp: true
+
+    - name: 1202.id4.vless.shocean
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 9f6833c6-54eb-4432-af87-d267b5d6e65b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id4.v2vless.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: id4.v2vless.xyz
+    udp: true  
     
   - name: 2201.idlws.mainssh
     server: *bug
@@ -36,22 +52,6 @@ proxies:
       path: /vless
       headers:
         Host: idlws.mainssh.xyz
-    udp: true
-
-  - name: 2201.id2vless.jagoanssh
-    server: *bug
-    port: 443
-    type: vless
-    uuid: e34d97e8-2676-47b0-a9de-074f19e10d64
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id2vless.ipservers.xyz
-    network: ws
-    ws-opts:
-      path: /jagoanssh
-      headers:
-        Host: id2vless.ipservers.xyz
     udp: true
 
   - name: 1202.idray.serverssh
