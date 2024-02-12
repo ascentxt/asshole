@@ -54,7 +54,7 @@ proxies:
         Host: idlws.mainssh.xyz
     udp: true
 
-  - name: 1202.idray.serverssh
+  - name: 2002.idray.serverssh
     server: *bug
     port: 443
     type: vless
@@ -91,7 +91,7 @@ proxies:
     server: *bug
     port: 443
     type: vmess
-    uuid: 88453297-c1b2-42aa-bfda-7f949aec01d9
+    uuid: 0f1666dd-d1a7-4f52-b169-f491c449e6de
     alterId: 0
     cipher: auto
     tls: true
