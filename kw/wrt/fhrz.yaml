@@ -22,11 +22,11 @@ proxies:
         Host: id1.v2vless.xyz
     udp: true
 
-    - name: 1202.id4.vless.shocean
+    - name: 2002.id4.vless.shocean
     server: *bug
     port: 443
     type: vless
-    uuid: 9f6833c6-54eb-4432-af87-d267b5d6e65b
+    uuid: a60c6584-4e0e-4a81-b21f-2e953745e1f6
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -58,7 +58,7 @@ proxies:
     server: *bug
     port: 443
     type: vless
-    uuid: a63da608-0130-4aab-a896-bfee2590e843
+    uuid: e18bf0a0-1521-446b-895f-f0ea1c939522
     cipher: auto
     tls: true
     skip-cert-verify: true
