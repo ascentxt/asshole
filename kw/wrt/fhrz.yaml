@@ -22,7 +22,7 @@ proxies:
         Host: id1.v2vless.xyz
     udp: true
 
-    - name: 2002.id4.vless.shocean
+  - name: 2002.id4.vless.shocean
     server: *bug
     port: 443
     type: vless
