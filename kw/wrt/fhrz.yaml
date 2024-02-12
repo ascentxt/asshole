@@ -87,7 +87,7 @@ proxies:
         Host: sg3lws.mainssh.xyz
     udp: true
     
-  - name: 1401.sgm1.serverssh
+  - name: 1403.sgm1.serverssh
     server: *bug
     port: 443
     type: vmess
