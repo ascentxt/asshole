@@ -6,11 +6,11 @@ interface:
 proxies:
 
 #ID
-  - name: 1202.id1.vless.shocean
+  - name: 2002.id1.vless.shocean
     server: *bug
     port: 443
     type: vless
-    uuid: 8f1f7786-0dfe-42c0-9714-cd83be78ffda
+    uuid: 7f74113a-b20a-4383-a5c6-722af7d70b68
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -38,11 +38,11 @@ proxies:
         Host: id4.v2vless.xyz
     udp: true  
     
-  - name: 2201.idlws.mainssh
+  - name: 2002.idlws.mainssh
     server: *bug
     port: 443
     type: vless
-    uuid: 55194054-000c-410a-9ee7-0d312d896cd0
+    uuid: c6aa6d26-41a8-4d98-acf0-fe690951f8e5
     cipher: auto
     tls: true
     skip-cert-verify: true
