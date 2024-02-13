@@ -1,0 +1,42 @@
+bug-isp:
+  - &bug 104.26.14.208
+interface:
+  - &usb usb0
+
+proxies:
+
+#SG
+  - name: 1202_sg3lws.mainssh
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 2f0b157c-1941-48c0-8c5a-8d76501b0e41
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3lws.mainssh.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sg3lws.mainssh.xyz
+    udp: true
+    
+  - name: 1403.sgm1.serverssh
+    server: *bug
+    port: 443
+    type: vmess
+    uuid: 0f1666dd-d1a7-4f52-b169-f491c449e6de
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgm1grpc.serverip.my.id
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc
+    udp: true
+    
+    
+
+
