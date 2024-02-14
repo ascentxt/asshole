@@ -7,22 +7,6 @@ proxies:
 
 #ID
     
-  - name: 2002.idlws.mainssh
-    server: *bug
-    port: 443
-    type: vless
-    uuid: c6aa6d26-41a8-4d98-acf0-fe690951f8e5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idlws.mainssh.xyz
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: idlws.mainssh.xyz
-    udp: true
-
   - name: 2002.id1.vless.shocean
     server: *bug
     port: 443
@@ -54,6 +38,22 @@ proxies:
       headers:
         Host: id4.v2vless.xyz
     udp: true  
+
+  - name: 2002.idlws.mainssh
+    server: *bug
+    port: 443
+    type: vless
+    uuid: c6aa6d26-41a8-4d98-acf0-fe690951f8e5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idlws.mainssh.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: idlws.mainssh.xyz
+    udp: true
 
   - name: 2002.idray.serverssh
     server: *bug
