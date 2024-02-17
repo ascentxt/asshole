@@ -6,6 +6,23 @@ interface:
 proxies:
 
 #ID
+    
+  - name: 2402.id1.vless.shocean
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 8b78ccec-c696-4f91-aba7-31e021a679fb
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id1.v2vless.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: id1.v2vless.xyz
+    udp: true
+
   - name: 2002.id4.vless.shocean
     server: *bug
     port: 443
@@ -21,22 +38,6 @@ proxies:
       headers:
         Host: id4.v2vless.xyz
     udp: true  
-    
-  - name: 2002.id1.vless.shocean
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 7f74113a-b20a-4383-a5c6-722af7d70b68
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id1.v2vless.xyz
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: id1.v2vless.xyz
-    udp: true
 
 
   - name: 2002.idray.serverssh
