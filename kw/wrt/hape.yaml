@@ -1,48 +1,50 @@
 bug-isp:
-  - &bug beacon.liveon.id
+  - &bug 104.26.14.208
 interface:
   - &usb usb0
 
 proxies:
 
 #ID
-  - name: 2201.idlws.mainssh
+    
+  - name: 2402.id1.vless.shocean
     server: *bug
     port: 443
     type: vless
-    uuid: 55194054-000c-410a-9ee7-0d312d896cd0
+    uuid: 8b78ccec-c696-4f91-aba7-31e021a679fb
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: idlws.mainssh.xyz
+    servername: id1.v2vless.xyz
     network: ws
     ws-opts:
       path: /vless
       headers:
-        Host: idlws.mainssh.xyz
+        Host: id1.v2vless.xyz
     udp: true
 
-  - name: 2201.id2vless.jagoanssh
+  - name: 2002.id4.vless.shocean
     server: *bug
     port: 443
     type: vless
-    uuid: e34d97e8-2676-47b0-a9de-074f19e10d64
+    uuid: a60c6584-4e0e-4a81-b21f-2e953745e1f6
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: id2vless.ipservers.xyz
+    servername: id4.v2vless.xyz
     network: ws
     ws-opts:
-      path: /jagoanssh
+      path: /vless
       headers:
-        Host: id2vless.ipservers.xyz
-    udp: true
+        Host: id4.v2vless.xyz
+    udp: true  
 
-  - name: 0501.idray.serverssh
+
+  - name: 2002.idray.serverssh
     server: *bug
     port: 443
     type: vless
-    uuid: 425989fe-d754-44ff-a3cd-be3e4a564acf
+    uuid: e18bf0a0-1521-446b-895f-f0ea1c939522
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -54,36 +56,20 @@ proxies:
         Host: idray.serverip.my.id
     udp: true
 
-#SG
-  - name: 2201_sg3lws.mainssh
+  - name: 2002.idlws.mainssh
     server: *bug
     port: 443
     type: vless
-    uuid: 0a0da4a1-f9d7-4ba1-86c5-c480dd26b089
+    uuid: c6aa6d26-41a8-4d98-acf0-fe690951f8e5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sg3lws.mainssh.xyz
+    servername: idlws.mainssh.xyz
     network: ws
     ws-opts:
       path: /vless
       headers:
-        Host: sg3lws.mainssh.xyz
-    udp: true
-    
-  - name: 1401.sgm1.serverssh
-    server: *bug
-    port: 443
-    type: vmess
-    uuid: 88453297-c1b2-42aa-bfda-7f949aec01d9
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sgm1grpc.serverip.my.id
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc
+        Host: idlws.mainssh.xyz
     udp: true
     
     
