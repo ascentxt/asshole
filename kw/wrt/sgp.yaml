@@ -25,16 +25,17 @@ proxies:
   - name: 2503.sgm1.serverssh
     server: *bug
     port: 443
-    type: vmess
+    type: vless
     uuid: a427d575-c163-41f7-8110-6dae2b7fd6c7
-    alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sgm1grpc.serverip.my.id
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc
+    servername: sgm1ray.serverip.my.id
+    network: ws
+    ws-opts:
+      path: /serverssh
+      headers:
+        Host: sgm1ray.serverip.my.id
     udp: true
     
     
