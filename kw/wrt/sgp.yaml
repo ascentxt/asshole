@@ -6,11 +6,11 @@ interface:
 proxies:
 
 #SG
-  - name: 1202_sg3lws.mainssh
+  - name: 0302_sg3lws.mainssh
     server: *bug
     port: 443
     type: vless
-    uuid: 2f0b157c-1941-48c0-8c5a-8d76501b0e41
+    uuid: 31b316e6-b8e6-4d23-a3ab-554c2c17ea03
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -22,11 +22,11 @@ proxies:
         Host: sg3lws.mainssh.xyz
     udp: true
     
-  - name: 1403.sgm1.serverssh
+  - name: 2503.sgm1.serverssh
     server: *bug
     port: 443
     type: vmess
-    uuid: 0f1666dd-d1a7-4f52-b169-f491c449e6de
+    uuid: a427d575-c163-41f7-8110-6dae2b7fd6c7
     alterId: 0
     cipher: auto
     tls: true
