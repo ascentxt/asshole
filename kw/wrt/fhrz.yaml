@@ -39,11 +39,11 @@ proxies:
         Host: id3.v2vless.xyz
     udp: true
 
-  - name: 2002.idray.serverssh
+  - name: 0203.idray.serverssh
     server: *bug
     port: 443
     type: vless
-    uuid: e18bf0a0-1521-446b-895f-f0ea1c939522
+    uuid: 3e08b121-9a49-48f0-882f-71ff75b56e66
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -55,11 +55,11 @@ proxies:
         Host: idray.serverip.my.id
     udp: true
 
-  - name: 2002.idlws.mainssh
+  - name: 0302.idlws.mainssh
     server: *bug
     port: 443
     type: vless
-    uuid: c6aa6d26-41a8-4d98-acf0-fe690951f8e5
+    uuid: 2d29b615-20d0-42a0-8960-3da409941b65
     cipher: auto
     tls: true
     skip-cert-verify: true
