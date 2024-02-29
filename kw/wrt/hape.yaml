@@ -1,5 +1,5 @@
 bug-isp:
-  - &bug 104.18.225.52
+  - &bug 104.26.14.208
 interface:
   - &usb usb0
   
