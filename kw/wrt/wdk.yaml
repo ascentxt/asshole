@@ -21,12 +21,12 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: id4.v2vless.xyz
+    servername: id2.v2vless.xyz
     network: ws
     ws-opts:
       path: /vless
       headers:
-        Host: id4.v2vless.xyz
+        Host: id2.v2vless.xyz
     udp: true  
 
   - name: 1503.idray.serverssh
@@ -34,22 +34,6 @@ proxies:
     port: 443
     type: vless
     uuid: b0c32387-791d-4f42-831d-aa031e67a2a9
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idray.serverip.my.id
-    network: ws
-    ws-opts:
-      path: /serverssh
-      headers:
-        Host: idray.serverip.my.id
-    udp: true
-
-  - name: 0203.idray.serverssh
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 3e08b121-9a49-48f0-882f-71ff75b56e66
     cipher: auto
     tls: true
     skip-cert-verify: true
