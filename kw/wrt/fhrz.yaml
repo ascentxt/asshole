@@ -1,5 +1,5 @@
 bug-isp:
-  - &bug 104.18.225.52
+  - &bug 104.22.5.240
 interface:
   - &usb usb0
   
@@ -7,6 +7,7 @@ interface:
 # 104.21.73.208 (vision)
 # beacon.liveon.id
 # 104.26.14.208 (liveon)
+# 104.22.5.240 (vidio)
 
 proxies:
 
