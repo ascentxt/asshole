@@ -13,6 +13,22 @@ proxies:
 
 #ID
 
+  - name: 1503.id4.vless.shocean
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 02c212fd-280a-422f-b1ae-7a3f92714663
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id4.v2vless.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: id4.v2vless.xyz
+    udp: true  
+
   - name: 1503.id1.vless.shocean
     server: *bug
     port: 443
