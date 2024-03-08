@@ -2,106 +2,81 @@ bug-isp:
   - &bug 104.18.225.52
 interface:
   - &usb usb0
+  
+# 104.18.225.52 (vision)
+# 104.21.73.208 (vision)
+# beacon.liveon.id
+# 104.26.14.208 (liveon)
+# 104.22.5.240 (vidio)
 
 proxies:
 
 #ID
-  - name: 0812_idx-1
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idx-1.openv2ray.com
-    network: ws
-    ws-opts:
-      path: /u/opentunnel.net-manhdjdj
-      headers:
-        Host: idx-1.openv2ray.com
-    udp: true
-    
-  - name: 0812_idlgrpc
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 63fb4b43-5fda-475f-a260-78b05cefe391
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idlgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: vlessgrpc
-    udp: true
-    
 
-#SG
-  - name: 0812_sgx-3
+  - name: 2902.id4.vless.shocean
     server: *bug
     port: 443
     type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    uuid: 276acafd-45b7-4860-adf0-8c2411083f0a
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sgx-1.openv2ray.com
+    servername: id4.v2vless.xyz
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-kokisoyo
+      path: /vless
       headers:
-        Host: sgx-1.openv2ray.com
-    udp: true
+        Host: id4.v2vless.xyz
+    udp: true  
     
-  - name: 0912_gaming
-    server: *bug
-    port: 80
-    type: vmess
-    uuid: 8e4c89ee-254d-4737-835d-90e13ca7940b
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: sg.serverfast.pw
-    network: ws
-    ws-opts:
-      path: /v2ray-vmess/ntls
-      headers:
-        Host: sg.serverfast.pw
-    udp: true
-    
-  - name: 0812_sg2lgrpc
+  - name: 2902.id3.vless.shocean
     server: *bug
     port: 443
     type: vless
-    uuid: 2cdb3b8b-4c54-4788-ae6c-6116d2fbb2fd
+    uuid: 743f3429-1502-4833-ac4d-5c627f666718
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sg2lgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts:
-      grpc-service-name: vlessgrpc
+    servername: id3.v2vless.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: id3.v2vless.xyz
     udp: true
 
-#SSHKIT
-  - name: 1412_sg1_widakdi
+  - name: 0203.idray.serverssh
     server: *bug
-    port: 80
-    type: vmess
-    uuid: e620d600-ee19-4012-a96c-968e85a52de9
-    alterId: 0
+    port: 443
+    type: vless
+    uuid: 3e08b121-9a49-48f0-882f-71ff75b56e66
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
-    servername: vmess-sg1.sshkit.org
+    servername: idray.serverip.my.id
     network: ws
     ws-opts:
-      path: /sshkit/582191343/6552b5133d03f/
+      path: /serverssh
       headers:
-        Host: vmess-sg1.sshkit.org
+        Host: idray.serverip.my.id
     udp: true
+
+  - name: 0302.idlws.mainssh
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 2d29b615-20d0-42a0-8960-3da409941b65
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idlws.mainssh.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: idlws.mainssh.xyz
+    udp: true
+    
     
 
 
