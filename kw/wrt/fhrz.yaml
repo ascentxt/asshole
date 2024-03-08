@@ -13,11 +13,11 @@ proxies:
 
 #ID
 
-  - name: 2902.id4.vless.shocean
+  - name: 1503.id2.vless.shocean
     server: *bug
     port: 443
     type: vless
-    uuid: 276acafd-45b7-4860-adf0-8c2411083f0a
+    uuid: sg2.v2vless.xyz
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -28,28 +28,12 @@ proxies:
       headers:
         Host: id4.v2vless.xyz
     udp: true  
-    
-  - name: 2902.id3.vless.shocean
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 743f3429-1502-4833-ac4d-5c627f666718
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id3.v2vless.xyz
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: id3.v2vless.xyz
-    udp: true
 
-  - name: 0203.idray.serverssh
+  - name: 1503.idray.serverssh
     server: *bug
     port: 443
     type: vless
-    uuid: 3e08b121-9a49-48f0-882f-71ff75b56e66
+    uuid: b0c32387-791d-4f42-831d-aa031e67a2a9
     cipher: auto
     tls: true
     skip-cert-verify: true
