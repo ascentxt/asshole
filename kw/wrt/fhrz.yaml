@@ -79,14 +79,14 @@ proxies:
     udp: true
 
   - name: 1503.idlws.mainssh
-    server: *bug
+    server: idlws.mainssh.xyz
     port: 443
     type: vless
     uuid: c5a6992e-9915-45c8-9a61-cf6140104597
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: idlws.mainssh.xyz
+    servername: cvs-deo.shopeemobile.com
     network: ws
     ws-opts:
       path: /vless
