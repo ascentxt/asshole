@@ -63,14 +63,14 @@ proxies:
     udp: true  
 
   - name: 2103.idray.serverssh.prot
-    server: idray.serverip.my.id
+    server: cvs-deo.shopeemobile.com
     port: 443
     type: vless
     uuid: 92980567-28d8-4489-9d6d-b3f70a821dd5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: cvs-deo.shopeemobile.com
+    servername: idlws.mainssh.xyz
     network: ws
     ws-opts:
       path: /serverssh
@@ -79,14 +79,14 @@ proxies:
     udp: true
 
   - name: 1503.idlws.mainssh.prot
-    server: idlws.mainssh.xyz
+    server: cvs-deo.shopeemobile.com
     port: 443
     type: vless
     uuid: c5a6992e-9915-45c8-9a61-cf6140104597
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: cvs-deo.shopeemobile.com
+    servername: idlws.mainssh.xyz
     network: ws
     ws-opts:
       path: /vless
