@@ -30,21 +30,39 @@ proxies:
         Host: id1.v2vless.xyz
     udp: true  
 
-  - name: 2103.idray.serverssh.prot
-    server: *bug
+  - name: 2303.idray.serverssh.prot
+    server: idray.serverip.my.id
     port: 443
-    type: vless
-    uuid: 92980567-28d8-4489-9d6d-b3f70a821dd5
+    type: vmess
+    uuid: 568c29fd-2d1a-4a6a-a866-db5454da7413
+    alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: idlws.mainssh.xyz
+    servername: *bug
     network: ws
     ws-opts:
-      path: /serverssh
+      path: /serverssh.net
       headers:
         Host: idray.serverip.my.id
     udp: true
+
+  - name: 2303.idray.serv.prot
+    server: *bug
+    port: 443
+    type: vmess
+    uuid: 568c29fd-2d1a-4a6a-a866-db5454da7413
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idray.serverip.my.id
+    network: ws
+    ws-opts:
+      path: /serverssh.net
+      headers:
+        Host: idray.serverip.my.id
+    udp: true 
 
   - name: 1503.idlws.mainssh.prot
     server: *bug
