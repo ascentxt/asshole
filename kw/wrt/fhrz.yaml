@@ -1,5 +1,5 @@
 bug-isp:
-  - &bug quiz.staging.vidio.com
+  - &bug cvs-deo.shopeemobile.com
 interface:
   - &usb usb0
   
@@ -9,32 +9,16 @@ interface:
 # 104.26.14.208 (liveon)
 # 104.22.5.240 (vidio)
 # quiz.staging.vidio.com (vidio) (port: 80)
+# cvs-deo.shopeemobile.com protek
 
 proxies:
 
 #ID
-
-  - name: 1503.id4.vless.shocean
+  - name: 2203.id1.vless.shocean
     server: *bug
     port: 443
     type: vless
-    uuid: 02c212fd-280a-422f-b1ae-7a3f92714663
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id4.v2vless.xyz
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: id4.v2vless.xyz
-    udp: true  
-
-  - name: 1503.id1.vless.shocean
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 9888dbc8-a541-443f-929f-6c9338ff620f
+    uuid: d84b36fd-2108-4cd5-9ca5-6c69012dac98
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -46,24 +30,8 @@ proxies:
         Host: id1.v2vless.xyz
     udp: true  
 
-  - name: 1503.id2.vless.shocean
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 35efa120-adec-4514-b99c-2c6d63b4a959
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id2.v2vless.xyz
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: id2.v2vless.xyz
-    udp: true  
-
   - name: 2103.idray.serverssh.prot
-    server: cvs-deo.shopeemobile.com
+    server: *bug
     port: 443
     type: vless
     uuid: 92980567-28d8-4489-9d6d-b3f70a821dd5
@@ -79,7 +47,7 @@ proxies:
     udp: true
 
   - name: 1503.idlws.mainssh.prot
-    server: cvs-deo.shopeemobile.com
+    server: *bug
     port: 443
     type: vless
     uuid: c5a6992e-9915-45c8-9a61-cf6140104597
