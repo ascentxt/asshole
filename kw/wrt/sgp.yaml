@@ -30,20 +30,19 @@ proxies:
         Host: sg3mws.mainssh.xyz
     udp: true
     
-  - name: 2503.sgm1.serverssh
+  - name: 1504.sgm1grpc.serverssh
     server: *bug
     port: 443
-    type: vless
-    uuid: a427d575-c163-41f7-8110-6dae2b7fd6c7
+    type: vmess
+    uuid: 73dda78b-d5f7-4f42-b85f-885d4873f62e
+    alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sgm1ray.serverip.my.id
-    network: ws
-    ws-opts:
-      path: /serverssh
-      headers:
-        Host: sgm1ray.serverip.my.id
+    servername: sgm1grpc.serverip.my.id
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc
     udp: true
     
     
