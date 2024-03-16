@@ -30,8 +30,8 @@ proxies:
       headers:
         Host: id1-ray.ipservers.xyz
         
-  - name: jagoanssh-cvsdeoshopeem
-    server: id1-ray.ipservers.xyz
+  - name: 2303.jagoanssh-vid
+    server: 104.16.14.120
     port: 443
     type: vmess
     uuid: 6683361a-487a-43c3-b62c-72dacf880334
@@ -39,12 +39,12 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: cvs-deo.shopeemobile.com
+    servername: id1-ray.ipservers.xyz
     network: ws
     ws-opts:
       path: /JAGOANSSH/
       headers:
-        Host: cvs-deo.shopeemobile.com
+        Host: id1-ray.ipservers.xyz
     udp: true
     
   - name: 2203.id1.vless.shocean
@@ -63,8 +63,8 @@ proxies:
         Host: id1.v2vless.xyz
     udp: true  
 
-  - name: 2303.idray.serverssh.prot
-    server: idray.serverip.my.id
+  - name: 2303.idray.serverssh.vidio
+    server: 104.16.14.120
     port: 443
     type: vmess
     uuid: 568c29fd-2d1a-4a6a-a866-db5454da7413
@@ -72,7 +72,7 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: *bug
+    servername: idray.serverip.my.id
     network: ws
     ws-opts:
       path: /serverssh.net
