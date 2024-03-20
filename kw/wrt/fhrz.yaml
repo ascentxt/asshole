@@ -9,7 +9,8 @@ interface:
 # 104.26.14.208 (liveon)
 # 104.22.5.240 (vidio)
 # quiz.staging.vidio.com (vidio) (port: 80)
-# cvs-deo.shopeemobile.com protek
+# cvs-deo.shopeemobile.com (protek)
+# 104.16.14.120 (vidio)
 
 proxies:
 
