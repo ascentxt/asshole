@@ -15,37 +15,36 @@ interface:
 proxies:
 
 #ID
-  - name: 2303.jagoanssh-cvsdeoshopeem
+  - name: 3003.jagoanssh-cvsdeoshopeem
     server: *bug
     port: 443
-    type: vmess
-    uuid: 6683361a-487a-43c3-b62c-72dacf880334
-    alterId: 0
+    type: vless
+    uuid: 69e2403a-c23d-428b-ac42-97102401af34
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: id1-ray.ipservers.xyz
+    servername: id1vless.ipservers.xyz
     network: ws
     ws-opts:
-      path: /JAGOANSSH/
+      path: /jagoanssh
       headers:
-        Host: id1-ray.ipservers.xyz
+        Host: id1vless.ipservers.xyz
+    udp: true
         
-  - name: 2303.jagoanssh-vid
+  - name: 3003.jagoanssh-cvsdeoshopeem
     server: 104.16.14.120
     port: 443
-    type: vmess
-    uuid: 6683361a-487a-43c3-b62c-72dacf880334
-    alterId: 0
+    type: vless
+    uuid: 69e2403a-c23d-428b-ac42-97102401af34
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: id1-ray.ipservers.xyz
+    servername: id1vless.ipservers.xyz
     network: ws
     ws-opts:
-      path: /JAGOANSSH/
+      path: /jagoanssh
       headers:
-        Host: id1-ray.ipservers.xyz
+        Host: id1vless.ipservers.xyz
     udp: true
     
   - name: 2203.id1.vless.shocean
@@ -64,39 +63,37 @@ proxies:
         Host: id1.v2vless.xyz
     udp: true  
 
-  - name: 2303.idray.serverssh.vidio
-    server: 104.16.14.120
+  - name: 3003.idray.serverip.prot
+    server: *bug
     port: 443
-    type: vmess
-    uuid: 568c29fd-2d1a-4a6a-a866-db5454da7413
-    alterId: 0
+    type: vless
+    uuid: ce78219b-5d16-4f91-9e5a-c73de2a616fe
     cipher: auto
     tls: true
     skip-cert-verify: true
     servername: idray.serverip.my.id
     network: ws
     ws-opts:
-      path: /serverssh.net
+      path: /serverssh
       headers:
         Host: idray.serverip.my.id
     udp: true
-
-  - name: 2303.idray.serv.prot
-    server: *bug
+    
+  - name: 2303.idray.serverssh.vidio
+    server: 104.16.14.120
     port: 443
-    type: vmess
-    uuid: 568c29fd-2d1a-4a6a-a866-db5454da7413
-    alterId: 0
+    type: vless
+    uuid: ce78219b-5d16-4f91-9e5a-c73de2a616fe
     cipher: auto
     tls: true
     skip-cert-verify: true
     servername: idray.serverip.my.id
     network: ws
     ws-opts:
-      path: /serverssh.net
+      path: /serverssh
       headers:
         Host: idray.serverip.my.id
-    udp: true 
+    udp: true
 
   - name: 1503.idlws.mainssh.prot
     server: *bug
