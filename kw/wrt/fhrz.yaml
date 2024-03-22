@@ -31,7 +31,7 @@ proxies:
         Host: id1vless.ipservers.xyz
     udp: true
         
-  - name: 3003.jagoanssh-cvsdeoshopeem
+  - name: 3003.jagoanssh-vidio
     server: 104.16.14.120
     port: 443
     type: vless
@@ -46,24 +46,8 @@ proxies:
       headers:
         Host: id1vless.ipservers.xyz
     udp: true
-    
-  - name: 2203.id1.vless.shocean
-    server: *bug
-    port: 443
-    type: vless
-    uuid: d84b36fd-2108-4cd5-9ca5-6c69012dac98
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id1.v2vless.xyz
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: id1.v2vless.xyz
-    udp: true  
 
-  - name: 3003.idray.serverip.prot
+  - name: 3003.idray.serverssh.prot
     server: *bug
     port: 443
     type: vless
@@ -79,7 +63,7 @@ proxies:
         Host: idray.serverip.my.id
     udp: true
     
-  - name: 2303.idray.serverssh.vidio
+  - name: 3003.idray.serverssh.vidio
     server: 104.16.14.120
     port: 443
     type: vless
@@ -95,11 +79,11 @@ proxies:
         Host: idray.serverip.my.id
     udp: true
 
-  - name: 1503.idlws.mainssh.prot
+  - name: 3003.idlws.mainssh.prot
     server: *bug
     port: 443
     type: vless
-    uuid: c5a6992e-9915-45c8-9a61-cf6140104597
+    uuid: 3753a83f-f33b-45ca-8034-ced997189924
     cipher: auto
     tls: true
     skip-cert-verify: true
