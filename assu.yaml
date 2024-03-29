@@ -162,7 +162,7 @@ proxy-groups:
 proxy-providers:
   AKUN:
     type: http
-    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/wrt/hape.yaml"
+    url: "https://raw.githubusercontent.com/ascentxt/asshole/main/kw/wrt/fhrz.yaml"
     interval: 3600
     path: "./servers/akun.yaml"
     health-check:
