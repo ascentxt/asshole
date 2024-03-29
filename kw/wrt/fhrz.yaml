@@ -32,7 +32,7 @@ proxies:
     udp: true
         
   - name: 3003.jagoanssh-vidio
-    server: 104.16.14.120
+    server: quiz.staging.vidio.com
     port: 443
     type: vless
     uuid: 69e2403a-c23d-428b-ac42-97102401af34
@@ -64,7 +64,7 @@ proxies:
     udp: true
     
   - name: 3003.idray.serverssh.vidio
-    server: 104.16.14.120
+    server: quiz.staging.vidio.com
     port: 443
     type: vless
     uuid: ce78219b-5d16-4f91-9e5a-c73de2a616fe
