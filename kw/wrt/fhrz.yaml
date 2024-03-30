@@ -15,11 +15,11 @@ interface:
 proxies:
 
 #ID
-  - name: 3003.jagoanssh-cvsdeoshopeem
+  - name: 0604.jagoanssh-cvsdeoshopeem
     server: *bug
     port: 443
     type: vless
-    uuid: 69e2403a-c23d-428b-ac42-97102401af34
+    uuid: 91e97cae-5f80-499c-ad6e-aa46fa1d25e4
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -31,11 +31,11 @@ proxies:
         Host: id1vless.ipservers.xyz
     udp: true
         
-  - name: 3003.jagoanssh-vidio
+  - name: 0604.jagoanssh-vidio
     server: quiz.staging.vidio.com
     port: 443
     type: vless
-    uuid: 69e2403a-c23d-428b-ac42-97102401af34
+    uuid: 91e97cae-5f80-499c-ad6e-aa46fa1d25e4
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -47,11 +47,11 @@ proxies:
         Host: id1vless.ipservers.xyz
     udp: true
 
-  - name: 3003.idray.serverssh.prot
+  - name: 0604.idray.serverssh.prot
     server: *bug
     port: 443
     type: vless
-    uuid: ce78219b-5d16-4f91-9e5a-c73de2a616fe
+    uuid: 73a9a525-c93b-4b95-b0df-d0b36d9b3eb7
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -63,11 +63,11 @@ proxies:
         Host: idray.serverip.my.id
     udp: true
     
-  - name: 3003.idray.serverssh.vidio
+  - name: 0604.idray.serverssh.vidio
     server: quiz.staging.vidio.com
     port: 443
     type: vless
-    uuid: ce78219b-5d16-4f91-9e5a-c73de2a616fe
+    uuid: 73a9a525-c93b-4b95-b0df-d0b36d9b3eb7
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -79,11 +79,11 @@ proxies:
         Host: idray.serverip.my.id
     udp: true
 
-  - name: 3003.idlws.mainssh.prot
+  - name: 0604.idlws.mainssh.prot
     server: *bug
     port: 443
     type: vless
-    uuid: 3753a83f-f33b-45ca-8034-ced997189924
+    uuid: ac8b752f-7541-4cfe-b8da-bc476f93d123
     cipher: auto
     tls: true
     skip-cert-verify: true
