@@ -13,21 +13,21 @@ interface:
 proxies:
 
 #SG
-  - name: 2303.sg3,main
+  - name: 0604.sg3,main
     server: *bug
     port: 443
     type: vmess
-    uuid: fadff6bb-da82-4fb9-bc6a-3e98710532a7
+    uuid: 6fbb2ace-6f55-4613-ad36-0cee802e2f65
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sg3mws.mainssh.xyz
+    servername: sglws.mainssh.xyz
     network: ws
     ws-opts:
       path: /vmess
       headers:
-        Host: sg3mws.mainssh.xyz
+        Host: sglws.mainssh.xyz
     udp: true
     
   - name: 1504.sgm1grpc.serverssh
