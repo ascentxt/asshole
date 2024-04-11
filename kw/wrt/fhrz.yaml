@@ -1,5 +1,5 @@
 bug-isp:
-  - &bug cvs-deo.shopeemobile.com
+  - &bug 104.18.49.163
 interface:
   - &usb usb0
   
@@ -10,6 +10,7 @@ interface:
 # 104.22.5.240 (vidio)
 # quiz.staging.vidio.com (vidio) (port: 80)
 # cvs-deo.shopeemobile.com (protek)
+# 104.18.49.163 (protek)
 # 104.16.14.120 (vidio)
 
 proxies:
