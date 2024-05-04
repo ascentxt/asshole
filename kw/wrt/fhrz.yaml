@@ -16,11 +16,11 @@ interface:
 proxies:
 
 #ID
-  - name: 0405.jagoanssh-cvsdeoshopeem
+  - name: 1105.jagoanssh-cvsdeoshopeem
     server: *bug
     port: 443
     type: vless
-    uuid: 9c04e6b1-ce71-4531-b3ad-c29a2d301f54
+    uuid: aa060c7e-a2fa-4ec8-a8a0-80ec87163a54
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -32,11 +32,11 @@ proxies:
         Host: id1vless.ipservers.xyz
     udp: true
 
-  - name: 0405.idray.serverssh.prot
+  - name: 1105.idray.serverssh.prot
     server: *bug
     port: 443
     type: vless
-    uuid: a97feb07-16ea-41a4-a55b-3657a73c6047
+    uuid: 9eaf4316-04f1-414e-b6c0-a8251ea96729
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -48,11 +48,11 @@ proxies:
         Host: idray.serverip.my.id
     udp: true
 
-  - name: 0405.idlws.mainssh.prot
+  - name: 1105.idlws.mainssh.prot
     server: *bug
     port: 443
     type: vless
-    uuid: 6d66c19a-5f36-432e-a444-8f55cac9affb
+    uuid: cfd93741-4ecb-47c6-99b7-bc313dfd2f90
     cipher: auto
     tls: true
     skip-cert-verify: true
