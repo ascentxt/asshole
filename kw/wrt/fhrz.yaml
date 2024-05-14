@@ -1,5 +1,5 @@
 bug-isp:
-  - &bug 104.18.56.55
+  - &bug 104.18.56.56
 interface:
   - &usb usb0
   
@@ -16,11 +16,11 @@ interface:
 proxies:
 
 #ID
-  - name: 1105.jagoanssh-cvsdeoshopeem
+  - name: 2205.jagoanssh-cvsdeoshopeem
     server: *bug
     port: 443
     type: vless
-    uuid: aa060c7e-a2fa-4ec8-a8a0-80ec87163a54
+    uuid: 216680c5-e28a-4966-a87f-2ac30dbf3d29
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -32,11 +32,11 @@ proxies:
         Host: id1vless.ipservers.xyz
     udp: true
 
-  - name: 1105.idray.serverssh.prot
+  - name: 2205.idray.serverssh.prot
     server: *bug
     port: 443
     type: vless
-    uuid: 9eaf4316-04f1-414e-b6c0-a8251ea96729
+    uuid: 2bfd78db-8718-4205-b483-52f413840bd0
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -46,20 +46,4 @@ proxies:
       path: /serverssh
       headers:
         Host: idray.serverip.my.id
-    udp: true
-
-  - name: 1105.idlws.mainssh.prot
-    server: *bug
-    port: 443
-    type: vless
-    uuid: cfd93741-4ecb-47c6-99b7-bc313dfd2f90
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idlws.mainssh.xyz
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: idlws.mainssh.xyz
     udp: true
