@@ -16,11 +16,11 @@ interface:
 proxies:
 
 #ID
-  - name: 2205.jagoanssh-cvsdeoshopeem
+  - name: 2205.jagoanssh-prot
     server: *bug
     port: 443
     type: vless
-    uuid: 216680c5-e28a-4966-a87f-2ac30dbf3d29
+    uuid: 5f821058-d69c-4061-815c-5f7b4f301785
     cipher: auto
     tls: true
     skip-cert-verify: true
