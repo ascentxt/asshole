@@ -16,7 +16,7 @@ interface:
 proxies:
 
 #ID
-  - name: 2205.jagoanssh-prot
+  - name: 3005.jagoanssh-prot
     server: *bug
     port: 443
     type: vless
