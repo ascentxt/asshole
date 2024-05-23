@@ -36,7 +36,7 @@ proxies:
     server: *bug
     port: 443
     type: vless
-    uuid: 2bfd78db-8718-4205-b483-52f413840bd0
+    uuid: c098060e-0e6c-4595-a526-5c52859e5eb8
     cipher: auto
     tls: true
     skip-cert-verify: true
