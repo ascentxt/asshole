@@ -1,5 +1,5 @@
 bug-isp:
-  - &bug cvs-deo.shopeemobile.com
+  - &bug 104.18.225.52
 interface:
   - &usb usb0
   
@@ -13,38 +13,16 @@ interface:
 proxies:
 
 #SG
-  - name: 0604.sg3,main
+  - name: 0706.sg.sshocean
     server: *bug
     port: 443
-    type: vmess
-    uuid: 6fbb2ace-6f55-4613-ad36-0cee802e2f65
-    alterId: 0
+    type: vless
+    uuid: 8f99dc37-8bd2-4b54-acd5-c79cf0b85221
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sglws.mainssh.xyz
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: sglws.mainssh.xyz
-    udp: true
-    
-  - name: 1504.sgm1grpc.serverssh
-    server: *bug
-    port: 443
-    type: vmess
-    uuid: 73dda78b-d5f7-4f42-b85f-885d4873f62e
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sgm1grpc.serverip.my.id
+    servername: sg3.v2vless.xyz
     network: grpc
     grpc-opts:
-      grpc-service-name: grpc
+      grpc-service-name: vless-grpc
     udp: true
-    
-    
-
-
