@@ -26,3 +26,19 @@ proxies:
     grpc-opts:
       grpc-service-name: vless-grpc
     udp: true
+
+  - name: 0706.sg.sshocean.v
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 8f99dc37-8bd2-4b54-acd5-c79cf0b85221
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3.v2vless.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sg3.v2vless.xyz
+    udp: true
