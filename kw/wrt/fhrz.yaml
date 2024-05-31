@@ -16,7 +16,7 @@ interface:
 proxies:
 
 #ID
-  - name: 0706.jagoanssh-prot
+  - name: 0706.jagoanssh-id1
     server: *bug
     port: 443
     type: vless
@@ -30,6 +30,22 @@ proxies:
       path: /jagoanssh
       headers:
         Host: id1vless.ipservers.xyz
+    udp: true
+
+  - name: 0706.jagoanssh-id2
+    server: *bug
+    port: 443
+    type: vless
+    uuid: 7ffe9db6-cfc3-407b-ae45-2737596b1d30
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id2vless.ipservers.xyz
+    network: ws
+    ws-opts:
+      path: /jagoanssh
+      headers:
+        Host: id2vless.ipservers.xyz
     udp: true
 
   - name: 0706.idray.serverssh.prot
