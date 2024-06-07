@@ -1,5 +1,5 @@
 bug-isp:
-  - &bug 104.18.225.52
+  - &bug investors.spotify.com
 interface:
   - &usb usb0
   
@@ -12,15 +12,16 @@ interface:
 # cvs-deo.shopeemobile.com (protek)
 # 104.18.49.163 (protek)
 # 104.16.14.120 (vidio)
+# investors.spotify.com (spotify)
 
 proxies:
 
 #ID
-  - name: 0706.jagoanssh-id1
+  - name: 1406.jagoanssh-id1
     server: *bug
     port: 443
     type: vless
-    uuid: 48f7bcc5-e37a-405d-b0b9-b1acbadf57b6
+    uuid: 80ae59fe-5627-4422-8808-f332a4142463
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -48,11 +49,11 @@ proxies:
         Host: id2vless.ipservers.xyz
     udp: true
 
-  - name: 0706.idray.serverssh.prot
+  - name: 1406.idray.serverssh.prot
     server: *bug
     port: 443
     type: vless
-    uuid: 1c5314be-8a52-41ac-8c14-40f46836e2a1
+    uuid: c2c68029-7702-48fb-bfd5-d78d0add8b36
     cipher: auto
     tls: true
     skip-cert-verify: true
