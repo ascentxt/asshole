@@ -1,8 +1,9 @@
 bug-isp:
-  - &bug investors.spotify.com
+  - &bug 104.17.3.81
 interface:
   - &usb usb0
-  
+
+# 104.17.3.81 (biz)
 # 104.18.225.52 (vision)
 # 104.21.73.208 (vision)
 # beacon.liveon.id
