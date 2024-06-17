@@ -50,11 +50,11 @@ proxies:
         Host: id2vless.ipservers.xyz
     udp: true
 
-  - name: 1406.idray.serverssh.prot
+  - name: 2406.idray.serverssh.prot
     server: *bug
     port: 443
     type: vless
-    uuid: c2c68029-7702-48fb-bfd5-d78d0add8b36
+    uuid: 41e60b2c-be68-42c7-bdb7-627241bb6441
     cipher: auto
     tls: true
     skip-cert-verify: true
