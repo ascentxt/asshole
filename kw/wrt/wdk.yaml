@@ -1,98 +1,51 @@
 bug-isp:
-  - &bug 104.18.225.52
+  - &bug 104.17.3.81
 interface:
   - &usb usb0
-  
+
+# 104.17.3.81 (biz)
 # 104.18.225.52 (vision)
 # 104.21.73.208 (vision)
 # beacon.liveon.id
 # 104.26.14.208 (liveon)
 # 104.22.5.240 (vidio)
+# quiz.staging.vidio.com (vidio) (port: 80)
+# cvs-deo.shopeemobile.com (protek)
+# 104.18.49.163 (protek)
+# 104.16.14.120 (vidio)
+# investors.spotify.com (spotify)
 
 proxies:
 
 #ID
-
-  - name: 1503.id4.vless.shocean
+  - name: 2807.jagoanssh-id1
     server: *bug
     port: 443
     type: vless
-    uuid: 02c212fd-280a-422f-b1ae-7a3f92714663
+    uuid: 284d87de-7d1d-4abf-8b2f-2db0b0e5d69f
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: id4.v2vless.xyz
+    servername: id1vless.ipservers.xyz
     network: ws
     ws-opts:
-      path: /vless
+      path: /jagoanssh
       headers:
-        Host: id4.v2vless.xyz
-    udp: true  
-
-  - name: 1503.id1.vless.shocean
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 9888dbc8-a541-443f-929f-6c9338ff620f
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id1.v2vless.xyz
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: id1.v2vless.xyz
-    udp: true  
-
-  - name: 1503.id2.vless.shocean
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 35efa120-adec-4514-b99c-2c6d63b4a959
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: id2.v2vless.xyz
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: id2.v2vless.xyz
-    udp: true  
-
-  - name: 1503.idray.serverssh
-    server: *bug
-    port: 443
-    type: vless
-    uuid: b0c32387-791d-4f42-831d-aa031e67a2a9
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idray.serverip.my.id
-    network: ws
-    ws-opts:
-      path: /serverssh
-      headers:
-        Host: idray.serverip.my.id
+        Host: id1vless.ipservers.xyz
     udp: true
 
-  - name: 1503.idlws.mainssh
+  - name: 2406.jagoanssh-id2
     server: *bug
     port: 443
     type: vless
-    uuid: c5a6992e-9915-45c8-9a61-cf6140104597
+    uuid: 1c91b816-ef0c-4597-9383-83a9660c46e3
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: idlws.mainssh.xyz
+    servername: id2vless.ipservers.xyz
     network: ws
     ws-opts:
-      path: /vless
+      path: /jagoanssh
       headers:
-        Host: idlws.mainssh.xyz
+        Host: id2vless.ipservers.xyz
     udp: true
-    
-    
-
-
