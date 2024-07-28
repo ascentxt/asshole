@@ -1,5 +1,5 @@
 bug-isp:
-  - &bug quiz.staging.vidio.com
+  - &bug 104.22.5.240
 interface:
   - &usb usb0
 
@@ -14,6 +14,7 @@ interface:
 # 104.18.49.163 (protek)
 # 104.16.14.120 (vidio)
 # investors.spotify.com (spotify)
+# quiz.int.vidio.com (vidio)
 
 proxies:
 
