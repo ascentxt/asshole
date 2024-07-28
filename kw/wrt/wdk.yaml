@@ -50,3 +50,18 @@ proxies:
       headers:
         Host: id2vless.ipservers.xyz
     udp: true
+    
+  - name: 0408.idray.serverssh
+    server: *bug
+    port: 443
+    type: vmess
+    uuid: 02f21c47-296c-41d9-bf54-a1f2a0922ba6
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: idgrpc.serverip.my.id
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc
+    udp: true
