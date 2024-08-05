@@ -19,11 +19,11 @@ interface:
 proxies:
 
 #ID
-  - name: 0408.jagoanssh-id1
+  - name: 1208.jagoanssh-id1
     server: *bug
     port: 443
     type: vless
-    uuid: d9bba637-1e73-47e4-b0cf-0da60a91ad83
+    uuid: 9b3b6595-f0e3-4744-85d1-d6ba07f081ae
     cipher: auto
     tls: true
     skip-cert-verify: true
