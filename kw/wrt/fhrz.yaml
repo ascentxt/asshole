@@ -36,7 +36,7 @@ proxies:
     udp: true
 
   - name: 1908.jagoanssh-id2
-    server: *bug
+    server: quiz.int.vidio.com
     port: 443
     type: vless
     uuid: 53c93e62-7f6b-4717-b69f-4414d3442883
