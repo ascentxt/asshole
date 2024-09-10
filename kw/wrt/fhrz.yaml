@@ -19,11 +19,11 @@ interface:
 proxies:
 
 #ID
-  - name: 1908.jagoanssh-id1
+  - name: 1709.jagoanssh-id1
     server: *bug
     port: 443
     type: vless
-    uuid: 99e89606-f3c6-4f6e-b83c-8cde282fb42
+    uuid: edf1e029-3148-4158-b493-986b8ddfe0ea
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -35,11 +35,11 @@ proxies:
         Host: id1vless.ipservers.xyz
     udp: true
 
-  - name: 1908.jagoanssh-id2
+  - name: 1709.jagoanssh-id2
     server: quiz.int.vidio.com
     port: 443
     type: vless
-    uuid: 53c93e62-7f6b-4717-b69f-4414d3442883
+    uuid: 45711a59-483b-4f82-8979-65ae9b1c8c8f
     cipher: auto
     tls: true
     skip-cert-verify: true
