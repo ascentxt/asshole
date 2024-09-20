@@ -19,11 +19,11 @@ interface:
 proxies:
 
 #ID
-  - name: 1709.jagoanssh-id1
+  - name: 2709.jagoanssh-id1
     server: *bug
     port: 443
     type: vless
-    uuid: edf1e029-3148-4158-b493-986b8ddfe0ea
+    uuid: 02c4ec44-795e-4a20-80df-11125a823feb
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -35,11 +35,11 @@ proxies:
         Host: id1vless.ipservers.xyz
     udp: true
 
-  - name: 1709.jagoanssh-id2
+  - name: 2709.jagoanssh-id2
     server: *bug
     port: 443
     type: vless
-    uuid: 45711a59-483b-4f82-8979-65ae9b1c8c8f
+    uuid: 8bd8853b-254a-4629-9af4-41634bb30f5f
     cipher: auto
     tls: true
     skip-cert-verify: true
