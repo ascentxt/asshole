@@ -14,7 +14,7 @@ proxies:
 
 #SG
   - name: 0611-serverssh
-    server: 104.17.3.81
+    server: *bug
     port: 443
     type: vless
     uuid: b7283518-e0c1-4e3c-ac8f-080fc93e5326
