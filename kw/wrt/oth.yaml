@@ -1,5 +1,5 @@
 bug-isp:
-  - &bug 104.18.225.52
+  - &bug 104.17.3.81
 interface:
   - &usb usb0
   
@@ -13,32 +13,21 @@ interface:
 proxies:
 
 #SG
-  - name: 0706.sg.sshocean
-    server: *bug
+  - name: 0611-serverssh
+    server: 104.17.3.81
     port: 443
     type: vless
-    uuid: 8f99dc37-8bd2-4b54-acd5-c79cf0b85221
+    uuid: b7283518-e0c1-4e3c-ac8f-080fc93e5326
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sg3.v2vless.xyz
-    network: grpc
-    grpc-opts:
-      grpc-service-name: vless-grpc
-    udp: true
-
-  - name: 0706.sg.sshocean.v
-    server: *bug
-    port: 443
-    type: vless
-    uuid: 8f99dc37-8bd2-4b54-acd5-c79cf0b85221
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg3.v2vless.xyz
+    servername: sg1ray.serverip.my.id
     network: ws
     ws-opts:
-      path: /vless
+      path: /serverssh
+      headers:
+        Host: sg1ray.serverip.my.id
+    udp: true
       headers:
         Host: sg3.v2vless.xyz
     udp: true
