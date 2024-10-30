@@ -28,6 +28,3 @@ proxies:
       headers:
         Host: sg1ray.serverip.my.id
     udp: true
-      headers:
-        Host: sg3.v2vless.xyz
-    udp: true
