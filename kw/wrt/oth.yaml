@@ -13,7 +13,7 @@ interface:
 proxies:
 
 #SG
-  - name: 0611-serverssh
+  - name: 0611.serverssh
     server: *bug
     port: 443
     type: vless
@@ -27,4 +27,20 @@ proxies:
       path: /serverssh
       headers:
         Host: sg1ray.serverip.my.id
+    udp: true
+  - name: 2911.sg1.sshkit.org
+    server: *bug
+    port: 443
+    type: vmess
+    uuid: e620d600-ee19-4012-a96c-968e85a52de9
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vmess-sg1.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/1373695293/6722327b884ba/
+      headers:
+        Host: vmess-sg1.sshkit.org
     udp: true
