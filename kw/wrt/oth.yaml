@@ -13,34 +13,19 @@ interface:
 proxies:
 
 #SG
-  - name: 0611.serverssh
-    server: *bug
-    port: 443
-    type: vless
-    uuid: b7283518-e0c1-4e3c-ac8f-080fc93e5326
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg1ray.serverip.my.id
-    network: ws
-    ws-opts:
-      path: /serverssh
-      headers:
-        Host: sg1ray.serverip.my.id
-    udp: true
-  - name: 2911.sg1.sshkit.org
-    server: *bug
+  - name: 021124.opentunnel
+    server: sgv-3.openv2ray.com
     port: 443
     type: vmess
-    uuid: e620d600-ee19-4012-a96c-968e85a52de9
+    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: vmess-sg1.sshkit.org
+    servername: sgv-3.openv2ray.com
     network: ws
     ws-opts:
-      path: /sshkit/1373695293/6722327b884ba/
+      path: /opentunnel?user=opentunnel.net-jjhhhh
       headers:
-        Host: vmess-sg1.sshkit.org
+        Host: sgv-3.openv2ray.com
     udp: true
