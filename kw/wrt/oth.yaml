@@ -12,7 +12,7 @@ interface:
 
 proxies:
 
-- name: us.1511.opentunnel.net
+  - name: us.1511.opentunnel.net
     server: 104.17.3.81
     port: 443
     type: vmess
