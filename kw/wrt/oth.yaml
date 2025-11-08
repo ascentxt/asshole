@@ -13,7 +13,7 @@ interface:
 proxies:
 
 - name: us.1511.opentunnel.net
-    server: usv-2.openv2ray.com
+    server: 104.17.3.81
     port: 443
     type: vmess
     uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
@@ -21,10 +21,10 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: creativecommons.org
+    servername: usv-2.openv2ray.com
     network: ws
     ws-opts:
       path: /opentunnel?user=opentunnel.net-sdsd
       headers:
-        Host: creativecommons.org
+        Host: usv-2.openv2ray.com
     udp: true
